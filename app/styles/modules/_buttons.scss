@@ -1,0 +1,62 @@
+// Reset
+*  {
+  outline: none;
+}
+
+// Styling the standard button
+.btn {
+	@include btn-animation;
+	background: none;
+	border: 2px solid $color-light;
+	@include border-radius(4em);
+	margin:1.2em 0 0.25em 0;
+	padding: 1.2em;
+	min-width: 12em;
+
+	color: $color-light;
+	font-size: 0.75em;
+
+	&:hover {
+		background: $color-light;
+		border: 2px solid $color-light;
+		@include box-shadow (inset 0px 0px 0px 2px $color);
+
+		color: $color;
+	}
+
+	&:active {
+		background: $color-light;
+		border: 2px solid $color-light;
+		@include box-shadow (none);
+
+		color: $color;
+	}
+}
+
+// Styling the close button
+
+.btn-close {
+	background: $color;
+	display: none;
+	cursor: pointer;
+	float: right;
+	padding: 0.2em 0.48em 0.25em 0.48em;
+	position: relative;
+	top: -0.15em;
+
+	color: $white;
+}
+
+// Make close button visible on hover 
+.link-list {
+
+	li {
+
+		&:hover {
+
+			.btn-close {
+				display: inline;
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+<ul class="row-fluid">
+	<li class="span4" ng-repeat="list in lists">
+		<ul class="link-list">
+			<li ng-repeat="hyperlink in list.hyperlinks"><a href="{{hyperlink.url}}" target="_blank">{{hyperlink.name}}</a><i class="btn-close" ng-click="deleteListItem($index, $parent.$index)">x</i></li>
+		</ul>
+		<form class="input-field" ng-submit="addListItem($index)">
+			<input type="text" placeholder="Enter new name" class="new-name new-input" ng-model="list.newItemName">
+			<input type="text" placeholder="Enter new link" class="new-link new-input" ng-model="list.newItemURL">
+			<button class="btn" value="Add" type="submit">Add</button>
+		</form>
+	</li>
+</ul>

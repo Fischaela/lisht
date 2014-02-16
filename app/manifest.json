@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+
+	"name": "lisht",
+	"description": "This extension helps you save your favorite webpages.",
+	"version": "0.0.7",
+
+	"browser_action": {
+		"default_icon": {                    // optional
+			"19": "icon19.png",           // optional
+			"38": "icon38.png"            // optional
+		},
+		"default_title": "Open a new tab to view your lisht",
+		"default_popup": "popup.html"
+	},
+
+	"chrome_url_overrides" : {
+		"newtab": "index.html"
+	},
+
+	"web_accessible_resources": [
+	    "views/main.html",
+	    "scripts/ebc3bfc2.scripts.js",
+	    "styles/d41d8cd9.main.css"
+	],
+
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

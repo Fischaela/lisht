@@ -1,0 +1,28 @@
+body {
+	background: $color;
+}
+
+// Styling the links
+.link-list {
+	
+	li {
+		@include list-animation;
+		padding: 1.2em;
+
+		&:hover {
+			background: $white;
+
+			&:after {
+				content: "";
+			}
+
+			a {
+				color: $color;
+			}
+		}
+
+		a {
+			color: $color-light;
+		}
+	}
+}

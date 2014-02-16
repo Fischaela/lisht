@@ -1,0 +1,261 @@
+/* line 17, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "questrial";
+  src: url('fonts/Questrial-Regular.ttf') format('truetype'), url('fonts/Questrial-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "questrial";
+  src: url('fonts/fontawesome-webfont.ttf') format('truetype'), url('fonts/fontawesome-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* line 17, ../../app/styles/base/_typography.scss */
+body {
+  font-family: 'questrial';
+  font-weight: 400;
+}
+
+/* line 22, ../../app/styles/base/_typography.scss */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* line 1, ../../app/styles/modules/_layout.scss */
+body {
+  padding: 0.7em;
+}
+
+/* line 6, ../../app/styles/modules/_layout.scss */
+.row-fluid {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+@media screen and (max-width: 43.75rem) {
+  /* line 6, ../../app/styles/modules/_layout.scss */
+  .row-fluid {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+/* line 17, ../../app/styles/modules/_layout.scss */
+.row-fluid .span4 {
+  -webkit-flex-basis: 34%;
+  flex-basis: 34%;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  margin: 0.7em;
+}
+@media screen and (max-width: 43.75rem) {
+  /* line 17, ../../app/styles/modules/_layout.scss */
+  .row-fluid .span4 {
+    -webkit-flex-basis: auto;
+    flex-basis: auto;
+  }
+}
+
+/* line 31, ../../app/styles/modules/_layout.scss */
+.input-field {
+  margin-top: 1em;
+}
+
+/* line 1, ../../app/styles/modules/_list-style.scss */
+body {
+  background: #f66b62;
+}
+
+/* line 8, ../../app/styles/modules/_list-style.scss */
+.link-list li {
+  -webkit-transition-property: background, color;
+  -moz-transition-property: background, color;
+  -o-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-duration: 0.1s;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  padding: 1.2em;
+}
+/* line 12, ../../app/styles/modules/_list-style.scss */
+.link-list li:hover {
+  background: white;
+}
+/* line 15, ../../app/styles/modules/_list-style.scss */
+.link-list li:hover:after {
+  content: "";
+}
+/* line 19, ../../app/styles/modules/_list-style.scss */
+.link-list li:hover a {
+  color: #f66b62;
+}
+/* line 24, ../../app/styles/modules/_list-style.scss */
+.link-list li a {
+  color: #fddddb;
+}
+
+/* line 3, ../../app/styles/modules/_forms.scss */
+.new-input {
+  background: #f99892;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: block;
+  margin: 0.25em 0;
+  padding: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  color: #fddddb;
+  font-family: 'questrial';
+  font-size: 1em;
+}
+/* line 17, ../../app/styles/modules/_forms.scss */
+.new-input::-webkit-input-placeholder {
+  color: #f66b62;
+}
+/* line 22, ../../app/styles/modules/_forms.scss */
+.new-input:active, .new-input:focus {
+  outline: none;
+}
+
+/* line 2, ../../app/styles/modules/_buttons.scss */
+* {
+  outline: none;
+}
+
+/* line 7, ../../app/styles/modules/_buttons.scss */
+.btn {
+  -webkit-transition-property: border, box-shadow, background;
+  -moz-transition-property: border, box-shadow, background;
+  -o-transition-property: border, box-shadow, background;
+  transition-property: border, box-shadow, background;
+  -webkit-transition-duration: 0.15s;
+  -moz-transition-duration: 0.15s;
+  -o-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  background: none;
+  border: 2px solid #fddddb;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  -ms-border-radius: 4em;
+  -o-border-radius: 4em;
+  border-radius: 4em;
+  margin: 1.2em 0 0.25em 0;
+  padding: 1.2em;
+  min-width: 12em;
+  color: #fddddb;
+  font-size: 0.75em;
+}
+/* line 19, ../../app/styles/modules/_buttons.scss */
+.btn:hover {
+  background: #fddddb;
+  border: 2px solid #fddddb;
+  -webkit-box-shadow: inset 0px 0px 0px 2px #f66b62;
+  -moz-box-shadow: inset 0px 0px 0px 2px #f66b62;
+  box-shadow: inset 0px 0px 0px 2px #f66b62;
+  color: #f66b62;
+}
+/* line 27, ../../app/styles/modules/_buttons.scss */
+.btn:active {
+  background: #fddddb;
+  border: 2px solid #fddddb;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: #f66b62;
+}
+
+/* line 38, ../../app/styles/modules/_buttons.scss */
+.btn-close {
+  background: #f66b62;
+  display: none;
+  cursor: pointer;
+  float: right;
+  padding: 0.2em 0.48em 0.25em 0.48em;
+  position: relative;
+  top: -0.15em;
+  color: white;
+}
+
+/* line 57, ../../app/styles/modules/_buttons.scss */
+.link-list li:hover .btn-close {
+  display: inline;
+}
