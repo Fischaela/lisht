@@ -1,28 +1,47 @@
 {
 	"manifest_version": 2,
 
-	"name": "lisht",
+	"name": "LISHT",
 	"description": "This extension helps you save your favorite webpages.",
-	"version": "0.0.7",
+	"version": "0.7.0.1",
 
 	"browser_action": {
-		"default_icon": {                    // optional
-			"19": "icon19.png",           // optional
-			"38": "icon38.png"            // optional
+		"default_icon": {
+			"19": "icon19.png",
+			"38": "icon38.png"
 		},
-		"default_title": "Open a new tab to view your lisht",
-		"default_popup": "popup.html"
+		"default_title": "Open a new tab to view your lisht"
 	},
+
+	"content_scripts": [
+		{
+			"matches": ["http://*/*"],
+			"js": ["scripts/scripts.js", "scripts/extension.js"],
+			"run_at": "document_start"
+		}
+	],
 
 	"chrome_url_overrides" : {
 		"newtab": "index.html"
 	},
 
+	"background": {
+		"scripts": ["scripts/extension.js"]
+	},
+
 	"web_accessible_resources": [
 	    "views/main.html",
-	    "scripts/ebc3bfc2.scripts.js",
-	    "styles/d41d8cd9.main.css"
+	    "scripts/scripts.js",
+	    "scripts/extension.js",
+	    "styles/main.css"
 	],
 
-	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+	"permissions": [
+		"<all_urls>",
+		"activeTab",
+		"tabs",
+		"http://*/"
+	]
 }
