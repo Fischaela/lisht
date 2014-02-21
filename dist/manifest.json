@@ -13,13 +13,26 @@
 		"default_title": "Open a new tab to view your lisht"
 	},
 
+	"content_scripts": [
+		{
+			"matches": ["http://*/*"],
+			"js": ["scripts/scripts.js", "scripts/extension.js"],
+			"run_at": "document_start"
+		}
+	],
+
 	"chrome_url_overrides" : {
 		"newtab": "index.html"
+	},
+
+	"background": {
+		"scripts": ["scripts/extension.js"]
 	},
 
 	"web_accessible_resources": [
 	    "views/main.html",
 	    "scripts/scripts.js",
+	    "scripts/extension.js",
 	    "styles/main.css"
 	],
 

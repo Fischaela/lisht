@@ -7,9 +7,11 @@ angular.module('lishtApp')
 		//console.log(jsonListData);
 		if (jsonListData !== null) {
 			$scope.lists = JSON.parse(jsonListData);
-			console.log('Local storage data loaded');
+			// Debugging
+			// console.log('Local storage data loaded');
 		} else {
-			console.log('JSON data loaded');
+			// Debugging
+			// console.log('JSON data loaded');
 			$scope.lists = [
 				{
 					'hyperlinks': [

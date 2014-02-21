@@ -63,7 +63,8 @@ chrome.browserAction.onClicked.addListener( function (tab) {
 		];
 	}
 
-	console.log(lishtData);
+	// Debugging
+	// console.log(lishtData);
 
 	chrome.tabs.getSelected( null, function (tab) {
 		var newItemName = tab.title,
@@ -73,7 +74,7 @@ chrome.browserAction.onClicked.addListener( function (tab) {
 				url: newItemURL
 			};
 		console.log(newListItem);
-		lishtData[1].hyperlinks.push(newListItem);
+		lishtData[0].hyperlinks.push(newListItem);
 		jsonListData = JSON.stringify(lishtData);
 		localStorage.setItem('GEILDANKE-lisht', jsonListData);
 	});
