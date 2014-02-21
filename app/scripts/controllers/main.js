@@ -3,16 +3,17 @@
 angular.module('lishtApp')
 	.controller('ListCtrl', function ($scope) {
 
-		var jsonListData = localStorage.getItem('GEILDANKE-list');
+		var jsonListData = localStorage.getItem('GEILDANKE-lisht');
 		//console.log(jsonListData);
 		if (jsonListData !== null) {
 			$scope.lists = JSON.parse(jsonListData);
-			console.log('Local storage data loaded');
+			// Debugging
+			// console.log('Local storage data loaded');
 		} else {
-			console.log('JSON data loaded');
+			// Debugging
+			// console.log('JSON data loaded');
 			$scope.lists = [
 				{
-					'color': 'red',
 					'hyperlinks': [
 						{
 							'name': 'twitter',
@@ -29,7 +30,6 @@ angular.module('lishtApp')
 					]
 				},
 				{
-					'color': 'grey',
 					'hyperlinks': [
 						{
 							'name': 'Designer News',
@@ -46,7 +46,6 @@ angular.module('lishtApp')
 					]
 				},
 				{
-					'color': 'green',
 					'hyperlinks': [
 						{
 							'name': 'Mail',
@@ -71,18 +70,17 @@ angular.module('lishtApp')
 					url: $scope.lists[index].newItemURL
 				},
 				jsonListData = '';
-			console.log(newListItem);
 			$scope.lists[index].hyperlinks.push(newListItem);
 			$scope.lists[index].newItemName = '';
 			$scope.lists[index].newItemURL = '';
 			jsonListData = JSON.stringify($scope.lists);
-			localStorage.setItem('GEILDANKE-list', jsonListData);
+			localStorage.setItem('GEILDANKE-lisht', jsonListData);
 		};
 
 		$scope.deleteListItem = function(index, parent) {
 			var jsonListData = '';
 			$scope.lists[parent].hyperlinks.splice(index, 1);
 			jsonListData = JSON.stringify($scope.lists);
-			localStorage.setItem('GEILDANKE-list', jsonListData);
+			localStorage.setItem('GEILDANKE-lisht', jsonListData);
 		};
 	});

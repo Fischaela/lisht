@@ -6,14 +6,6 @@
 	false, 400, normal
 );
 
-@include font-face("questrial",
-	font-files(
-		"fontawesome-webfont.ttf", ttf,
-		"fontawesome-webfont.woff", woff
-        ),
-	false, 400, normal
-);
-
 body {
 	font-family: 'questrial';
 	font-weight: 400;

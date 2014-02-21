@@ -257,7 +257,8 @@ module.exports = function (grunt) {
             'styles/fonts/*',
             'manifest.json',
             'icon19.png',
-            'icon38.png'
+            'icon38.png',
+            'scripts/extension.js'
           ]
         }]
       }
@@ -287,7 +288,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'jshint',
-    'test',
+    // 'test',
     'coffee',
     'compass:dist',
     'useminPrepare',
