@@ -142,22 +142,28 @@ body {
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
   padding: 1.2em;
+  position: relative;
 }
-/* line 12, ../../app/styles/modules/_list-style.scss */
+/* line 13, ../../app/styles/modules/_list-style.scss */
 .link-list li:hover {
   background: white;
 }
-/* line 15, ../../app/styles/modules/_list-style.scss */
+/* line 16, ../../app/styles/modules/_list-style.scss */
 .link-list li:hover:after {
   content: "";
 }
-/* line 19, ../../app/styles/modules/_list-style.scss */
+/* line 20, ../../app/styles/modules/_list-style.scss */
 .link-list li:hover a {
   color: #f66b62;
 }
-/* line 24, ../../app/styles/modules/_list-style.scss */
+/* line 25, ../../app/styles/modules/_list-style.scss */
 .link-list li a {
   color: #fddddb;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 10.6rem;
 }
 
 /* line 3, ../../app/styles/modules/_forms.scss */
@@ -241,10 +247,10 @@ body {
   background: #f66b62;
   display: none;
   cursor: pointer;
-  float: right;
   padding: 0.2em 0.48em 0.25em 0.48em;
-  position: relative;
-  top: -0.15em;
+  position: absolute;
+  top: 1em;
+  right: 1.2em;
   color: white;
 }
 

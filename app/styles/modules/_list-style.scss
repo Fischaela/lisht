@@ -8,6 +8,7 @@ body {
 	li {
 		@include list-animation;
 		padding: 1.2em;
+		position: relative;
 
 		&:hover {
 			background: $white;
@@ -23,6 +24,11 @@ body {
 
 		a {
 			color: $color-light;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			max-width: 10.6rem;
 		}
 	}
 }
