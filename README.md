@@ -1,11 +1,18 @@
 lisht
 =====
 
-This is a simple link list that can be used as a chrome extension. Written by [Michaela Lehr](http://twitter.com/FischaelaMeer).
+This is the respository of the chrome extention [lisht][1], written by [Michaela Lehr][2].
 
 Download and use
 ----------------
-The zip file contains the whole yeoman project. To distribute run "grunt" in the master directory. Since I don't know yet, if I will publish the extension, to use it, visit [chrome://extensions](chrome://extensions) and import the unpacked files in the dist folder. Once you open a new tab the link list will be your blank page.
+The zip file contains the whole Yeoman project. For more information about Yeoman, see <http://yeoman.io/>. To initialize run 
+
+	npm update
+	npm install
+	bower update
+	bower install
+
+To distribute run `grunt`. This will create two folders: dist/ contains the distributed html version, archive/ contains the archived project as a zip-file.
 
 License
 -------
@@ -29,3 +36,6 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[1]: http://bit.ly/lisht
+[2]: http://twitter.com/FischaelaMeer
