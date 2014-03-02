@@ -3,8 +3,15 @@
 angular.module('lishtApp')
 	.controller('ListCtrl', function ($scope) {
 
-		var jsonListData = localStorage.getItem('GEILDANKE-lisht');
-		//console.log(jsonListData);
+		var jsonListData = localStorage.getItem('GEILDANKE-lisht'),
+			jsonColorData = localStorage.getItem('GEILDANKE-options');
+
+		if (jsonColorData !== null) {
+			$scope.activeClass = jsonColorData;
+		} else {
+			$scope.activeClass = 'pink';
+		}
+
 		if (jsonListData !== null) {
 			$scope.lists = JSON.parse(jsonListData);
 			// Debugging

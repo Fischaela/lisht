@@ -4,7 +4,7 @@
 	"name": "LISHT",
 	"short_name": "Make the most of a new tab",
 	"description": "This extension helps you save your favorite webpages.",
-	"version": "0.7.0.3",
+	"version": "0.7.0.4",
 	"author": "Michaela Lehr @fischaelameer",
 
 	"icons": {
@@ -12,6 +12,10 @@
 		"38": "Icon-38.png",
 		"48": "Icon-48.png",
 		"128": "Icon-128.png"
+	},
+
+	"background": {
+		"scripts": ["scripts/extension.js"]
 	},
 
 	"browser_action": {
@@ -26,23 +30,21 @@
 		"newtab": "index.html"
 	},
 
-	"background": {
-		"scripts": ["scripts/extension.js"]
-	},
-
-	"web_accessible_resources": [
-	    "views/main.html",
-	    "scripts/scripts.js",
-	    "scripts/extension.js",
-	    "styles/main.css"
-	],
-
 	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+	"options_page": "options.html",
 
 	"permissions": [
 		"<all_urls>",
 		"activeTab",
 		"tabs",
 		"http://*/"
+	],
+
+	"web_accessible_resources": [
+	    "views/main.html",
+	    "scripts/scripts.js",
+	    "scripts/extension.js",
+	    "styles/main.css"
 	]
 }

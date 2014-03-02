@@ -7,44 +7,37 @@
 .btn {
 	@include btn-animation;
 	background: none;
-	border: 2px solid $color-light;
 	@include border-radius(4em);
+	cursor: pointer;
 	margin:1.2em 0 0.25em 0;
 	padding: 1.2em;
 	min-width: 12em;
 
-	color: $color-light;
 	font-size: 0.75em;
 
-	&:hover {
-		background: $color-light;
-		border: 2px solid $color-light;
-		@include box-shadow (inset 0px 0px 0px 2px $color);
-
-		color: $color;
-	}
-
 	&:active {
-		background: $color-light;
-		border: 2px solid $color-light;
 		@include box-shadow (none);
-
-		color: $color;
 	}
 }
 
 // Styling the close button
 
 .btn-close {
-	background: $color;
 	display: none;
 	cursor: pointer;
 	padding: 0.2em 0.48em 0.25em 0.48em;
 	position: absolute;
 	top: 1em;
 	right: 1.2em;
+}
 
-	color: $white;
+.btn-options {
+	clear: both;
+	display: inline-block;
+	margin-top: 2rem;
+	min-width: 0rem;
+
+	font-size: 1rem;
 }
 
 // Make close button visible on hover 

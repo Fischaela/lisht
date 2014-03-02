@@ -5,7 +5,7 @@ This is the respository of the chrome extention [lisht][1], written by [Michaela
 
 Download and use
 ----------------
-The zip file contains the whole Yeoman project. For more information about Yeoman, see <http://yeoman.io/>. To initialize run 
+The repository contains the whole Yeoman project. For more information about Yeoman, see [yeoman.io][3]. To initialize run 
 
 	npm update
 	npm install
@@ -39,3 +39,4 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [1]: http://bit.ly/lisht
 [2]: http://twitter.com/FischaelaMeer
+[3]: http://yeoman.io
