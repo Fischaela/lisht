@@ -7,9 +7,17 @@ angular.module('lishtApp', [])
         templateUrl: 'views/main.html',
         controller: 'ListCtrl'
       })
-      .when('/options', {
+      .otherwise({
+        redirectTo: '/'
+      });
+  }]);
+
+angular.module('lishtOptionsApp', [])
+  .config(['$routeProvider', function ($routeProvider) {
+    $routeProvider
+      .when('/', {
         templateUrl: 'views/options.html',
-        controller: 'ListCtrl'
+        controller: 'OptionsCtrl'
       })
       .otherwise({
         redirectTo: '/'
