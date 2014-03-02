@@ -6,6 +6,10 @@
 	"description": "This extension helps you save your favorite webpages.",
 	"version": "0.7.0.3",
 
+	"background": {
+		"scripts": ["scripts/extension.js"]
+	},
+
 	"browser_action": {
 		"default_icon": {
 			"19": "icon-19.png",
@@ -14,35 +18,33 @@
 		"default_title": "Open a new tab to view your lisht"
 	},
 
-	"content_scripts": [
-		{
-			"matches": ["http://*/*"],
-			"js": ["scripts/scripts.js", "scripts/extension.js"],
-			"run_at": "document_start"
-		}
-	],
-
 	"chrome_url_overrides" : {
 		"newtab": "index.html"
 	},
 
-	"background": {
-		"scripts": ["scripts/extension.js"]
-	},
-
-	"web_accessible_resources": [
-	    "views/main.html",
-	    "scripts/scripts.js",
-	    "scripts/extension.js",
-	    "styles/main.css"
-	],
+	// "content_scripts": [
+	// 	{
+	// 		"matches": ["http://*/*"],
+	// 		"js": ["scripts/scripts.js", "scripts/extension.js"],
+	// 		"run_at": "document_start"
+	// 	}
+	// ],
 
 	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+	"options_page": "options.html",
 
 	"permissions": [
 		"<all_urls>",
 		"activeTab",
 		"tabs",
 		"http://*/"
+	],
+
+	"web_accessible_resources": [
+	    "views/main.html",
+	    "scripts/scripts.js",
+	    "scripts/extension.js",
+	    "styles/main.css"
 	]
 }

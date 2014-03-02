@@ -7,6 +7,10 @@ angular.module('lishtApp', [])
         templateUrl: 'views/main.html',
         controller: 'ListCtrl'
       })
+      .when('/options', {
+        templateUrl: 'views/options.html',
+        controller: 'ListCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
