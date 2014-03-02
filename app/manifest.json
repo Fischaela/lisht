@@ -15,7 +15,7 @@
 	},
 
 	"background": {
-		"scripts": ["scripts/extension.js"]
+		"scripts": "scripts/extension.js"
 	},
 
 	"browser_action": {
@@ -29,14 +29,6 @@
 	"chrome_url_overrides" : {
 		"newtab": "index.html"
 	},
-
-	// "content_scripts": [
-	// 	{
-	// 		"matches": ["http://*/*"],
-	// 		"js": ["scripts/scripts.js", "scripts/extension.js"],
-	// 		"run_at": "document_start"
-	// 	}
-	// ],
 
 	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
 

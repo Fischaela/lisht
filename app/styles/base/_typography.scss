@@ -8,10 +8,32 @@
 
 body {
 	font-family: 'questrial';
+	font-size: 1em;
 	font-weight: 400;
 }
 
 a {
 	color: $black;
 	text-decoration: none;
+}
+
+.typography-headline-huge {
+	font-size: 2.5rem;
+}
+
+.typography-copy-ui-info {
+	
+}
+
+.typography-color-decent {
+	color: lighten($black,50);
+}
+
+.typography-style-underlined {
+	border-bottom: 1px solid lighten($black,70);
+	padding-bottom: 1.75rem;
+}
+
+.typography-style-verticalrhythm {
+	margin-bottom: 1.75rem;
 }

@@ -1,4 +1,4 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/\.rvm\/gems\/ruby-2\.1\.0\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000317}}
+/* line 17, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/\.rvm\/gems\/ruby-2\.1\.0\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000322}}
+/* line 22, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/\.rvm\/gems\/ruby-2\.1\.0\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000324}}
+/* line 24, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/\.rvm\/gems\/ruby-2\.1\.0\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000326}}
+/* line 26, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/\.rvm\/gems\/ruby-2\.1\.0\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000328}}
+/* line 28, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/\.rvm\/gems\/ruby-2\.1\.0\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000330}}
+/* line 30, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/\.rvm\/gems\/ruby-2\.1\.0\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\00003103}}
+/* line 103, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/\.rvm\/gems\/ruby-2\.1\.0\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000332}}
+/* line 32, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/\.rvm\/gems\/ruby-2\.1\.0\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\00003116}}
+/* line 116, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -70,24 +70,46 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-style: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/base\/_typography\.scss}line{font-family:\000039}}
+/* line 9, ../../app/styles/base/_typography.scss */
 body {
   font-family: 'questrial';
+  font-size: 1em;
   font-weight: 400;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/base\/_typography\.scss}line{font-family:\0000314}}
+/* line 15, ../../app/styles/base/_typography.scss */
 a {
   color: black;
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_layout\.scss}line{font-family:\000031}}
+/* line 20, ../../app/styles/base/_typography.scss */
+.typography-headline-huge {
+  font-size: 2.5rem;
+}
+
+/* line 28, ../../app/styles/base/_typography.scss */
+.typography-color-decent {
+  color: gray;
+}
+
+/* line 32, ../../app/styles/base/_typography.scss */
+.typography-style-underlined {
+  border-bottom: 1px solid #b3b3b3;
+  padding-bottom: 1.75rem;
+}
+
+/* line 37, ../../app/styles/base/_typography.scss */
+.typography-style-verticalrhythm {
+  margin-bottom: 1.75rem;
+}
+
+/* line 1, ../../app/styles/modules/_layout.scss */
 body {
   padding: 0.7em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_layout\.scss}line{font-family:\000036}}
+/* line 6, ../../app/styles/modules/_layout.scss */
 .row-fluid {
   display: -webkit-flex;
   display: flex;
@@ -95,13 +117,13 @@ body {
   flex-direction: row;
 }
 @media screen and (max-width: 43.75rem) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_layout\.scss}line{font-family:\000036}}
+  /* line 6, ../../app/styles/modules/_layout.scss */
   .row-fluid {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_layout\.scss}line{font-family:\0000317}}
+/* line 17, ../../app/styles/modules/_layout.scss */
 .row-fluid .span4 {
   -webkit-flex-basis: 34%;
   flex-basis: 34%;
@@ -110,24 +132,24 @@ body {
   margin: 0.7em;
 }
 @media screen and (max-width: 43.75rem) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_layout\.scss}line{font-family:\0000317}}
+  /* line 17, ../../app/styles/modules/_layout.scss */
   .row-fluid .span4 {
     -webkit-flex-basis: auto;
     flex-basis: auto;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_layout\.scss}line{font-family:\0000331}}
+/* line 31, ../../app/styles/modules/_layout.scss */
 .input-field {
   margin-top: 1em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_list-style\.scss}line{font-family:\000031}}
+/* line 1, ../../app/styles/modules/_list-style.scss */
 body {
   background: #f66b62;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_list-style\.scss}line{font-family:\000038}}
+/* line 8, ../../app/styles/modules/_list-style.scss */
 .link-list li {
   -webkit-transition-property: background, color;
   -moz-transition-property: background, color;
@@ -144,19 +166,19 @@ body {
   padding: 1.2em;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_list-style\.scss}line{font-family:\0000313}}
+/* line 13, ../../app/styles/modules/_list-style.scss */
 .link-list li:hover {
   background: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_list-style\.scss}line{font-family:\0000316}}
+/* line 16, ../../app/styles/modules/_list-style.scss */
 .link-list li:hover:after {
   content: "";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_list-style\.scss}line{font-family:\0000320}}
+/* line 20, ../../app/styles/modules/_list-style.scss */
 .link-list li:hover a {
   color: #f66b62;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_list-style\.scss}line{font-family:\0000325}}
+/* line 25, ../../app/styles/modules/_list-style.scss */
 .link-list li a {
   color: #fddddb;
   display: -webkit-box;
@@ -166,7 +188,7 @@ body {
   max-width: 10.6rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_forms\.scss}line{font-family:\000033}}
+/* line 3, ../../app/styles/modules/_forms.scss */
 .new-input {
   background: #f99892;
   border: none;
@@ -182,21 +204,21 @@ body {
   font-family: 'questrial';
   font-size: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_forms\.scss}line{font-family:\0000317}}
+/* line 17, ../../app/styles/modules/_forms.scss */
 .new-input::-webkit-input-placeholder {
   color: #f66b62;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_forms\.scss}line{font-family:\0000322}}
+/* line 22, ../../app/styles/modules/_forms.scss */
 .new-input:active, .new-input:focus {
   outline: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_buttons\.scss}line{font-family:\000032}}
+/* line 2, ../../app/styles/modules/_buttons.scss */
 * {
   outline: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_buttons\.scss}line{font-family:\000037}}
+/* line 7, ../../app/styles/modules/_buttons.scss */
 .btn {
   -webkit-transition-property: border, box-shadow, background;
   -moz-transition-property: border, box-shadow, background;
@@ -223,7 +245,7 @@ body {
   color: #fddddb;
   font-size: 0.75em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_buttons\.scss}line{font-family:\0000319}}
+/* line 19, ../../app/styles/modules/_buttons.scss */
 .btn:hover {
   background: #fddddb;
   border: 2px solid #fddddb;
@@ -232,7 +254,7 @@ body {
   box-shadow: inset 0px 0px 0px 2px #f66b62;
   color: #f66b62;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_buttons\.scss}line{font-family:\0000327}}
+/* line 27, ../../app/styles/modules/_buttons.scss */
 .btn:active {
   background: #fddddb;
   border: 2px solid #fddddb;
@@ -242,7 +264,7 @@ body {
   color: #f66b62;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_buttons\.scss}line{font-family:\0000338}}
+/* line 38, ../../app/styles/modules/_buttons.scss */
 .btn-close {
   background: #f66b62;
   display: none;
@@ -254,7 +276,17 @@ body {
   color: white;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/michaelalehr\/Dropbox\%20\(GEILDANKE\)\/gd-michaela-lehr\/_personal\/LISHT\/app\/styles\/modules\/_buttons\.scss}line{font-family:\0000357}}
+/* line 57, ../../app/styles/modules/_buttons.scss */
 .link-list li:hover .btn-close {
   display: inline;
+}
+
+/* line 1, ../../app/styles/modules/_options.scss */
+.options-container {
+  background-color: white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 97.75vh;
+  padding: 5rem;
 }

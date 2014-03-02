@@ -3,8 +3,10 @@
 angular.module('lishtApp')
 	.controller('ListCtrl', function ($scope) {
 
-		var jsonListData = localStorage.getItem('GEILDANKE-lisht');
-		//console.log(jsonListData);
+		var jsonListData = localStorage.getItem('GEILDANKE-lisht'),
+			jsonColorData = localStorage.getItem('GEILDANKE-options');
+		console.log(jsonListData);
+		console.log(jsonColorData);
 		if (jsonListData !== null) {
 			$scope.lists = JSON.parse(jsonListData);
 			// Debugging
@@ -83,4 +85,70 @@ angular.module('lishtApp')
 			jsonListData = JSON.stringify($scope.lists);
 			localStorage.setItem('GEILDANKE-lisht', jsonListData);
 		};
+
+		$scope.colors = [
+			{
+				'color': 'pink-dark'
+			},
+			{
+				'color': 'pink'
+			},
+			{
+				'color': 'pink-light'
+			},
+			{
+				'color': 'red-dark'
+			},
+			{
+				'color': 'red'
+			},
+			{
+				'color': 'red-light'
+			},
+			{
+				'color': 'orange-dark'
+			},
+			{
+				'color': 'orange'
+			},
+			{
+				'color': 'orange-light'
+			},
+			{
+				'color': 'yellow-dark'
+			},
+			{
+				'color': 'yellow'
+			},
+			{
+				'color': 'yellow-light'
+			},
+			{
+				'color': 'green-dark'
+			},
+			{
+				'color': 'green'
+			},
+			{
+				'color': 'green-light'
+			},
+			{
+				'color': 'blue-dark'
+			},
+			{
+				'color': 'blue'
+			},
+			{
+				'color': 'blue-light'
+			},
+			{
+				'color': 'black-dark'
+			},
+			{
+				'color': 'black'
+			},
+			{
+				'color': 'black-light'
+			}
+		];
 	});

@@ -1,0 +1,6 @@
+.options-container {
+	background-color: $white;
+	@include box-sizing(border-box);
+	height: 97.75vh;
+	padding: 5rem;
+}
