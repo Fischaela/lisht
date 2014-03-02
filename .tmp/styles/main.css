@@ -88,19 +88,25 @@ a {
   font-size: 2.5rem;
 }
 
-/* line 28, ../../app/styles/base/_typography.scss */
+/* line 24, ../../app/styles/base/_typography.scss */
+.typography-headline-big {
+  font-size: 1.75rem;
+}
+
+/* line 32, ../../app/styles/base/_typography.scss */
 .typography-color-decent {
   color: #b1baba;
 }
 
-/* line 32, ../../app/styles/base/_typography.scss */
+/* line 36, ../../app/styles/base/_typography.scss */
 .typography-style-underlined {
   border-bottom: 1px solid #ccd2d2;
   padding-bottom: 1.75rem;
 }
 
-/* line 37, ../../app/styles/base/_typography.scss */
+/* line 41, ../../app/styles/base/_typography.scss */
 .typography-style-verticalrhythm {
+  margin-top: 2rem;
   margin-bottom: 1.75rem;
 }
 
@@ -226,19 +232,20 @@ body,
   -ms-border-radius: 4em;
   -o-border-radius: 4em;
   border-radius: 4em;
+  cursor: pointer;
   margin: 1.2em 0 0.25em 0;
   padding: 1.2em;
   min-width: 12em;
   font-size: 0.75em;
 }
-/* line 17, ../../app/styles/modules/_buttons.scss */
+/* line 18, ../../app/styles/modules/_buttons.scss */
 .btn:active {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 24, ../../app/styles/modules/_buttons.scss */
+/* line 25, ../../app/styles/modules/_buttons.scss */
 .btn-close {
   display: none;
   cursor: pointer;
@@ -248,7 +255,16 @@ body,
   right: 1.2em;
 }
 
-/* line 40, ../../app/styles/modules/_buttons.scss */
+/* line 34, ../../app/styles/modules/_buttons.scss */
+.btn-options {
+  clear: both;
+  display: inline-block;
+  margin-top: 2rem;
+  min-width: 0rem;
+  font-size: 1rem;
+}
+
+/* line 50, ../../app/styles/modules/_buttons.scss */
 .link-list li:hover .btn-close {
   display: inline;
 }
@@ -353,39 +369,53 @@ body,
   background: #ff6698;
   color: white;
 }
-/* line 39, ../../app/styles/theme/_options.scss */
+/* line 38, ../../app/styles/theme/_options.scss */
+.pink .btn-options {
+  border: 2px solid #ff6698;
+  color: #ff6698;
+}
+/* line 43, ../../app/styles/theme/_options.scss */
+.pink .btn-options:hover {
+  background-color: #ff6698;
+  border: 2px solid #ff6698;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  box-shadow: inset 0px 0px 0px 2px white;
+  color: white;
+}
+/* line 53, ../../app/styles/theme/_options.scss */
 .pink .new-input {
   background: #ff99ba;
   color: #ffe5ee;
 }
-/* line 44, ../../app/styles/theme/_options.scss */
+/* line 58, ../../app/styles/theme/_options.scss */
 .pink .new-input::-webkit-input-placeholder {
   color: #ff6698;
 }
-/* line 56, ../../app/styles/theme/_options.scss */
+/* line 70, ../../app/styles/theme/_options.scss */
 .pink .link-list li:hover a {
   color: #ff6698;
 }
-/* line 61, ../../app/styles/theme/_options.scss */
+/* line 75, ../../app/styles/theme/_options.scss */
 .pink .link-list li a {
   color: #ffe5ee;
 }
 
-/* line 68, ../../app/styles/theme/_options.scss */
+/* line 82, ../../app/styles/theme/_options.scss */
 .pink-dark {
   background-color: #e5004b;
 }
-/* line 75, ../../app/styles/theme/_options.scss */
+/* line 89, ../../app/styles/theme/_options.scss */
 .pink-dark.options-container {
   background-color: white;
   border: 10px solid #e5004b;
 }
-/* line 81, ../../app/styles/theme/_options.scss */
+/* line 95, ../../app/styles/theme/_options.scss */
 .pink-dark .btn {
   border: 2px solid white;
   color: white;
 }
-/* line 86, ../../app/styles/theme/_options.scss */
+/* line 100, ../../app/styles/theme/_options.scss */
 .pink-dark .btn:hover {
   background: white;
   border: 2px solid white;
@@ -394,48 +424,62 @@ body,
   box-shadow: inset 0px 0px 0px 2px #e5004b;
   color: #e5004b;
 }
-/* line 94, ../../app/styles/theme/_options.scss */
+/* line 108, ../../app/styles/theme/_options.scss */
 .pink-dark .btn:active {
   color: #e5004b;
 }
-/* line 99, ../../app/styles/theme/_options.scss */
+/* line 113, ../../app/styles/theme/_options.scss */
 .pink-dark .btn-close {
   background: #e5004b;
   color: white;
 }
-/* line 106, ../../app/styles/theme/_options.scss */
+/* line 119, ../../app/styles/theme/_options.scss */
+.pink-dark .btn-options {
+  border: 2px solid #e5004b;
+  color: #e5004b;
+}
+/* line 124, ../../app/styles/theme/_options.scss */
+.pink-dark .btn-options:hover {
+  background-color: #e5004b;
+  border: 2px solid #e5004b;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  box-shadow: inset 0px 0px 0px 2px white;
+  color: white;
+}
+/* line 134, ../../app/styles/theme/_options.scss */
 .pink-dark .new-input {
   background: #ff4d87;
   color: white;
 }
-/* line 111, ../../app/styles/theme/_options.scss */
+/* line 139, ../../app/styles/theme/_options.scss */
 .pink-dark .new-input::-webkit-input-placeholder {
   color: #e5004b;
 }
-/* line 123, ../../app/styles/theme/_options.scss */
+/* line 151, ../../app/styles/theme/_options.scss */
 .pink-dark .link-list li:hover a {
   color: #e5004b;
 }
-/* line 128, ../../app/styles/theme/_options.scss */
+/* line 156, ../../app/styles/theme/_options.scss */
 .pink-dark .link-list li a {
   color: white;
 }
 
-/* line 135, ../../app/styles/theme/_options.scss */
+/* line 163, ../../app/styles/theme/_options.scss */
 .red {
   background-color: #f66b62;
 }
-/* line 142, ../../app/styles/theme/_options.scss */
+/* line 170, ../../app/styles/theme/_options.scss */
 .red.options-container {
   background-color: white;
   border: 10px solid #f66b62;
 }
-/* line 148, ../../app/styles/theme/_options.scss */
+/* line 176, ../../app/styles/theme/_options.scss */
 .red .btn {
   border: 2px solid #fddddb;
   color: #fddddb;
 }
-/* line 153, ../../app/styles/theme/_options.scss */
+/* line 181, ../../app/styles/theme/_options.scss */
 .red .btn:hover {
   background: #fddddb;
   border: 2px solid #fddddb;
@@ -444,48 +488,62 @@ body,
   box-shadow: inset 0px 0px 0px 2px #f66b62;
   color: #f66b62;
 }
-/* line 161, ../../app/styles/theme/_options.scss */
+/* line 189, ../../app/styles/theme/_options.scss */
 .red .btn:active {
   color: #f66b62;
 }
-/* line 166, ../../app/styles/theme/_options.scss */
+/* line 194, ../../app/styles/theme/_options.scss */
 .red .btn-close {
   background: #f66b62;
   color: white;
 }
-/* line 173, ../../app/styles/theme/_options.scss */
+/* line 200, ../../app/styles/theme/_options.scss */
+.red .btn-options {
+  border: 2px solid #f66b62;
+  color: #f66b62;
+}
+/* line 205, ../../app/styles/theme/_options.scss */
+.red .btn-options:hover {
+  background-color: #f66b62;
+  border: 2px solid #f66b62;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  box-shadow: inset 0px 0px 0px 2px white;
+  color: white;
+}
+/* line 215, ../../app/styles/theme/_options.scss */
 .red .new-input {
   background: #f99892;
   color: #fddddb;
 }
-/* line 178, ../../app/styles/theme/_options.scss */
+/* line 220, ../../app/styles/theme/_options.scss */
 .red .new-input::-webkit-input-placeholder {
   color: #f66b62;
 }
-/* line 190, ../../app/styles/theme/_options.scss */
+/* line 232, ../../app/styles/theme/_options.scss */
 .red .link-list li:hover a {
   color: #f66b62;
 }
-/* line 195, ../../app/styles/theme/_options.scss */
+/* line 237, ../../app/styles/theme/_options.scss */
 .red .link-list li a {
   color: #fddddb;
 }
 
-/* line 202, ../../app/styles/theme/_options.scss */
+/* line 244, ../../app/styles/theme/_options.scss */
 .red-dark {
   background-color: #cd170c;
 }
-/* line 209, ../../app/styles/theme/_options.scss */
+/* line 251, ../../app/styles/theme/_options.scss */
 .red-dark.options-container {
   background-color: white;
   border: 10px solid #cd170c;
 }
-/* line 215, ../../app/styles/theme/_options.scss */
+/* line 257, ../../app/styles/theme/_options.scss */
 .red-dark .btn {
   border: 2px solid #fef3f3;
   color: #fef3f3;
 }
-/* line 220, ../../app/styles/theme/_options.scss */
+/* line 262, ../../app/styles/theme/_options.scss */
 .red-dark .btn:hover {
   background: #fef3f3;
   border: 2px solid #fef3f3;
@@ -494,48 +552,62 @@ body,
   box-shadow: inset 0px 0px 0px 2px #cd170c;
   color: #cd170c;
 }
-/* line 228, ../../app/styles/theme/_options.scss */
+/* line 270, ../../app/styles/theme/_options.scss */
 .red-dark .btn:active {
   color: #cd170c;
 }
-/* line 233, ../../app/styles/theme/_options.scss */
+/* line 275, ../../app/styles/theme/_options.scss */
 .red-dark .btn-close {
   background: #cd170c;
   color: white;
 }
-/* line 240, ../../app/styles/theme/_options.scss */
+/* line 281, ../../app/styles/theme/_options.scss */
+.red-dark .btn-options {
+  border: 2px solid #cd170c;
+  color: #cd170c;
+}
+/* line 286, ../../app/styles/theme/_options.scss */
+.red-dark .btn-options:hover {
+  background-color: #cd170c;
+  border: 2px solid #cd170c;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  box-shadow: inset 0px 0px 0px 2px white;
+  color: white;
+}
+/* line 296, ../../app/styles/theme/_options.scss */
 .red-dark .new-input {
   background: #f5544a;
   color: #fef3f3;
 }
-/* line 245, ../../app/styles/theme/_options.scss */
+/* line 301, ../../app/styles/theme/_options.scss */
 .red-dark .new-input::-webkit-input-placeholder {
   color: #cd170c;
 }
-/* line 257, ../../app/styles/theme/_options.scss */
+/* line 313, ../../app/styles/theme/_options.scss */
 .red-dark .link-list li:hover a {
   color: #cd170c;
 }
-/* line 262, ../../app/styles/theme/_options.scss */
+/* line 318, ../../app/styles/theme/_options.scss */
 .red-dark .link-list li a {
   color: #fef3f3;
 }
 
-/* line 269, ../../app/styles/theme/_options.scss */
+/* line 325, ../../app/styles/theme/_options.scss */
 .orange {
   background-color: #ff8d66;
 }
-/* line 276, ../../app/styles/theme/_options.scss */
+/* line 332, ../../app/styles/theme/_options.scss */
 .orange.options-container {
   background-color: white;
   border: 10px solid #ff8d66;
 }
-/* line 282, ../../app/styles/theme/_options.scss */
+/* line 338, ../../app/styles/theme/_options.scss */
 .orange .btn {
   border: 2px solid #ffece5;
   color: #ffece5;
 }
-/* line 287, ../../app/styles/theme/_options.scss */
+/* line 343, ../../app/styles/theme/_options.scss */
 .orange .btn:hover {
   background: #ffece5;
   border: 2px solid #ffece5;
@@ -544,48 +616,62 @@ body,
   box-shadow: inset 0px 0px 0px 2px #ff8d66;
   color: #ff8d66;
 }
-/* line 295, ../../app/styles/theme/_options.scss */
+/* line 351, ../../app/styles/theme/_options.scss */
 .orange .btn:active {
   color: #ff8d66;
 }
-/* line 300, ../../app/styles/theme/_options.scss */
+/* line 356, ../../app/styles/theme/_options.scss */
 .orange .btn-close {
   background: #ff8d66;
   color: white;
 }
-/* line 307, ../../app/styles/theme/_options.scss */
+/* line 362, ../../app/styles/theme/_options.scss */
+.orange .btn-options {
+  border: 2px solid #ff8d66;
+  color: #ff8d66;
+}
+/* line 367, ../../app/styles/theme/_options.scss */
+.orange .btn-options:hover {
+  background-color: #ff8d66;
+  border: 2px solid #ff8d66;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  box-shadow: inset 0px 0px 0px 2px white;
+  color: white;
+}
+/* line 377, ../../app/styles/theme/_options.scss */
 .orange .new-input {
   background: #ffb399;
   color: #ffece5;
 }
-/* line 312, ../../app/styles/theme/_options.scss */
+/* line 382, ../../app/styles/theme/_options.scss */
 .orange .new-input::-webkit-input-placeholder {
   color: #ff8d66;
 }
-/* line 324, ../../app/styles/theme/_options.scss */
+/* line 394, ../../app/styles/theme/_options.scss */
 .orange .link-list li:hover a {
   color: #ff8d66;
 }
-/* line 329, ../../app/styles/theme/_options.scss */
+/* line 399, ../../app/styles/theme/_options.scss */
 .orange .link-list li a {
   color: #ffece5;
 }
 
-/* line 336, ../../app/styles/theme/_options.scss */
+/* line 406, ../../app/styles/theme/_options.scss */
 .orange-dark {
   background-color: #e53b00;
 }
-/* line 343, ../../app/styles/theme/_options.scss */
+/* line 413, ../../app/styles/theme/_options.scss */
 .orange-dark.options-container {
   background-color: white;
   border: 10px solid #e53b00;
 }
-/* line 349, ../../app/styles/theme/_options.scss */
+/* line 419, ../../app/styles/theme/_options.scss */
 .orange-dark .btn {
   border: 2px solid white;
   color: white;
 }
-/* line 354, ../../app/styles/theme/_options.scss */
+/* line 424, ../../app/styles/theme/_options.scss */
 .orange-dark .btn:hover {
   background: white;
   border: 2px solid white;
@@ -594,48 +680,62 @@ body,
   box-shadow: inset 0px 0px 0px 2px #e53b00;
   color: #e53b00;
 }
-/* line 362, ../../app/styles/theme/_options.scss */
+/* line 432, ../../app/styles/theme/_options.scss */
 .orange-dark .btn:active {
   color: #e53b00;
 }
-/* line 367, ../../app/styles/theme/_options.scss */
+/* line 437, ../../app/styles/theme/_options.scss */
 .orange-dark .btn-close {
   background: #e53b00;
   color: white;
 }
-/* line 374, ../../app/styles/theme/_options.scss */
+/* line 443, ../../app/styles/theme/_options.scss */
+.orange-dark .btn-options {
+  border: 2px solid #e53b00;
+  color: #e53b00;
+}
+/* line 448, ../../app/styles/theme/_options.scss */
+.orange-dark .btn-options:hover {
+  background-color: #e53b00;
+  border: 2px solid #e53b00;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  box-shadow: inset 0px 0px 0px 2px white;
+  color: white;
+}
+/* line 458, ../../app/styles/theme/_options.scss */
 .orange-dark .new-input {
   background: #ff7a4d;
   color: white;
 }
-/* line 379, ../../app/styles/theme/_options.scss */
+/* line 463, ../../app/styles/theme/_options.scss */
 .orange-dark .new-input::-webkit-input-placeholder {
   color: #e53b00;
 }
-/* line 391, ../../app/styles/theme/_options.scss */
+/* line 475, ../../app/styles/theme/_options.scss */
 .orange-dark .link-list li:hover a {
   color: #e53b00;
 }
-/* line 396, ../../app/styles/theme/_options.scss */
+/* line 480, ../../app/styles/theme/_options.scss */
 .orange-dark .link-list li a {
   color: white;
 }
 
-/* line 403, ../../app/styles/theme/_options.scss */
+/* line 487, ../../app/styles/theme/_options.scss */
 .yellow {
   background-color: #ffc666;
 }
-/* line 410, ../../app/styles/theme/_options.scss */
+/* line 494, ../../app/styles/theme/_options.scss */
 .yellow.options-container {
   background-color: white;
   border: 10px solid #ffc666;
 }
-/* line 416, ../../app/styles/theme/_options.scss */
+/* line 500, ../../app/styles/theme/_options.scss */
 .yellow .btn {
   border: 2px solid #fff5e5;
   color: #fff5e5;
 }
-/* line 421, ../../app/styles/theme/_options.scss */
+/* line 505, ../../app/styles/theme/_options.scss */
 .yellow .btn:hover {
   background: #fff5e5;
   border: 2px solid #fff5e5;
@@ -644,48 +744,62 @@ body,
   box-shadow: inset 0px 0px 0px 2px #ffc666;
   color: #ffc666;
 }
-/* line 429, ../../app/styles/theme/_options.scss */
+/* line 513, ../../app/styles/theme/_options.scss */
 .yellow .btn:active {
   color: #ffc666;
 }
-/* line 434, ../../app/styles/theme/_options.scss */
+/* line 518, ../../app/styles/theme/_options.scss */
 .yellow .btn-close {
   background: #ffc666;
   color: white;
 }
-/* line 441, ../../app/styles/theme/_options.scss */
+/* line 524, ../../app/styles/theme/_options.scss */
+.yellow .btn-options {
+  border: 2px solid #ffc666;
+  color: #ffc666;
+}
+/* line 529, ../../app/styles/theme/_options.scss */
+.yellow .btn-options:hover {
+  background-color: #ffc666;
+  border: 2px solid #ffc666;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  box-shadow: inset 0px 0px 0px 2px white;
+  color: white;
+}
+/* line 539, ../../app/styles/theme/_options.scss */
 .yellow .new-input {
   background: #ffd999;
   color: #fff5e5;
 }
-/* line 446, ../../app/styles/theme/_options.scss */
+/* line 544, ../../app/styles/theme/_options.scss */
 .yellow .new-input::-webkit-input-placeholder {
   color: #ffc666;
 }
-/* line 458, ../../app/styles/theme/_options.scss */
+/* line 556, ../../app/styles/theme/_options.scss */
 .yellow .link-list li:hover a {
   color: #ffc666;
 }
-/* line 463, ../../app/styles/theme/_options.scss */
+/* line 561, ../../app/styles/theme/_options.scss */
 .yellow .link-list li a {
   color: #fff5e5;
 }
 
-/* line 470, ../../app/styles/theme/_options.scss */
+/* line 568, ../../app/styles/theme/_options.scss */
 .yellow-dark {
   background-color: #e59000;
 }
-/* line 477, ../../app/styles/theme/_options.scss */
+/* line 575, ../../app/styles/theme/_options.scss */
 .yellow-dark.options-container {
   background-color: white;
   border: 10px solid #e59000;
 }
-/* line 483, ../../app/styles/theme/_options.scss */
+/* line 581, ../../app/styles/theme/_options.scss */
 .yellow-dark .btn {
   border: 2px solid white;
   color: white;
 }
-/* line 488, ../../app/styles/theme/_options.scss */
+/* line 586, ../../app/styles/theme/_options.scss */
 .yellow-dark .btn:hover {
   background: white;
   border: 2px solid white;
@@ -694,48 +808,62 @@ body,
   box-shadow: inset 0px 0px 0px 2px #e59000;
   color: #e59000;
 }
-/* line 496, ../../app/styles/theme/_options.scss */
+/* line 594, ../../app/styles/theme/_options.scss */
 .yellow-dark .btn:active {
   color: #e59000;
 }
-/* line 501, ../../app/styles/theme/_options.scss */
+/* line 599, ../../app/styles/theme/_options.scss */
 .yellow-dark .btn-close {
   background: #e59000;
   color: white;
 }
-/* line 508, ../../app/styles/theme/_options.scss */
+/* line 605, ../../app/styles/theme/_options.scss */
+.yellow-dark .btn-options {
+  border: 2px solid #e59000;
+  color: #e59000;
+}
+/* line 610, ../../app/styles/theme/_options.scss */
+.yellow-dark .btn-options:hover {
+  background-color: #e59000;
+  border: 2px solid #e59000;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  box-shadow: inset 0px 0px 0px 2px white;
+  color: white;
+}
+/* line 620, ../../app/styles/theme/_options.scss */
 .yellow-dark .new-input {
   background: #ffbd4d;
   color: white;
 }
-/* line 513, ../../app/styles/theme/_options.scss */
+/* line 625, ../../app/styles/theme/_options.scss */
 .yellow-dark .new-input::-webkit-input-placeholder {
   color: #e59000;
 }
-/* line 525, ../../app/styles/theme/_options.scss */
+/* line 637, ../../app/styles/theme/_options.scss */
 .yellow-dark .link-list li:hover a {
   color: #e59000;
 }
-/* line 530, ../../app/styles/theme/_options.scss */
+/* line 642, ../../app/styles/theme/_options.scss */
 .yellow-dark .link-list li a {
   color: white;
 }
 
-/* line 537, ../../app/styles/theme/_options.scss */
+/* line 649, ../../app/styles/theme/_options.scss */
 .green {
   background-color: #52cc82;
 }
-/* line 544, ../../app/styles/theme/_options.scss */
+/* line 656, ../../app/styles/theme/_options.scss */
 .green.options-container {
   background-color: white;
   border: 10px solid #52cc82;
 }
-/* line 550, ../../app/styles/theme/_options.scss */
+/* line 662, ../../app/styles/theme/_options.scss */
 .green .btn {
   border: 2px solid #b4e9c9;
   color: #b4e9c9;
 }
-/* line 555, ../../app/styles/theme/_options.scss */
+/* line 667, ../../app/styles/theme/_options.scss */
 .green .btn:hover {
   background: #b4e9c9;
   border: 2px solid #b4e9c9;
@@ -744,48 +872,62 @@ body,
   box-shadow: inset 0px 0px 0px 2px #52cc82;
   color: #52cc82;
 }
-/* line 563, ../../app/styles/theme/_options.scss */
+/* line 675, ../../app/styles/theme/_options.scss */
 .green .btn:active {
   color: #52cc82;
 }
-/* line 568, ../../app/styles/theme/_options.scss */
+/* line 680, ../../app/styles/theme/_options.scss */
 .green .btn-close {
   background: #52cc82;
   color: white;
 }
-/* line 575, ../../app/styles/theme/_options.scss */
+/* line 686, ../../app/styles/theme/_options.scss */
+.green .btn-options {
+  border: 2px solid #52cc82;
+  color: #52cc82;
+}
+/* line 691, ../../app/styles/theme/_options.scss */
+.green .btn-options:hover {
+  background-color: #52cc82;
+  border: 2px solid #52cc82;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  box-shadow: inset 0px 0px 0px 2px white;
+  color: white;
+}
+/* line 701, ../../app/styles/theme/_options.scss */
 .green .new-input {
   background: #79d89e;
   color: #b4e9c9;
 }
-/* line 580, ../../app/styles/theme/_options.scss */
+/* line 706, ../../app/styles/theme/_options.scss */
 .green .new-input::-webkit-input-placeholder {
   color: #52cc82;
 }
-/* line 592, ../../app/styles/theme/_options.scss */
+/* line 718, ../../app/styles/theme/_options.scss */
 .green .link-list li:hover a {
   color: #52cc82;
 }
-/* line 597, ../../app/styles/theme/_options.scss */
+/* line 723, ../../app/styles/theme/_options.scss */
 .green .link-list li a {
   color: #b4e9c9;
 }
 
-/* line 604, ../../app/styles/theme/_options.scss */
+/* line 730, ../../app/styles/theme/_options.scss */
 .green-dark {
   background-color: #247a46;
 }
-/* line 611, ../../app/styles/theme/_options.scss */
+/* line 737, ../../app/styles/theme/_options.scss */
 .green-dark.options-container {
   background-color: white;
   border: 10px solid #247a46;
 }
-/* line 617, ../../app/styles/theme/_options.scss */
+/* line 743, ../../app/styles/theme/_options.scss */
 .green-dark .btn {
   border: 2px solid #c8efd7;
   color: #c8efd7;
 }
-/* line 622, ../../app/styles/theme/_options.scss */
+/* line 748, ../../app/styles/theme/_options.scss */
 .green-dark .btn:hover {
   background: #c8efd7;
   border: 2px solid #c8efd7;
@@ -794,48 +936,62 @@ body,
   box-shadow: inset 0px 0px 0px 2px #247a46;
   color: #247a46;
 }
-/* line 630, ../../app/styles/theme/_options.scss */
+/* line 756, ../../app/styles/theme/_options.scss */
 .green-dark .btn:active {
   color: #247a46;
 }
-/* line 635, ../../app/styles/theme/_options.scss */
+/* line 761, ../../app/styles/theme/_options.scss */
 .green-dark .btn-close {
   background: #247a46;
   color: white;
 }
-/* line 642, ../../app/styles/theme/_options.scss */
+/* line 767, ../../app/styles/theme/_options.scss */
+.green-dark .btn-options {
+  border: 2px solid #247a46;
+  color: #247a46;
+}
+/* line 772, ../../app/styles/theme/_options.scss */
+.green-dark .btn-options:hover {
+  background-color: #247a46;
+  border: 2px solid #247a46;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  box-shadow: inset 0px 0px 0px 2px white;
+  color: white;
+}
+/* line 782, ../../app/styles/theme/_options.scss */
 .green-dark .new-input {
   background: #3ec674;
   color: #c8efd7;
 }
-/* line 647, ../../app/styles/theme/_options.scss */
+/* line 787, ../../app/styles/theme/_options.scss */
 .green-dark .new-input::-webkit-input-placeholder {
   color: #247a46;
 }
-/* line 659, ../../app/styles/theme/_options.scss */
+/* line 799, ../../app/styles/theme/_options.scss */
 .green-dark .link-list li:hover a {
   color: #247a46;
 }
-/* line 664, ../../app/styles/theme/_options.scss */
+/* line 804, ../../app/styles/theme/_options.scss */
 .green-dark .link-list li a {
   color: #c8efd7;
 }
 
-/* line 671, ../../app/styles/theme/_options.scss */
+/* line 811, ../../app/styles/theme/_options.scss */
 .blue {
   background-color: #50cccc;
 }
-/* line 678, ../../app/styles/theme/_options.scss */
+/* line 818, ../../app/styles/theme/_options.scss */
 .blue.options-container {
   background-color: white;
   border: 10px solid #50cccc;
 }
-/* line 684, ../../app/styles/theme/_options.scss */
+/* line 824, ../../app/styles/theme/_options.scss */
 .blue .btn {
   border: 2px solid #b3e9e9;
   color: #b3e9e9;
 }
-/* line 689, ../../app/styles/theme/_options.scss */
+/* line 829, ../../app/styles/theme/_options.scss */
 .blue .btn:hover {
   background: #b3e9e9;
   border: 2px solid #b3e9e9;
@@ -844,48 +1000,62 @@ body,
   box-shadow: inset 0px 0px 0px 2px #50cccc;
   color: #50cccc;
 }
-/* line 697, ../../app/styles/theme/_options.scss */
+/* line 837, ../../app/styles/theme/_options.scss */
 .blue .btn:active {
   color: #50cccc;
 }
-/* line 702, ../../app/styles/theme/_options.scss */
+/* line 842, ../../app/styles/theme/_options.scss */
 .blue .btn-close {
   background: #50cccc;
   color: white;
 }
-/* line 709, ../../app/styles/theme/_options.scss */
+/* line 848, ../../app/styles/theme/_options.scss */
+.blue .btn-options {
+  border: 2px solid #50cccc;
+  color: #50cccc;
+}
+/* line 853, ../../app/styles/theme/_options.scss */
+.blue .btn-options:hover {
+  background-color: #50cccc;
+  border: 2px solid #50cccc;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  box-shadow: inset 0px 0px 0px 2px white;
+  color: white;
+}
+/* line 863, ../../app/styles/theme/_options.scss */
 .blue .new-input {
   background: #77d8d8;
   color: #b3e9e9;
 }
-/* line 714, ../../app/styles/theme/_options.scss */
+/* line 868, ../../app/styles/theme/_options.scss */
 .blue .new-input::-webkit-input-placeholder {
   color: #50cccc;
 }
-/* line 726, ../../app/styles/theme/_options.scss */
+/* line 880, ../../app/styles/theme/_options.scss */
 .blue .link-list li:hover a {
   color: #50cccc;
 }
-/* line 731, ../../app/styles/theme/_options.scss */
+/* line 885, ../../app/styles/theme/_options.scss */
 .blue .link-list li a {
   color: #b3e9e9;
 }
 
-/* line 738, ../../app/styles/theme/_options.scss */
+/* line 892, ../../app/styles/theme/_options.scss */
 .blue-dark {
   background-color: #237979;
 }
-/* line 745, ../../app/styles/theme/_options.scss */
+/* line 899, ../../app/styles/theme/_options.scss */
 .blue-dark.options-container {
   background-color: white;
   border: 10px solid #237979;
 }
-/* line 751, ../../app/styles/theme/_options.scss */
+/* line 905, ../../app/styles/theme/_options.scss */
 .blue-dark .btn {
   border: 2px solid #c6efef;
   color: #c6efef;
 }
-/* line 756, ../../app/styles/theme/_options.scss */
+/* line 910, ../../app/styles/theme/_options.scss */
 .blue-dark .btn:hover {
   background: #c6efef;
   border: 2px solid #c6efef;
@@ -894,48 +1064,62 @@ body,
   box-shadow: inset 0px 0px 0px 2px #237979;
   color: #237979;
 }
-/* line 764, ../../app/styles/theme/_options.scss */
+/* line 918, ../../app/styles/theme/_options.scss */
 .blue-dark .btn:active {
   color: #237979;
 }
-/* line 769, ../../app/styles/theme/_options.scss */
+/* line 923, ../../app/styles/theme/_options.scss */
 .blue-dark .btn-close {
   background: #237979;
   color: white;
 }
-/* line 776, ../../app/styles/theme/_options.scss */
+/* line 929, ../../app/styles/theme/_options.scss */
+.blue-dark .btn-options {
+  border: 2px solid #237979;
+  color: #237979;
+}
+/* line 934, ../../app/styles/theme/_options.scss */
+.blue-dark .btn-options:hover {
+  background-color: #237979;
+  border: 2px solid #237979;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  box-shadow: inset 0px 0px 0px 2px white;
+  color: white;
+}
+/* line 944, ../../app/styles/theme/_options.scss */
 .blue-dark .new-input {
   background: #3cc6c6;
   color: #c6efef;
 }
-/* line 781, ../../app/styles/theme/_options.scss */
+/* line 949, ../../app/styles/theme/_options.scss */
 .blue-dark .new-input::-webkit-input-placeholder {
   color: #237979;
 }
-/* line 793, ../../app/styles/theme/_options.scss */
+/* line 961, ../../app/styles/theme/_options.scss */
 .blue-dark .link-list li:hover a {
   color: #237979;
 }
-/* line 798, ../../app/styles/theme/_options.scss */
+/* line 966, ../../app/styles/theme/_options.scss */
 .blue-dark .link-list li a {
   color: #c6efef;
 }
 
-/* line 805, ../../app/styles/theme/_options.scss */
+/* line 973, ../../app/styles/theme/_options.scss */
 .black {
   background-color: #4b5454;
 }
-/* line 812, ../../app/styles/theme/_options.scss */
+/* line 980, ../../app/styles/theme/_options.scss */
 .black.options-container {
   background-color: white;
   border: 10px solid #4b5454;
 }
-/* line 818, ../../app/styles/theme/_options.scss */
+/* line 986, ../../app/styles/theme/_options.scss */
 .black .btn {
   border: 2px solid #899696;
   color: #899696;
 }
-/* line 823, ../../app/styles/theme/_options.scss */
+/* line 991, ../../app/styles/theme/_options.scss */
 .black .btn:hover {
   background: #899696;
   border: 2px solid #899696;
@@ -944,48 +1128,62 @@ body,
   box-shadow: inset 0px 0px 0px 2px #4b5454;
   color: #4b5454;
 }
-/* line 831, ../../app/styles/theme/_options.scss */
+/* line 999, ../../app/styles/theme/_options.scss */
 .black .btn:active {
   color: #4b5454;
 }
-/* line 836, ../../app/styles/theme/_options.scss */
+/* line 1004, ../../app/styles/theme/_options.scss */
 .black .btn-close {
   background: #4b5454;
   color: white;
 }
-/* line 843, ../../app/styles/theme/_options.scss */
+/* line 1010, ../../app/styles/theme/_options.scss */
+.black .btn-options {
+  border: 2px solid #4b5454;
+  color: #4b5454;
+}
+/* line 1015, ../../app/styles/theme/_options.scss */
+.black .btn-options:hover {
+  background-color: #4b5454;
+  border: 2px solid #4b5454;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  box-shadow: inset 0px 0px 0px 2px white;
+  color: white;
+}
+/* line 1025, ../../app/styles/theme/_options.scss */
 .black .new-input {
   background: #636f6f;
   color: #899696;
 }
-/* line 848, ../../app/styles/theme/_options.scss */
+/* line 1030, ../../app/styles/theme/_options.scss */
 .black .new-input::-webkit-input-placeholder {
   color: #4b5454;
 }
-/* line 860, ../../app/styles/theme/_options.scss */
+/* line 1042, ../../app/styles/theme/_options.scss */
 .black .link-list li:hover a {
   color: #4b5454;
 }
-/* line 865, ../../app/styles/theme/_options.scss */
+/* line 1047, ../../app/styles/theme/_options.scss */
 .black .link-list li a {
   color: #899696;
 }
 
-/* line 872, ../../app/styles/theme/_options.scss */
+/* line 1054, ../../app/styles/theme/_options.scss */
 .black-dark {
   background-color: #0f1111;
 }
-/* line 879, ../../app/styles/theme/_options.scss */
+/* line 1061, ../../app/styles/theme/_options.scss */
 .black-dark.options-container {
   background-color: white;
   border: 10px solid #0f1111;
 }
-/* line 885, ../../app/styles/theme/_options.scss */
+/* line 1067, ../../app/styles/theme/_options.scss */
 .black-dark .btn {
   border: 2px solid #96a2a2;
   color: #96a2a2;
 }
-/* line 890, ../../app/styles/theme/_options.scss */
+/* line 1072, ../../app/styles/theme/_options.scss */
 .black-dark .btn:hover {
   background: #96a2a2;
   border: 2px solid #96a2a2;
@@ -994,48 +1192,62 @@ body,
   box-shadow: inset 0px 0px 0px 2px #0f1111;
   color: #0f1111;
 }
-/* line 898, ../../app/styles/theme/_options.scss */
+/* line 1080, ../../app/styles/theme/_options.scss */
 .black-dark .btn:active {
   color: #0f1111;
 }
-/* line 903, ../../app/styles/theme/_options.scss */
+/* line 1085, ../../app/styles/theme/_options.scss */
 .black-dark .btn-close {
   background: #0f1111;
   color: white;
 }
-/* line 910, ../../app/styles/theme/_options.scss */
+/* line 1091, ../../app/styles/theme/_options.scss */
+.black-dark .btn-options {
+  border: 2px solid #0f1111;
+  color: #0f1111;
+}
+/* line 1096, ../../app/styles/theme/_options.scss */
+.black-dark .btn-options:hover {
+  background-color: #0f1111;
+  border: 2px solid #0f1111;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  box-shadow: inset 0px 0px 0px 2px white;
+  color: white;
+}
+/* line 1106, ../../app/styles/theme/_options.scss */
 .black-dark .new-input {
   background: #3f4747;
   color: #96a2a2;
 }
-/* line 915, ../../app/styles/theme/_options.scss */
+/* line 1111, ../../app/styles/theme/_options.scss */
 .black-dark .new-input::-webkit-input-placeholder {
   color: #0f1111;
 }
-/* line 927, ../../app/styles/theme/_options.scss */
+/* line 1123, ../../app/styles/theme/_options.scss */
 .black-dark .link-list li:hover a {
   color: #0f1111;
 }
-/* line 932, ../../app/styles/theme/_options.scss */
+/* line 1128, ../../app/styles/theme/_options.scss */
 .black-dark .link-list li a {
   color: #96a2a2;
 }
 
-/* line 939, ../../app/styles/theme/_options.scss */
+/* line 1135, ../../app/styles/theme/_options.scss */
 .black-light {
   background-color: #899696;
 }
-/* line 946, ../../app/styles/theme/_options.scss */
+/* line 1142, ../../app/styles/theme/_options.scss */
 .black-light.options-container {
   background-color: white;
   border: 10px solid #899696;
 }
-/* line 952, ../../app/styles/theme/_options.scss */
+/* line 1148, ../../app/styles/theme/_options.scss */
 .black-light .btn {
   border: 2px solid #f5f6f6;
   color: #f5f6f6;
 }
-/* line 957, ../../app/styles/theme/_options.scss */
+/* line 1153, ../../app/styles/theme/_options.scss */
 .black-light .btn:hover {
   background: #f5f6f6;
   border: 2px solid #f5f6f6;
@@ -1044,29 +1256,43 @@ body,
   box-shadow: inset 0px 0px 0px 2px #899696;
   color: #899696;
 }
-/* line 965, ../../app/styles/theme/_options.scss */
+/* line 1161, ../../app/styles/theme/_options.scss */
 .black-light .btn:active {
   color: #899696;
 }
-/* line 970, ../../app/styles/theme/_options.scss */
+/* line 1166, ../../app/styles/theme/_options.scss */
 .black-light .btn-close {
   background: #899696;
   color: white;
 }
-/* line 977, ../../app/styles/theme/_options.scss */
+/* line 1172, ../../app/styles/theme/_options.scss */
+.black-light .btn-options {
+  border: 2px solid #899696;
+  color: #899696;
+}
+/* line 1177, ../../app/styles/theme/_options.scss */
+.black-light .btn-options:hover {
+  background-color: #899696;
+  border: 2px solid #899696;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  box-shadow: inset 0px 0px 0px 2px white;
+  color: white;
+}
+/* line 1187, ../../app/styles/theme/_options.scss */
 .black-light .new-input {
   background: #b1baba;
   color: #f5f6f6;
 }
-/* line 982, ../../app/styles/theme/_options.scss */
+/* line 1192, ../../app/styles/theme/_options.scss */
 .black-light .new-input::-webkit-input-placeholder {
   color: #899696;
 }
-/* line 994, ../../app/styles/theme/_options.scss */
+/* line 1204, ../../app/styles/theme/_options.scss */
 .black-light .link-list li:hover a {
   color: #899696;
 }
-/* line 999, ../../app/styles/theme/_options.scss */
+/* line 1209, ../../app/styles/theme/_options.scss */
 .black-light .link-list li a {
   color: #f5f6f6;
 }

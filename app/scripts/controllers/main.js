@@ -5,8 +5,7 @@ angular.module('lishtApp')
 
 		var jsonListData = localStorage.getItem('GEILDANKE-lisht'),
 			jsonColorData = localStorage.getItem('GEILDANKE-options');
-		console.log(jsonListData);
-		console.log(jsonColorData);
+
 		if (jsonListData !== null) {
 			$scope.lists = JSON.parse(jsonListData);
 			// Debugging
@@ -86,7 +85,13 @@ angular.module('lishtApp')
 			localStorage.setItem('GEILDANKE-lisht', jsonListData);
 		};
 
-		$scope.activeClass = 'pink';
+		if (jsonColorData !== null) {
+			$scope.activeClass = jsonColorData;
+		} else {
+			$scope.activeClass = 'pink';
+		}
+
+		console.log(jsonColorData);
 
 		$scope.colors = [
 			{
@@ -137,7 +142,10 @@ angular.module('lishtApp')
 		];
 
 		$scope.setActiveClass = function(index) {
+			var jsonColorData = '';
 			$scope.activeClass = $scope.colors[index].color;
-			console.log($scope.colors[index].color);
+			jsonColorData = $scope.activeClass;
+			// console.log(jsonColorData);
+			localStorage.setItem('GEILDANKE-options', jsonColorData);
 		};
 	});
