@@ -303,9 +303,8 @@ body,
   color: white;
   text-align: center;
 }
-
-/* line 51, ../../app/styles/modules/_options.scss */
-.options-color-box-active {
+/* line 50, ../../app/styles/modules/_options.scss */
+.options-color-box.is-active {
   -webkit-box-shadow: inset 130px 0px 0px rgba(255, 255, 255, 0.5);
   -moz-box-shadow: inset 130px 0px 0px rgba(255, 255, 255, 0.5);
   box-shadow: inset 130px 0px 0px rgba(255, 255, 255, 0.5);
@@ -374,14 +373,19 @@ body,
 
 /* line 68, ../../app/styles/theme/_options.scss */
 .pink-dark {
-  background: #e5004b;
+  background-color: #e5004b;
 }
-/* line 76, ../../app/styles/theme/_options.scss */
+/* line 75, ../../app/styles/theme/_options.scss */
+.pink-dark.options-container {
+  background-color: white;
+  border: 10px solid #e5004b;
+}
+/* line 81, ../../app/styles/theme/_options.scss */
 .pink-dark .btn {
   border: 2px solid white;
   color: white;
 }
-/* line 81, ../../app/styles/theme/_options.scss */
+/* line 86, ../../app/styles/theme/_options.scss */
 .pink-dark .btn:hover {
   background: white;
   border: 2px solid white;
@@ -390,48 +394,48 @@ body,
   box-shadow: inset 0px 0px 0px 2px #e5004b;
   color: #e5004b;
 }
-/* line 89, ../../app/styles/theme/_options.scss */
+/* line 94, ../../app/styles/theme/_options.scss */
 .pink-dark .btn:active {
   color: #e5004b;
 }
-/* line 94, ../../app/styles/theme/_options.scss */
+/* line 99, ../../app/styles/theme/_options.scss */
 .pink-dark .btn-close {
   background: #e5004b;
   color: white;
 }
-/* line 101, ../../app/styles/theme/_options.scss */
+/* line 106, ../../app/styles/theme/_options.scss */
 .pink-dark .new-input {
   background: #ff4d87;
   color: white;
 }
-/* line 106, ../../app/styles/theme/_options.scss */
+/* line 111, ../../app/styles/theme/_options.scss */
 .pink-dark .new-input::-webkit-input-placeholder {
   color: #e5004b;
 }
-/* line 118, ../../app/styles/theme/_options.scss */
+/* line 123, ../../app/styles/theme/_options.scss */
 .pink-dark .link-list li:hover a {
   color: #e5004b;
 }
-/* line 123, ../../app/styles/theme/_options.scss */
+/* line 128, ../../app/styles/theme/_options.scss */
 .pink-dark .link-list li a {
   color: white;
 }
 
-/* line 130, ../../app/styles/theme/_options.scss */
+/* line 135, ../../app/styles/theme/_options.scss */
 .red {
   background-color: #f66b62;
 }
-/* line 137, ../../app/styles/theme/_options.scss */
+/* line 142, ../../app/styles/theme/_options.scss */
 .red.options-container {
   background-color: white;
   border: 10px solid #f66b62;
 }
-/* line 143, ../../app/styles/theme/_options.scss */
+/* line 148, ../../app/styles/theme/_options.scss */
 .red .btn {
   border: 2px solid #fddddb;
   color: #fddddb;
 }
-/* line 148, ../../app/styles/theme/_options.scss */
+/* line 153, ../../app/styles/theme/_options.scss */
 .red .btn:hover {
   background: #fddddb;
   border: 2px solid #fddddb;
@@ -440,43 +444,48 @@ body,
   box-shadow: inset 0px 0px 0px 2px #f66b62;
   color: #f66b62;
 }
-/* line 156, ../../app/styles/theme/_options.scss */
+/* line 161, ../../app/styles/theme/_options.scss */
 .red .btn:active {
   color: #f66b62;
 }
-/* line 161, ../../app/styles/theme/_options.scss */
+/* line 166, ../../app/styles/theme/_options.scss */
 .red .btn-close {
   background: #f66b62;
   color: white;
 }
-/* line 168, ../../app/styles/theme/_options.scss */
+/* line 173, ../../app/styles/theme/_options.scss */
 .red .new-input {
   background: #f99892;
   color: #fddddb;
 }
-/* line 173, ../../app/styles/theme/_options.scss */
+/* line 178, ../../app/styles/theme/_options.scss */
 .red .new-input::-webkit-input-placeholder {
   color: #f66b62;
 }
-/* line 185, ../../app/styles/theme/_options.scss */
+/* line 190, ../../app/styles/theme/_options.scss */
 .red .link-list li:hover a {
   color: #f66b62;
 }
-/* line 190, ../../app/styles/theme/_options.scss */
+/* line 195, ../../app/styles/theme/_options.scss */
 .red .link-list li a {
   color: #fddddb;
 }
 
-/* line 197, ../../app/styles/theme/_options.scss */
+/* line 202, ../../app/styles/theme/_options.scss */
 .red-dark {
-  background: #cd170c;
+  background-color: #cd170c;
 }
-/* line 205, ../../app/styles/theme/_options.scss */
+/* line 209, ../../app/styles/theme/_options.scss */
+.red-dark.options-container {
+  background-color: white;
+  border: 10px solid #cd170c;
+}
+/* line 215, ../../app/styles/theme/_options.scss */
 .red-dark .btn {
   border: 2px solid #fef3f3;
   color: #fef3f3;
 }
-/* line 210, ../../app/styles/theme/_options.scss */
+/* line 220, ../../app/styles/theme/_options.scss */
 .red-dark .btn:hover {
   background: #fef3f3;
   border: 2px solid #fef3f3;
@@ -485,48 +494,48 @@ body,
   box-shadow: inset 0px 0px 0px 2px #cd170c;
   color: #cd170c;
 }
-/* line 218, ../../app/styles/theme/_options.scss */
+/* line 228, ../../app/styles/theme/_options.scss */
 .red-dark .btn:active {
   color: #cd170c;
 }
-/* line 223, ../../app/styles/theme/_options.scss */
+/* line 233, ../../app/styles/theme/_options.scss */
 .red-dark .btn-close {
   background: #cd170c;
   color: white;
 }
-/* line 230, ../../app/styles/theme/_options.scss */
+/* line 240, ../../app/styles/theme/_options.scss */
 .red-dark .new-input {
   background: #f5544a;
   color: #fef3f3;
 }
-/* line 235, ../../app/styles/theme/_options.scss */
+/* line 245, ../../app/styles/theme/_options.scss */
 .red-dark .new-input::-webkit-input-placeholder {
   color: #cd170c;
 }
-/* line 247, ../../app/styles/theme/_options.scss */
+/* line 257, ../../app/styles/theme/_options.scss */
 .red-dark .link-list li:hover a {
   color: #cd170c;
 }
-/* line 252, ../../app/styles/theme/_options.scss */
+/* line 262, ../../app/styles/theme/_options.scss */
 .red-dark .link-list li a {
   color: #fef3f3;
 }
 
-/* line 259, ../../app/styles/theme/_options.scss */
+/* line 269, ../../app/styles/theme/_options.scss */
 .orange {
   background-color: #ff8d66;
 }
-/* line 266, ../../app/styles/theme/_options.scss */
+/* line 276, ../../app/styles/theme/_options.scss */
 .orange.options-container {
   background-color: white;
   border: 10px solid #ff8d66;
 }
-/* line 272, ../../app/styles/theme/_options.scss */
+/* line 282, ../../app/styles/theme/_options.scss */
 .orange .btn {
   border: 2px solid #ffece5;
   color: #ffece5;
 }
-/* line 277, ../../app/styles/theme/_options.scss */
+/* line 287, ../../app/styles/theme/_options.scss */
 .orange .btn:hover {
   background: #ffece5;
   border: 2px solid #ffece5;
@@ -535,43 +544,48 @@ body,
   box-shadow: inset 0px 0px 0px 2px #ff8d66;
   color: #ff8d66;
 }
-/* line 285, ../../app/styles/theme/_options.scss */
+/* line 295, ../../app/styles/theme/_options.scss */
 .orange .btn:active {
   color: #ff8d66;
 }
-/* line 290, ../../app/styles/theme/_options.scss */
+/* line 300, ../../app/styles/theme/_options.scss */
 .orange .btn-close {
   background: #ff8d66;
   color: white;
 }
-/* line 297, ../../app/styles/theme/_options.scss */
+/* line 307, ../../app/styles/theme/_options.scss */
 .orange .new-input {
   background: #ffb399;
   color: #ffece5;
 }
-/* line 302, ../../app/styles/theme/_options.scss */
+/* line 312, ../../app/styles/theme/_options.scss */
 .orange .new-input::-webkit-input-placeholder {
   color: #ff8d66;
 }
-/* line 314, ../../app/styles/theme/_options.scss */
+/* line 324, ../../app/styles/theme/_options.scss */
 .orange .link-list li:hover a {
   color: #ff8d66;
 }
-/* line 319, ../../app/styles/theme/_options.scss */
+/* line 329, ../../app/styles/theme/_options.scss */
 .orange .link-list li a {
   color: #ffece5;
 }
 
-/* line 326, ../../app/styles/theme/_options.scss */
+/* line 336, ../../app/styles/theme/_options.scss */
 .orange-dark {
-  background: #e53b00;
+  background-color: #e53b00;
 }
-/* line 334, ../../app/styles/theme/_options.scss */
+/* line 343, ../../app/styles/theme/_options.scss */
+.orange-dark.options-container {
+  background-color: white;
+  border: 10px solid #e53b00;
+}
+/* line 349, ../../app/styles/theme/_options.scss */
 .orange-dark .btn {
   border: 2px solid white;
   color: white;
 }
-/* line 339, ../../app/styles/theme/_options.scss */
+/* line 354, ../../app/styles/theme/_options.scss */
 .orange-dark .btn:hover {
   background: white;
   border: 2px solid white;
@@ -580,48 +594,48 @@ body,
   box-shadow: inset 0px 0px 0px 2px #e53b00;
   color: #e53b00;
 }
-/* line 347, ../../app/styles/theme/_options.scss */
+/* line 362, ../../app/styles/theme/_options.scss */
 .orange-dark .btn:active {
   color: #e53b00;
 }
-/* line 352, ../../app/styles/theme/_options.scss */
+/* line 367, ../../app/styles/theme/_options.scss */
 .orange-dark .btn-close {
   background: #e53b00;
   color: white;
 }
-/* line 359, ../../app/styles/theme/_options.scss */
+/* line 374, ../../app/styles/theme/_options.scss */
 .orange-dark .new-input {
   background: #ff7a4d;
   color: white;
 }
-/* line 364, ../../app/styles/theme/_options.scss */
+/* line 379, ../../app/styles/theme/_options.scss */
 .orange-dark .new-input::-webkit-input-placeholder {
   color: #e53b00;
 }
-/* line 376, ../../app/styles/theme/_options.scss */
+/* line 391, ../../app/styles/theme/_options.scss */
 .orange-dark .link-list li:hover a {
   color: #e53b00;
 }
-/* line 381, ../../app/styles/theme/_options.scss */
+/* line 396, ../../app/styles/theme/_options.scss */
 .orange-dark .link-list li a {
   color: white;
 }
 
-/* line 388, ../../app/styles/theme/_options.scss */
+/* line 403, ../../app/styles/theme/_options.scss */
 .yellow {
   background-color: #ffc666;
 }
-/* line 395, ../../app/styles/theme/_options.scss */
+/* line 410, ../../app/styles/theme/_options.scss */
 .yellow.options-container {
   background-color: white;
   border: 10px solid #ffc666;
 }
-/* line 401, ../../app/styles/theme/_options.scss */
+/* line 416, ../../app/styles/theme/_options.scss */
 .yellow .btn {
   border: 2px solid #fff5e5;
   color: #fff5e5;
 }
-/* line 406, ../../app/styles/theme/_options.scss */
+/* line 421, ../../app/styles/theme/_options.scss */
 .yellow .btn:hover {
   background: #fff5e5;
   border: 2px solid #fff5e5;
@@ -630,43 +644,48 @@ body,
   box-shadow: inset 0px 0px 0px 2px #ffc666;
   color: #ffc666;
 }
-/* line 414, ../../app/styles/theme/_options.scss */
+/* line 429, ../../app/styles/theme/_options.scss */
 .yellow .btn:active {
   color: #ffc666;
 }
-/* line 419, ../../app/styles/theme/_options.scss */
+/* line 434, ../../app/styles/theme/_options.scss */
 .yellow .btn-close {
   background: #ffc666;
   color: white;
 }
-/* line 426, ../../app/styles/theme/_options.scss */
+/* line 441, ../../app/styles/theme/_options.scss */
 .yellow .new-input {
   background: #ffd999;
   color: #fff5e5;
 }
-/* line 431, ../../app/styles/theme/_options.scss */
+/* line 446, ../../app/styles/theme/_options.scss */
 .yellow .new-input::-webkit-input-placeholder {
   color: #ffc666;
 }
-/* line 443, ../../app/styles/theme/_options.scss */
+/* line 458, ../../app/styles/theme/_options.scss */
 .yellow .link-list li:hover a {
   color: #ffc666;
 }
-/* line 448, ../../app/styles/theme/_options.scss */
+/* line 463, ../../app/styles/theme/_options.scss */
 .yellow .link-list li a {
   color: #fff5e5;
 }
 
-/* line 455, ../../app/styles/theme/_options.scss */
+/* line 470, ../../app/styles/theme/_options.scss */
 .yellow-dark {
-  background: #e59000;
+  background-color: #e59000;
 }
-/* line 463, ../../app/styles/theme/_options.scss */
+/* line 477, ../../app/styles/theme/_options.scss */
+.yellow-dark.options-container {
+  background-color: white;
+  border: 10px solid #e59000;
+}
+/* line 483, ../../app/styles/theme/_options.scss */
 .yellow-dark .btn {
   border: 2px solid white;
   color: white;
 }
-/* line 468, ../../app/styles/theme/_options.scss */
+/* line 488, ../../app/styles/theme/_options.scss */
 .yellow-dark .btn:hover {
   background: white;
   border: 2px solid white;
@@ -675,48 +694,48 @@ body,
   box-shadow: inset 0px 0px 0px 2px #e59000;
   color: #e59000;
 }
-/* line 476, ../../app/styles/theme/_options.scss */
+/* line 496, ../../app/styles/theme/_options.scss */
 .yellow-dark .btn:active {
   color: #e59000;
 }
-/* line 481, ../../app/styles/theme/_options.scss */
+/* line 501, ../../app/styles/theme/_options.scss */
 .yellow-dark .btn-close {
   background: #e59000;
   color: white;
 }
-/* line 488, ../../app/styles/theme/_options.scss */
+/* line 508, ../../app/styles/theme/_options.scss */
 .yellow-dark .new-input {
   background: #ffbd4d;
   color: white;
 }
-/* line 493, ../../app/styles/theme/_options.scss */
+/* line 513, ../../app/styles/theme/_options.scss */
 .yellow-dark .new-input::-webkit-input-placeholder {
   color: #e59000;
 }
-/* line 505, ../../app/styles/theme/_options.scss */
+/* line 525, ../../app/styles/theme/_options.scss */
 .yellow-dark .link-list li:hover a {
   color: #e59000;
 }
-/* line 510, ../../app/styles/theme/_options.scss */
+/* line 530, ../../app/styles/theme/_options.scss */
 .yellow-dark .link-list li a {
   color: white;
 }
 
-/* line 517, ../../app/styles/theme/_options.scss */
+/* line 537, ../../app/styles/theme/_options.scss */
 .green {
   background-color: #52cc82;
 }
-/* line 524, ../../app/styles/theme/_options.scss */
+/* line 544, ../../app/styles/theme/_options.scss */
 .green.options-container {
   background-color: white;
   border: 10px solid #52cc82;
 }
-/* line 530, ../../app/styles/theme/_options.scss */
+/* line 550, ../../app/styles/theme/_options.scss */
 .green .btn {
   border: 2px solid #b4e9c9;
   color: #b4e9c9;
 }
-/* line 535, ../../app/styles/theme/_options.scss */
+/* line 555, ../../app/styles/theme/_options.scss */
 .green .btn:hover {
   background: #b4e9c9;
   border: 2px solid #b4e9c9;
@@ -725,43 +744,48 @@ body,
   box-shadow: inset 0px 0px 0px 2px #52cc82;
   color: #52cc82;
 }
-/* line 543, ../../app/styles/theme/_options.scss */
+/* line 563, ../../app/styles/theme/_options.scss */
 .green .btn:active {
   color: #52cc82;
 }
-/* line 548, ../../app/styles/theme/_options.scss */
+/* line 568, ../../app/styles/theme/_options.scss */
 .green .btn-close {
   background: #52cc82;
   color: white;
 }
-/* line 555, ../../app/styles/theme/_options.scss */
+/* line 575, ../../app/styles/theme/_options.scss */
 .green .new-input {
   background: #79d89e;
   color: #b4e9c9;
 }
-/* line 560, ../../app/styles/theme/_options.scss */
+/* line 580, ../../app/styles/theme/_options.scss */
 .green .new-input::-webkit-input-placeholder {
   color: #52cc82;
 }
-/* line 572, ../../app/styles/theme/_options.scss */
+/* line 592, ../../app/styles/theme/_options.scss */
 .green .link-list li:hover a {
   color: #52cc82;
 }
-/* line 577, ../../app/styles/theme/_options.scss */
+/* line 597, ../../app/styles/theme/_options.scss */
 .green .link-list li a {
   color: #b4e9c9;
 }
 
-/* line 584, ../../app/styles/theme/_options.scss */
+/* line 604, ../../app/styles/theme/_options.scss */
 .green-dark {
-  background: #247a46;
+  background-color: #247a46;
 }
-/* line 592, ../../app/styles/theme/_options.scss */
+/* line 611, ../../app/styles/theme/_options.scss */
+.green-dark.options-container {
+  background-color: white;
+  border: 10px solid #247a46;
+}
+/* line 617, ../../app/styles/theme/_options.scss */
 .green-dark .btn {
   border: 2px solid #c8efd7;
   color: #c8efd7;
 }
-/* line 597, ../../app/styles/theme/_options.scss */
+/* line 622, ../../app/styles/theme/_options.scss */
 .green-dark .btn:hover {
   background: #c8efd7;
   border: 2px solid #c8efd7;
@@ -770,48 +794,48 @@ body,
   box-shadow: inset 0px 0px 0px 2px #247a46;
   color: #247a46;
 }
-/* line 605, ../../app/styles/theme/_options.scss */
+/* line 630, ../../app/styles/theme/_options.scss */
 .green-dark .btn:active {
   color: #247a46;
 }
-/* line 610, ../../app/styles/theme/_options.scss */
+/* line 635, ../../app/styles/theme/_options.scss */
 .green-dark .btn-close {
   background: #247a46;
   color: white;
 }
-/* line 617, ../../app/styles/theme/_options.scss */
+/* line 642, ../../app/styles/theme/_options.scss */
 .green-dark .new-input {
   background: #3ec674;
   color: #c8efd7;
 }
-/* line 622, ../../app/styles/theme/_options.scss */
+/* line 647, ../../app/styles/theme/_options.scss */
 .green-dark .new-input::-webkit-input-placeholder {
   color: #247a46;
 }
-/* line 634, ../../app/styles/theme/_options.scss */
+/* line 659, ../../app/styles/theme/_options.scss */
 .green-dark .link-list li:hover a {
   color: #247a46;
 }
-/* line 639, ../../app/styles/theme/_options.scss */
+/* line 664, ../../app/styles/theme/_options.scss */
 .green-dark .link-list li a {
   color: #c8efd7;
 }
 
-/* line 646, ../../app/styles/theme/_options.scss */
+/* line 671, ../../app/styles/theme/_options.scss */
 .blue {
   background-color: #50cccc;
 }
-/* line 653, ../../app/styles/theme/_options.scss */
+/* line 678, ../../app/styles/theme/_options.scss */
 .blue.options-container {
   background-color: white;
   border: 10px solid #50cccc;
 }
-/* line 659, ../../app/styles/theme/_options.scss */
+/* line 684, ../../app/styles/theme/_options.scss */
 .blue .btn {
   border: 2px solid #b3e9e9;
   color: #b3e9e9;
 }
-/* line 664, ../../app/styles/theme/_options.scss */
+/* line 689, ../../app/styles/theme/_options.scss */
 .blue .btn:hover {
   background: #b3e9e9;
   border: 2px solid #b3e9e9;
@@ -820,43 +844,48 @@ body,
   box-shadow: inset 0px 0px 0px 2px #50cccc;
   color: #50cccc;
 }
-/* line 672, ../../app/styles/theme/_options.scss */
+/* line 697, ../../app/styles/theme/_options.scss */
 .blue .btn:active {
   color: #50cccc;
 }
-/* line 677, ../../app/styles/theme/_options.scss */
+/* line 702, ../../app/styles/theme/_options.scss */
 .blue .btn-close {
   background: #50cccc;
   color: white;
 }
-/* line 684, ../../app/styles/theme/_options.scss */
+/* line 709, ../../app/styles/theme/_options.scss */
 .blue .new-input {
   background: #77d8d8;
   color: #b3e9e9;
 }
-/* line 689, ../../app/styles/theme/_options.scss */
+/* line 714, ../../app/styles/theme/_options.scss */
 .blue .new-input::-webkit-input-placeholder {
   color: #50cccc;
 }
-/* line 701, ../../app/styles/theme/_options.scss */
+/* line 726, ../../app/styles/theme/_options.scss */
 .blue .link-list li:hover a {
   color: #50cccc;
 }
-/* line 706, ../../app/styles/theme/_options.scss */
+/* line 731, ../../app/styles/theme/_options.scss */
 .blue .link-list li a {
   color: #b3e9e9;
 }
 
-/* line 713, ../../app/styles/theme/_options.scss */
+/* line 738, ../../app/styles/theme/_options.scss */
 .blue-dark {
-  background: #237979;
+  background-color: #237979;
 }
-/* line 721, ../../app/styles/theme/_options.scss */
+/* line 745, ../../app/styles/theme/_options.scss */
+.blue-dark.options-container {
+  background-color: white;
+  border: 10px solid #237979;
+}
+/* line 751, ../../app/styles/theme/_options.scss */
 .blue-dark .btn {
   border: 2px solid #c6efef;
   color: #c6efef;
 }
-/* line 726, ../../app/styles/theme/_options.scss */
+/* line 756, ../../app/styles/theme/_options.scss */
 .blue-dark .btn:hover {
   background: #c6efef;
   border: 2px solid #c6efef;
@@ -865,48 +894,48 @@ body,
   box-shadow: inset 0px 0px 0px 2px #237979;
   color: #237979;
 }
-/* line 734, ../../app/styles/theme/_options.scss */
+/* line 764, ../../app/styles/theme/_options.scss */
 .blue-dark .btn:active {
   color: #237979;
 }
-/* line 739, ../../app/styles/theme/_options.scss */
+/* line 769, ../../app/styles/theme/_options.scss */
 .blue-dark .btn-close {
   background: #237979;
   color: white;
 }
-/* line 746, ../../app/styles/theme/_options.scss */
+/* line 776, ../../app/styles/theme/_options.scss */
 .blue-dark .new-input {
   background: #3cc6c6;
   color: #c6efef;
 }
-/* line 751, ../../app/styles/theme/_options.scss */
+/* line 781, ../../app/styles/theme/_options.scss */
 .blue-dark .new-input::-webkit-input-placeholder {
   color: #237979;
 }
-/* line 763, ../../app/styles/theme/_options.scss */
+/* line 793, ../../app/styles/theme/_options.scss */
 .blue-dark .link-list li:hover a {
   color: #237979;
 }
-/* line 768, ../../app/styles/theme/_options.scss */
+/* line 798, ../../app/styles/theme/_options.scss */
 .blue-dark .link-list li a {
   color: #c6efef;
 }
 
-/* line 775, ../../app/styles/theme/_options.scss */
+/* line 805, ../../app/styles/theme/_options.scss */
 .black {
   background-color: #4b5454;
 }
-/* line 782, ../../app/styles/theme/_options.scss */
+/* line 812, ../../app/styles/theme/_options.scss */
 .black.options-container {
   background-color: white;
   border: 10px solid #4b5454;
 }
-/* line 788, ../../app/styles/theme/_options.scss */
+/* line 818, ../../app/styles/theme/_options.scss */
 .black .btn {
   border: 2px solid #899696;
   color: #899696;
 }
-/* line 793, ../../app/styles/theme/_options.scss */
+/* line 823, ../../app/styles/theme/_options.scss */
 .black .btn:hover {
   background: #899696;
   border: 2px solid #899696;
@@ -915,43 +944,48 @@ body,
   box-shadow: inset 0px 0px 0px 2px #4b5454;
   color: #4b5454;
 }
-/* line 801, ../../app/styles/theme/_options.scss */
+/* line 831, ../../app/styles/theme/_options.scss */
 .black .btn:active {
   color: #4b5454;
 }
-/* line 806, ../../app/styles/theme/_options.scss */
+/* line 836, ../../app/styles/theme/_options.scss */
 .black .btn-close {
   background: #4b5454;
   color: white;
 }
-/* line 813, ../../app/styles/theme/_options.scss */
+/* line 843, ../../app/styles/theme/_options.scss */
 .black .new-input {
   background: #636f6f;
   color: #899696;
 }
-/* line 818, ../../app/styles/theme/_options.scss */
+/* line 848, ../../app/styles/theme/_options.scss */
 .black .new-input::-webkit-input-placeholder {
   color: #4b5454;
 }
-/* line 830, ../../app/styles/theme/_options.scss */
+/* line 860, ../../app/styles/theme/_options.scss */
 .black .link-list li:hover a {
   color: #4b5454;
 }
-/* line 835, ../../app/styles/theme/_options.scss */
+/* line 865, ../../app/styles/theme/_options.scss */
 .black .link-list li a {
   color: #899696;
 }
 
-/* line 842, ../../app/styles/theme/_options.scss */
+/* line 872, ../../app/styles/theme/_options.scss */
 .black-dark {
-  background: #0f1111;
+  background-color: #0f1111;
 }
-/* line 850, ../../app/styles/theme/_options.scss */
+/* line 879, ../../app/styles/theme/_options.scss */
+.black-dark.options-container {
+  background-color: white;
+  border: 10px solid #0f1111;
+}
+/* line 885, ../../app/styles/theme/_options.scss */
 .black-dark .btn {
   border: 2px solid #96a2a2;
   color: #96a2a2;
 }
-/* line 855, ../../app/styles/theme/_options.scss */
+/* line 890, ../../app/styles/theme/_options.scss */
 .black-dark .btn:hover {
   background: #96a2a2;
   border: 2px solid #96a2a2;
@@ -960,43 +994,48 @@ body,
   box-shadow: inset 0px 0px 0px 2px #0f1111;
   color: #0f1111;
 }
-/* line 863, ../../app/styles/theme/_options.scss */
+/* line 898, ../../app/styles/theme/_options.scss */
 .black-dark .btn:active {
   color: #0f1111;
 }
-/* line 868, ../../app/styles/theme/_options.scss */
+/* line 903, ../../app/styles/theme/_options.scss */
 .black-dark .btn-close {
   background: #0f1111;
   color: white;
 }
-/* line 875, ../../app/styles/theme/_options.scss */
+/* line 910, ../../app/styles/theme/_options.scss */
 .black-dark .new-input {
   background: #3f4747;
   color: #96a2a2;
 }
-/* line 880, ../../app/styles/theme/_options.scss */
+/* line 915, ../../app/styles/theme/_options.scss */
 .black-dark .new-input::-webkit-input-placeholder {
   color: #0f1111;
 }
-/* line 892, ../../app/styles/theme/_options.scss */
+/* line 927, ../../app/styles/theme/_options.scss */
 .black-dark .link-list li:hover a {
   color: #0f1111;
 }
-/* line 897, ../../app/styles/theme/_options.scss */
+/* line 932, ../../app/styles/theme/_options.scss */
 .black-dark .link-list li a {
   color: #96a2a2;
 }
 
-/* line 904, ../../app/styles/theme/_options.scss */
+/* line 939, ../../app/styles/theme/_options.scss */
 .black-light {
-  background: #899696;
+  background-color: #899696;
 }
-/* line 912, ../../app/styles/theme/_options.scss */
+/* line 946, ../../app/styles/theme/_options.scss */
+.black-light.options-container {
+  background-color: white;
+  border: 10px solid #899696;
+}
+/* line 952, ../../app/styles/theme/_options.scss */
 .black-light .btn {
   border: 2px solid #f5f6f6;
   color: #f5f6f6;
 }
-/* line 917, ../../app/styles/theme/_options.scss */
+/* line 957, ../../app/styles/theme/_options.scss */
 .black-light .btn:hover {
   background: #f5f6f6;
   border: 2px solid #f5f6f6;
@@ -1005,29 +1044,29 @@ body,
   box-shadow: inset 0px 0px 0px 2px #899696;
   color: #899696;
 }
-/* line 925, ../../app/styles/theme/_options.scss */
+/* line 965, ../../app/styles/theme/_options.scss */
 .black-light .btn:active {
   color: #899696;
 }
-/* line 930, ../../app/styles/theme/_options.scss */
+/* line 970, ../../app/styles/theme/_options.scss */
 .black-light .btn-close {
   background: #899696;
   color: white;
 }
-/* line 937, ../../app/styles/theme/_options.scss */
+/* line 977, ../../app/styles/theme/_options.scss */
 .black-light .new-input {
   background: #b1baba;
   color: #f5f6f6;
 }
-/* line 942, ../../app/styles/theme/_options.scss */
+/* line 982, ../../app/styles/theme/_options.scss */
 .black-light .new-input::-webkit-input-placeholder {
   color: #899696;
 }
-/* line 954, ../../app/styles/theme/_options.scss */
+/* line 994, ../../app/styles/theme/_options.scss */
 .black-light .link-list li:hover a {
   color: #899696;
 }
-/* line 959, ../../app/styles/theme/_options.scss */
+/* line 999, ../../app/styles/theme/_options.scss */
 .black-light .link-list li a {
   color: #f5f6f6;
 }

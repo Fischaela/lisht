@@ -2,6 +2,6 @@
 	<h1 class="typography-headline-huge typography-color-decent typography-style-underlined typography-style-verticalrhythm">Options</h1>
 	<p class="typography-copy-ui-info typography-color-decent typography-style-verticalrhythm">Please choose your favorite color.</p>
 	<ul class="options-row-fluid color-list">
-		<li class="options-span options-color-box {{color.color}}" ng-repeat="color in colors"></li>
+		<li class="options-span options-color-box {{color.color}}" ng-repeat="color in colors" ng-click="setActiveClass($index)"></li>
 	</ul>
 </sectio

@@ -46,12 +46,12 @@
 			text-align: center;
 		}
 	}
-}
 
-.options-color-box-active {
-	@include box-shadow(
-		inset 130px 0px 0px rgba(255, 255, 255, 0.5)
-		);
+	&.is-active {
+		@include box-shadow(
+			inset 130px 0px 0px rgba(255, 255, 255, 0.5)
+			);
+	}
 }
 
 .options-color-box-active:before {

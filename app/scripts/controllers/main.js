@@ -135,4 +135,9 @@ angular.module('lishtApp')
 				color: 'black-light'
 			}
 		];
+
+		$scope.setActiveClass = function(index) {
+			$scope.activeClass = $scope.colors[index].color;
+			console.log($scope.colors[index].color);
+		};
 	});
