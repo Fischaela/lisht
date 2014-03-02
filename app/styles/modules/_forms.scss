@@ -1,7 +1,6 @@
 // Styling the forms
 
 .new-input {
-	background: $color-alpha;
 	border: none;
 	@include box-shadow(none);
 	display: block;
@@ -10,13 +9,8 @@
 	width: 100%;
 	box-sizing: border-box;
 
-	color: $color-light;
 	font-family: 'questrial';
 	font-size: 1em;
-
-	&::-webkit-input-placeholder {
-	   color: $color;
-	}
 
 	&:active,
 	&:focus {

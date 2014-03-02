@@ -11,3 +11,15 @@ angular.module('lishtApp', [])
         redirectTo: '/'
       });
   }]);
+
+angular.module('lishtOptionsApp', [])
+  .config(['$routeProvider', function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'views/options.html',
+        controller: 'OptionsCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  }]);
