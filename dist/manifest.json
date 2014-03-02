@@ -4,23 +4,24 @@
 	"name": "LISHT",
 	"short_name": "Make the most of a new tab",
 	"description": "This extension helps you save your favorite webpages.",
-	"version": "0.7.0.2",
+	"version": "0.7.0.3",
 
 	"browser_action": {
 		"default_icon": {
 			"19": "icon-19.png",
-			"38": "icon-38.png"
+			"38": "icon-38.png",
+			"128": "icon-128.png"
 		},
 		"default_title": "Open a new tab to view your lisht"
 	},
 
-	"content_scripts": [
-		{
-			"matches": ["http://*/*"],
-			"js": ["scripts/scripts.js", "scripts/extension.js"],
-			"run_at": "document_start"
-		}
-	],
+	// "content_scripts": [
+	// 	{
+	// 		"matches": ["http://*/*"],
+	// 		"js": ["scripts/scripts.js", "scripts/extension.js"],
+	// 		"run_at": "document_start"
+	// 	}
+	// ],
 
 	"chrome_url_overrides" : {
 		"newtab": "index.html"
