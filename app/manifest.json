@@ -5,12 +5,19 @@
 	"short_name": "Make the most of a new tab",
 	"description": "This extension helps you save your favorite webpages.",
 	"version": "0.7.0.3",
+	"author": "Michaela Lehr @fischaelameer",
+
+	"icons": {
+		"19": "Icon-19.png",
+		"38": "Icon-38.png",
+		"48": "Icon-48.png",
+		"128": "Icon-128.png"
+	},
 
 	"browser_action": {
 		"default_icon": {
-			"19": "icon-19.png",
-			"38": "icon-38.png",
-			"128": "icon-128.png"
+			"19": "Icon-19.png",
+			"38": "Icon-38.png"
 		},
 		"default_title": "Open a new tab to view your lisht"
 	},
