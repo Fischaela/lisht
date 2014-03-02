@@ -3,7 +3,12 @@
 	$color-light: lighten($color, 25%);
 	$color-alpha: lighten($color, 10%);
 
-	background: $color;
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
 
 	// Theming _buttons.scss
 	.btn {
@@ -127,7 +132,12 @@
 	$color-light: lighten($color, 25%);
 	$color-alpha: lighten($color, 10%);
 
-	background: $color;
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
 
 	// Theming _buttons.scss
 	.btn {
@@ -251,7 +261,12 @@
 	$color-light: lighten($color, 25%);
 	$color-alpha: lighten($color, 10%);
 
-	background: $color;
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
 
 	// Theming _buttons.scss
 	.btn {
@@ -375,7 +390,12 @@
 	$color-light: lighten($color, 25%);
 	$color-alpha: lighten($color, 10%);
 
-	background: $color;
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
 
 	// Theming _buttons.scss
 	.btn {
@@ -499,7 +519,12 @@
 	$color-light: lighten($color, 25%);
 	$color-alpha: lighten($color, 10%);
 
-	background: $color;
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
 
 	// Theming _buttons.scss
 	.btn {
@@ -623,7 +648,12 @@
 	$color-light: lighten($color, 25%);
 	$color-alpha: lighten($color, 10%);
 
-	background: $color;
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
 
 	// Theming _buttons.scss
 	.btn {
@@ -747,7 +777,12 @@
 	$color-light: lighten($color, 25%);
 	$color-alpha: lighten($color, 10%);
 
-	background: $color;
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
 
 	// Theming _buttons.scss
 	.btn {

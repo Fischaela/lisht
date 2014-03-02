@@ -1,7 +1,6 @@
 .options-container {
 	background-color: $white;
 	@include box-sizing(border-box);
-	height: 97.75vh;
 	padding: 5rem;
 }
 
@@ -33,7 +32,7 @@
 
 	&:hover {
 		@include box-shadow(
-			inset 130px 0px 0px rgba(255, 255, 255, 0.25)
+			inset 130px 0px 0px rgba(255, 255, 255, 0.1)
 			);
 
 		&:before {
