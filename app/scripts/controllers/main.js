@@ -94,16 +94,10 @@ angular.module('lishtApp')
 				'color': 'pink'
 			},
 			{
-				'color': 'pink-light'
-			},
-			{
 				'color': 'red-dark'
 			},
 			{
 				'color': 'red'
-			},
-			{
-				'color': 'red-light'
 			},
 			{
 				'color': 'orange-dark'
@@ -112,16 +106,10 @@ angular.module('lishtApp')
 				'color': 'orange'
 			},
 			{
-				'color': 'orange-light'
-			},
-			{
 				'color': 'yellow-dark'
 			},
 			{
 				'color': 'yellow'
-			},
-			{
-				'color': 'yellow-light'
 			},
 			{
 				'color': 'green-dark'
@@ -130,16 +118,10 @@ angular.module('lishtApp')
 				'color': 'green'
 			},
 			{
-				'color': 'green-light'
-			},
-			{
 				'color': 'blue-dark'
 			},
 			{
 				'color': 'blue'
-			},
-			{
-				'color': 'blue-light'
 			},
 			{
 				'color': 'black-dark'
