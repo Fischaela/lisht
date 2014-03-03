@@ -116,7 +116,7 @@ body,
 .container,
 .options-container,
 .row-fluid {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* line 10, ../../app/styles/modules/_layout.scss */
@@ -133,7 +133,7 @@ body,
     flex-direction: column;
   }
 }
-/* line 21, ../../app/styles/modules/_layout.scss */
+/* line 22, ../../app/styles/modules/_layout.scss */
 .row-fluid .span4 {
   -webkit-flex-basis: 34%;
   flex-basis: 34%;
@@ -142,19 +142,26 @@ body,
   margin: 0.7em;
 }
 @media screen and (max-width: 43.75rem) {
-  /* line 21, ../../app/styles/modules/_layout.scss */
+  /* line 22, ../../app/styles/modules/_layout.scss */
   .row-fluid .span4 {
     -webkit-flex-basis: auto;
     flex-basis: auto;
   }
 }
 
-/* line 35, ../../app/styles/modules/_layout.scss */
+/* line 36, ../../app/styles/modules/_layout.scss */
 .input-field {
   margin-top: 1em;
 }
 
-/* line 4, ../../app/styles/modules/_list-style.scss */
+/* line 2, ../../app/styles/modules/_list-style.scss */
+[draggable] {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: element;
+}
+
+/* line 12, ../../app/styles/modules/_list-style.scss */
 .link-list li {
   -webkit-transition-property: background, color;
   -moz-transition-property: background, color;
@@ -171,15 +178,15 @@ body,
   padding: 1.2em;
   position: relative;
 }
-/* line 9, ../../app/styles/modules/_list-style.scss */
+/* line 17, ../../app/styles/modules/_list-style.scss */
 .link-list li:hover {
   background: white;
 }
-/* line 12, ../../app/styles/modules/_list-style.scss */
+/* line 20, ../../app/styles/modules/_list-style.scss */
 .link-list li:hover:after {
   content: "";
 }
-/* line 17, ../../app/styles/modules/_list-style.scss */
+/* line 25, ../../app/styles/modules/_list-style.scss */
 .link-list li a {
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -264,8 +271,34 @@ body,
   font-size: 1rem;
 }
 
-/* line 50, ../../app/styles/modules/_buttons.scss */
-.link-list li:hover .btn-close {
+/* line 43, ../../app/styles/modules/_buttons.scss */
+.btn-draggable {
+  background-image: url("../images/draganddrop.png");
+  -webkit-transition-property: background-image;
+  -moz-transition-property: background-image;
+  -o-transition-property: background-image;
+  transition-property: background-image;
+  -webkit-transition-duration: 0.15s;
+  -moz-transition-duration: 0.15s;
+  -o-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  cursor: move;
+  display: none;
+  margin: 0.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 92%;
+}
+
+/* line 64, ../../app/styles/modules/_buttons.scss */
+.link-list li:hover .btn-close,
+.link-list li:hover .btn-draggable {
   display: inline;
 }
 

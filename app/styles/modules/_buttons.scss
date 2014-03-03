@@ -40,14 +40,28 @@
 	font-size: 1rem;
 }
 
-// Make close button visible on hover 
+.btn-draggable {
+	background-image: url("../images/draganddrop.png");
+	@include btn-animation-draggable;
+	cursor: move;
+	display: none;
+	margin: 0.5%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 12px;
+	height: 92%;
+}
+
+// Make close and draggable buttons visible on hover 
 .link-list {
 
 	li {
 
 		&:hover {
 
-			.btn-close {
+			.btn-close,
+			.btn-draggable {
 				display: inline;
 			}
 		}
