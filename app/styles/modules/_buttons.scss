@@ -46,11 +46,16 @@
 	cursor: move;
 	display: none;
 	margin: 0.5%;
+	opacity: 0.6;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 12px;
 	height: 92%;
+
+	&:hover {
+		opacity: 1;
+	}
 }
 
 // Make close and draggable buttons visible on hover 
