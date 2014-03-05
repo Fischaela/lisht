@@ -92,6 +92,6 @@ angular.module('lishtApp')
 		};
 
 		$scope.$watch('lists', function() {
-			// window.alert('Item has been dropped');
+			
 		});
 	});
