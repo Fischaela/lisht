@@ -49,8 +49,7 @@ angular.module('lishtApp')
 				el.addEventListener(
 					'drop',
 					function(e) {
-						var that = this;
-						// console.log(this);
+						var hyperlink;
 
 						// Stops some browsers from redirecting.
 						if (e.stopPropagation) {
@@ -59,14 +58,10 @@ angular.module('lishtApp')
 
 						this.classList.remove('over');
 
-						var item = document.getElementById(e.dataTransfer.getData('Text'));
-						console.log(this);
-						console.log(item);
-
+						hyperlink = JSON.parse(e.dataTransfer.getData('text'));
 						scope.$apply(function () {
-							that.appendChild(item);
+							scope.list.hyperlinks.push(hyperlink);
 						});
-
 
 						return false;
 					},
