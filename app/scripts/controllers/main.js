@@ -90,4 +90,8 @@ angular.module('lishtApp')
 			jsonListData = JSON.stringify($scope.lists);
 			localStorage.setItem('GEILDANKE-lisht', jsonListData);
 		};
+
+		$scope.$watch('lists', function() {
+			// window.alert('Item has been dropped');
+		});
 	});

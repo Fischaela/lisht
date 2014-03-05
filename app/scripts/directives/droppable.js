@@ -3,11 +3,11 @@
 angular.module('lishtApp')
 	.directive('droppable', function () {
 		return {
-			// scope: {
-			// 	drop: '&',
-			// 	bin: '=' // bi-directional scope
-			// },
-			link: function (scope, element, index) {
+			scope: {
+				list: '=',
+				drop: '&'
+			},
+			link: function (scope, element) {
 				// again we need the native object
 				var el = element[0];
 				// console.log(el);
@@ -49,6 +49,7 @@ angular.module('lishtApp')
 				el.addEventListener(
 					'drop',
 					function(e) {
+						var that = this;
 						// console.log(this);
 
 						// Stops some browsers from redirecting.
@@ -62,7 +63,10 @@ angular.module('lishtApp')
 						console.log(this);
 						console.log(item);
 
-						this.appendChild(item);
+						scope.$apply(function () {
+							that.appendChild(item);
+						});
+
 
 						return false;
 					},
