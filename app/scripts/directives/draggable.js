@@ -9,7 +9,10 @@ angular.module('lishtApp')
 			},
 			link: function (scope, element) {
 				// this gives us the native JS object
-				var el = element[0];
+				var el = element[0],
+					jsonListData = localStorage.getItem('GEILDANKE-lisht');
+
+				console.log(jsonListData);
 
 				el.draggable = true;
 
@@ -40,6 +43,17 @@ angular.module('lishtApp')
 					},
 					false
 				);
+
+				scope.deleteListItem = function (parentIndex, index) {
+					scope.lists = JSON.parse(jsonListData);
+
+					scope.parentList.hyperlinks.splice(index, 1);
+					scope.lists[parentIndex].hyperlinks.splice(index, 1);
+
+
+					jsonListData = JSON.stringify(scope.lists);
+					localStorage.setItem('GEILDANKE-lisht', jsonListData);
+				};
 			}
 		};
 	});

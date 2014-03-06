@@ -15,7 +15,8 @@ angular.module('lishtApp')
 		if (jsonListData !== null) {
 			$scope.lists = JSON.parse(jsonListData);
 			// Debugging
-			// console.log('Local storage data loaded');
+			// console.log(jsonListData);
+			// localStorage.clear();
 		} else {
 			// Debugging
 			// console.log('JSON data loaded');
@@ -84,14 +85,8 @@ angular.module('lishtApp')
 			localStorage.setItem('GEILDANKE-lisht', jsonListData);
 		};
 
-		$scope.deleteListItem = function(index, parent) {
-			var jsonListData = '';
-			$scope.lists[parent].hyperlinks.splice(index, 1);
-			jsonListData = JSON.stringify($scope.lists);
+		$scope.$watch('lists', function(list) {
+			jsonListData = JSON.stringify(list);
 			localStorage.setItem('GEILDANKE-lisht', jsonListData);
-		};
-
-		$scope.$watch('lists', function() {
-			
 		});
 	});
