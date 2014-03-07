@@ -5,7 +5,8 @@ angular.module('lishtApp')
 		return {
 			scope: {
 				hyperlink: '=draggable',
-				parentList: '=parent'
+				parentList: '=parent',
+				all: '='
 			},
 			link: function (scope, element) {
 				// this gives us the native JS object
@@ -44,14 +45,14 @@ angular.module('lishtApp')
 					false
 				);
 
+				// WHY IS THE SCOPE UNDEFINED?!
 				scope.deleteListItem = function (parentIndex, index) {
-					scope.lists = JSON.parse(jsonListData);
+					console.log(scope.all[parentIndex]);
 
-					scope.parentList.hyperlinks.splice(index, 1);
-					scope.lists[parentIndex].hyperlinks.splice(index, 1);
+					scope.all[parentIndex].hyperlinks.splice(index, 1);
+					// scope.lists[parentIndex].hyperlinks.splice(index, 1);
 
-
-					jsonListData = JSON.stringify(scope.lists);
+					jsonListData = JSON.stringify(scope.all);
 					localStorage.setItem('GEILDANKE-lisht', jsonListData);
 				};
 			}
