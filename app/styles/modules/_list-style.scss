@@ -8,7 +8,8 @@
 
 // Styling the links
 .link-list {
-	
+	border: 1px solid transparent;
+
 	li {
 		@include list-animation;
 		padding: 1.2em;
