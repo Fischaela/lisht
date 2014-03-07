@@ -1,6 +1,6 @@
 <ul class="row-fluid" ng-class="[activeClass]">
-	<li class="span4" grandparent="grandparent" ng-repeat="list in lists" id="list-{{$index + 1}}">
-		<ul class="link-list" droppable drop="list" list="list">
+	<li class="span4" ng-repeat="list in lists" id="list-{{$index + 1}}">
+		<ul class="link-list" droppable drop="list" list="list" all="lists">
 			<li draggable="hyperlink" parent="list" ng-repeat="hyperlink in list.hyperlinks" id="{{$parent.$index}}"><i class="btn-draggable">&nbsp;</i><a href="{{hyperlink.url}}" target="_blank">{{hyperlink.name}}</a><i class="btn-close" ng-click="deleteListItem($parent.$parent.$parent.$index, $parent.$index)">x</i></li>
 		</ul>
 		<form class="input-field" ng-submit="addListItem($index)">

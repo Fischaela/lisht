@@ -5,12 +5,13 @@ angular.module('lishtApp')
 		return {
 			scope: {
 				list: '=',
-				drop: '&'
+				drop: '&',
+				all: '='
 			},
 			link: function (scope, element) {
 				// again we need the native object
-				var el = element[0];
-				// console.log(el);
+				var el = element[0],
+					jsonListData = localStorage.getItem('GEILDANKE-lisht');
 
 				el.addEventListener(
 					'dragover',
@@ -28,7 +29,7 @@ angular.module('lishtApp')
 
 				el.addEventListener(
 					'dragenter',
-					function(e) {
+					function() {
 						// console.log(e);
 						this.classList.add('over');
 						return false;
@@ -38,7 +39,7 @@ angular.module('lishtApp')
 
 				el.addEventListener(
 					'dragleave',
-					function(e) {
+					function() {
 						// console.log(e);
 						this.classList.remove('over');
 						return false;
@@ -49,7 +50,8 @@ angular.module('lishtApp')
 				el.addEventListener(
 					'drop',
 					function(e) {
-						var hyperlink;
+						var hyperlink,
+							index = scope.all.indexOf(scope.list);
 
 						// Stops some browsers from redirecting.
 						if (e.stopPropagation) {
@@ -59,9 +61,12 @@ angular.module('lishtApp')
 						this.classList.remove('over');
 
 						hyperlink = JSON.parse(e.dataTransfer.getData('text'));
-						scope.$apply(function () {
-							scope.list.hyperlinks.push(hyperlink);
+						scope.$apply( function () {
+							scope.all[index].hyperlinks.push(hyperlink);
 						});
+
+						jsonListData = JSON.stringify(scope.all);
+						localStorage.setItem('GEILDANKE-lisht', jsonListData);
 
 						return false;
 					},

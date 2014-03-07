@@ -12,7 +12,7 @@ angular.module('lishtApp')
 				var el = element[0],
 					jsonListData = localStorage.getItem('GEILDANKE-lisht');
 
-				console.log(jsonListData);
+				// console.log(jsonListData);
 
 				el.draggable = true;
 
@@ -20,7 +20,7 @@ angular.module('lishtApp')
 					'dragstart',
 					function(e) {
 						var index = this.id;
-						console.log(index);
+						// console.log(index);
 
 						e.dataTransfer.effectAllowed = 'move';
 
