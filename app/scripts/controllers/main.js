@@ -72,7 +72,7 @@ angular.module('lishtApp')
 			];
 		}
 
-		$scope.addListItem = function(index) {
+		$scope.addListItem = function (index) {
 			var newListItem = {
 					name: $scope.lists[index].newItemName,
 					url: $scope.lists[index].newItemURL
@@ -84,9 +84,4 @@ angular.module('lishtApp')
 			jsonListData = JSON.stringify($scope.lists);
 			localStorage.setItem('GEILDANKE-lisht', jsonListData);
 		};
-
-		$scope.$watch('lists', function(list) {
-			jsonListData = JSON.stringify(list);
-			localStorage.setItem('GEILDANKE-lisht', jsonListData);
-		});
 	});
