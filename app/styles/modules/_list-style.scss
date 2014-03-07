@@ -1,6 +1,15 @@
+// Prevent the text contents of draggable elements from being selectable.
+[draggable] {
+  -webkit-user-select: none;
+  user-select: none;
+  // Required to make elements draggable in old WebKit
+  -webkit-user-drag: element;
+}
+
 // Styling the links
 .link-list {
-	
+	border: 1px solid transparent;
+
 	li {
 		@include list-animation;
 		padding: 1.2em;

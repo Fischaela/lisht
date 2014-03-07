@@ -3,7 +3,7 @@ body,
 .container,
 .options-container,
 .row-fluid {
-	height: 100vh;
+	min-height: 100vh;
 }
 
 // Layout
@@ -12,6 +12,7 @@ body,
   	display: flex;
   	-webkit-flex-direction: row;
  	flex-direction: row;
+
 
 	@media screen and (max-width: 43.75rem) {
 		-webkit-flex-direction: column;
@@ -22,7 +23,7 @@ body,
 		-webkit-flex-basis: 34%;
   		flex-basis: 34%;
   		-webkit-align-items: flex-start;
-  		align-items: flex-start;	
+  		align-items: flex-start;
   		margin: 0.7em;
 
   		@media screen and (max-width: 43.75rem) {

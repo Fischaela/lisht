@@ -4,8 +4,26 @@
  	@include transition-timing-function(ease-in);
 }
 
+@mixin btn-animation-draggable {
+	@include transition-property(background-image);
+	@include transition-duration(0.15s);
+ 	@include transition-timing-function(ease-in);
+}
+
 @mixin list-animation {
 	@include transition-property(background, color);
 	@include transition-duration(0.1s);
  	@include transition-timing-function(ease-in);
+}
+
+@mixin layout-clearfix {
+    &:before,
+    &:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    &:after {
+        clear: both;
+    }
 }
