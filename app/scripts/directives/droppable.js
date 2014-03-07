@@ -28,7 +28,7 @@ angular.module('lishtApp')
 
 				el.addEventListener(
 					'dragenter',
-					function(e) {
+					function() {
 						// console.log(e);
 						this.classList.add('over');
 						return false;
@@ -38,7 +38,7 @@ angular.module('lishtApp')
 
 				el.addEventListener(
 					'dragleave',
-					function(e) {
+					function() {
 						// console.log(e);
 						this.classList.remove('over');
 						return false;
