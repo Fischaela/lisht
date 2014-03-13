@@ -14,11 +14,7 @@ angular.module('lishtApp')
 
 		if (jsonListData !== null) {
 			$scope.lists = JSON.parse(jsonListData);
-			// Debugging
-			// console.log('Local storage data loaded');
 		} else {
-			// Debugging
-			// console.log('JSON data loaded');
 			$scope.lists = [
 				{
 					'hyperlinks': [
@@ -71,7 +67,7 @@ angular.module('lishtApp')
 			];
 		}
 
-		$scope.addListItem = function(index) {
+		$scope.addListItem = function (index) {
 			var newListItem = {
 					name: $scope.lists[index].newItemName,
 					url: $scope.lists[index].newItemURL
@@ -84,9 +80,38 @@ angular.module('lishtApp')
 			localStorage.setItem('GEILDANKE-lisht', jsonListData);
 		};
 
-		$scope.deleteListItem = function(index, parent) {
-			var jsonListData = '';
-			$scope.lists[parent].hyperlinks.splice(index, 1);
+		$scope.deleteListItem = function (parentIndex, index) {
+			$scope.lists[parentIndex].hyperlinks.splice(index, 1);
+			jsonListData = JSON.stringify($scope.lists);
+			localStorage.setItem('GEILDANKE-lisht', jsonListData);
+		};
+
+		$scope.handleDragStart = function (e) {
+			var listItem = JSON.stringify(this.hyperlink);
+
+			e.dataTransfer.setData('text/plain', listItem);
+		};
+
+		$scope.handleDragEnd = function (e) {
+			var index = this.$index,
+				parentIndex = this.$parent.$index;
+
+			// Check if dragging was successful
+			if (e.dataTransfer.dropEffect !== 'none') {
+				$scope.$apply( function () {
+					$scope.lists[parentIndex].hyperlinks.splice(index, 1);
+				});
+			}
+
+			jsonListData = JSON.stringify($scope.lists);
+			localStorage.setItem('GEILDANKE-lisht', jsonListData);
+		};
+
+		$scope.handleDrop = function(e) {
+			var newItem = JSON.parse(e.dataTransfer.getData('text/plain')),
+				listIndex = this.$index;
+
+			$scope.lists[listIndex].hyperlinks.push(newItem);
 			jsonListData = JSON.stringify($scope.lists);
 			localStorage.setItem('GEILDANKE-lisht', jsonListData);
 		};

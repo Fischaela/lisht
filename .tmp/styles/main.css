@@ -1,4 +1,4 @@
-/* line 17, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -116,7 +116,7 @@ body,
 .container,
 .options-container,
 .row-fluid {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* line 10, ../../app/styles/modules/_layout.scss */
@@ -133,7 +133,7 @@ body,
     flex-direction: column;
   }
 }
-/* line 21, ../../app/styles/modules/_layout.scss */
+/* line 22, ../../app/styles/modules/_layout.scss */
 .row-fluid .span4 {
   -webkit-flex-basis: 34%;
   flex-basis: 34%;
@@ -142,19 +142,30 @@ body,
   margin: 0.7em;
 }
 @media screen and (max-width: 43.75rem) {
-  /* line 21, ../../app/styles/modules/_layout.scss */
+  /* line 22, ../../app/styles/modules/_layout.scss */
   .row-fluid .span4 {
     -webkit-flex-basis: auto;
     flex-basis: auto;
   }
 }
 
-/* line 35, ../../app/styles/modules/_layout.scss */
+/* line 36, ../../app/styles/modules/_layout.scss */
 .input-field {
   margin-top: 1em;
 }
 
-/* line 4, ../../app/styles/modules/_list-style.scss */
+/* line 2, ../../app/styles/modules/_list-style.scss */
+[draggable] {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: element;
+}
+
+/* line 10, ../../app/styles/modules/_list-style.scss */
+.link-list {
+  border: 1px solid transparent;
+}
+/* line 13, ../../app/styles/modules/_list-style.scss */
 .link-list li {
   -webkit-transition-property: background, color;
   -moz-transition-property: background, color;
@@ -171,15 +182,15 @@ body,
   padding: 1.2em;
   position: relative;
 }
-/* line 9, ../../app/styles/modules/_list-style.scss */
+/* line 18, ../../app/styles/modules/_list-style.scss */
 .link-list li:hover {
   background: white;
 }
-/* line 12, ../../app/styles/modules/_list-style.scss */
+/* line 21, ../../app/styles/modules/_list-style.scss */
 .link-list li:hover:after {
   content: "";
 }
-/* line 17, ../../app/styles/modules/_list-style.scss */
+/* line 26, ../../app/styles/modules/_list-style.scss */
 .link-list li a {
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -264,8 +275,39 @@ body,
   font-size: 1rem;
 }
 
-/* line 50, ../../app/styles/modules/_buttons.scss */
-.link-list li:hover .btn-close {
+/* line 43, ../../app/styles/modules/_buttons.scss */
+.btn-draggable {
+  background-image: url("../images/draganddrop.png");
+  -webkit-transition-property: background-image;
+  -moz-transition-property: background-image;
+  -o-transition-property: background-image;
+  transition-property: background-image;
+  -webkit-transition-duration: 0.15s;
+  -moz-transition-duration: 0.15s;
+  -o-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  cursor: move;
+  display: none;
+  margin: 0.5%;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 92%;
+}
+/* line 56, ../../app/styles/modules/_buttons.scss */
+.btn-draggable:hover {
+  opacity: 1;
+}
+
+/* line 69, ../../app/styles/modules/_buttons.scss */
+.link-list li:hover .btn-close,
+.link-list li:hover .btn-draggable {
   display: inline;
 }
 
@@ -335,6 +377,16 @@ body,
   width: 100%;
   color: white;
   text-align: center;
+}
+
+/* line 2, ../../app/styles/states/_dnd.scss */
+.drag {
+  opacity: 0.5;
+}
+
+/* line 6, ../../app/styles/states/_dnd.scss */
+.over {
+  border: 1px dashed rgba(255, 255, 255, 0.4);
 }
 
 /* line 1, ../../app/styles/theme/_options.scss */
