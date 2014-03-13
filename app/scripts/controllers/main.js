@@ -14,12 +14,7 @@ angular.module('lishtApp')
 
 		if (jsonListData !== null) {
 			$scope.lists = JSON.parse(jsonListData);
-			// Debugging
-			// console.log(jsonListData);
-			// localStorage.clear();
 		} else {
-			// Debugging
-			// console.log('JSON data loaded');
 			$scope.lists = [
 				{
 					'hyperlinks': [
@@ -81,6 +76,12 @@ angular.module('lishtApp')
 			$scope.lists[index].hyperlinks.push(newListItem);
 			$scope.lists[index].newItemName = '';
 			$scope.lists[index].newItemURL = '';
+			jsonListData = JSON.stringify($scope.lists);
+			localStorage.setItem('GEILDANKE-lisht', jsonListData);
+		};
+
+		$scope.deleteListItem = function (parentIndex, index) {
+			$scope.lists[parentIndex].hyperlinks.splice(index, 1);
 			jsonListData = JSON.stringify($scope.lists);
 			localStorage.setItem('GEILDANKE-lisht', jsonListData);
 		};
