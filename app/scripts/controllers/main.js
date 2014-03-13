@@ -101,13 +101,17 @@ angular.module('lishtApp')
 					$scope.lists[parentIndex].hyperlinks.splice(index, 1);
 				});
 			}
+
+			jsonListData = JSON.stringify($scope.lists);
+			localStorage.setItem('GEILDANKE-lisht', jsonListData);
 		};
 
 		$scope.handleDrop = function(e) {
 			var newItem = JSON.parse(e.dataTransfer.getData('text/plain')),
 				listIndex = this.$index;
 
-			console.log(newItem);
 			$scope.lists[listIndex].hyperlinks.push(newItem);
+			jsonListData = JSON.stringify($scope.lists);
+			localStorage.setItem('GEILDANKE-lisht', jsonListData);
 		};
 	});
