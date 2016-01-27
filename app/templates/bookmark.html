@@ -1,0 +1,11 @@
+<div class="bookmark">
+  <a href="{{bookmark.url}}" class="bookmark__link">{{bookmark.name}}</a>
+  <button (click)="_submitted=true" [hidden]="_submitted">Edit</button>
+  <form [hidden]="!_submitted" (ngSubmit)="onSubmit()">
+    <label>Name: </label>
+    <input [(ngModel)]="bookmark.name" placeholder="name"/>
+    <label>URL: </label>
+    <input [(ngModel)]="bookmark.url" placeholder="name"/>
+    <button type="submit" (click)="setBookmark(bookmark)">Done</button>
+  </form>
+</div>
