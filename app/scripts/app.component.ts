@@ -33,7 +33,7 @@ import { BookmarkService } from './bookmark.service';
 
 export class AppComponent implements OnInit {
 
-  public bookmarks : Bookmark[];
+  public bookmarks : Object;
 
   constructor( private _bookmarkService : BookmarkService ) { }
 

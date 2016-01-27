@@ -12,12 +12,12 @@ export class BookmarkService {
 
   getBookmarks() {
     if ( this._bookmarksLocalStorage != null ) {
-      this._bookmarksToReturn = this._bookmarksLocalStorage[ 0 ][ 'hyperlinks' ];
+      this._bookmarksToReturn = this._bookmarksLocalStorage;
     }
     return Promise.resolve( this._bookmarksToReturn );
   }
 
-  setBookmarks( bookmarks : Bookmark[] ) {
+  setBookmarks( bookmarks : Object ) {
     localStorage.setItem( 'GEILDANKE-lisht', JSON.stringify( bookmarks ) );
   }
 

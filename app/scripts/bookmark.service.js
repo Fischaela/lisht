@@ -28,7 +28,7 @@ System.register(['./mock-bookmarks', 'angular2/core'], function(exports_1) {
                 }
                 BookmarkService.prototype.getBookmarks = function () {
                     if (this._bookmarksLocalStorage != null) {
-                        this._bookmarksToReturn = this._bookmarksLocalStorage[0]['hyperlinks'];
+                        this._bookmarksToReturn = this._bookmarksLocalStorage;
                     }
                     return Promise.resolve(this._bookmarksToReturn);
                 };
