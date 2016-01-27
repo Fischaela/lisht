@@ -10,7 +10,7 @@ import { BookmarkService } from './bookmark.service';
     template: `
     <ul class="bookmark__list">
       <li>
-        <bookmark *ngFor="#bookmark of bookmarks" [bookmark]="bookmark"></bookmark>
+        <bookmark *ngFor="#bookmark of bookmarks" [bookmark]="bookmark" (bookmarkChanged)="setBookmarks()"></bookmark>
       </li>
     </ul>
       `,
@@ -31,7 +31,7 @@ import { BookmarkService } from './bookmark.service';
     providers: [ BookmarkService ]
 } )
 
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   public bookmarks : Bookmark[];
 
@@ -39,6 +39,11 @@ export class AppComponent {
 
   getBookmarks() {
     this._bookmarkService.getBookmarks().then( bookmarks => this.bookmarks = bookmarks );
+  }
+
+  setBookmarks() {
+    this._bookmarkService.setBookmarks( this.bookmarks );
+    console.log( 'OnChanges' );
   }
 
   ngOnInit() {

@@ -32,6 +32,9 @@ System.register(['./mock-bookmarks', 'angular2/core'], function(exports_1) {
                     }
                     return Promise.resolve(this._bookmarksToReturn);
                 };
+                BookmarkService.prototype.setBookmarks = function (bookmarks) {
+                    localStorage.setItem('GEILDANKE-lisht', JSON.stringify(bookmarks));
+                };
                 BookmarkService = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [])

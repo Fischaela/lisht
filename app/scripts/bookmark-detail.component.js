@@ -9,21 +9,29 @@ System.register(['angular2/core'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, core_2, core_3;
     var BookmarkDetailComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+                core_2 = core_1_1;
+                core_3 = core_1_1;
             }],
         execute: function() {
             BookmarkDetailComponent = (function () {
                 function BookmarkDetailComponent() {
                     this._submitted = false;
+                    this.bookmarkChanged = new core_3.EventEmitter();
                 }
                 BookmarkDetailComponent.prototype.onSubmit = function (bookmark) {
                     this._submitted = false;
+                    this.bookmarkChanged.emit(bookmark);
                 };
+                __decorate([
+                    core_2.Output(), 
+                    __metadata('design:type', core_3.EventEmitter)
+                ], BookmarkDetailComponent.prototype, "bookmarkChanged", void 0);
                 BookmarkDetailComponent = __decorate([
                     core_1.Component({
                         selector: 'bookmark',
