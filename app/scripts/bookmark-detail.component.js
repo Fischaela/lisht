@@ -23,15 +23,23 @@ System.register(['angular2/core'], function(exports_1) {
                 function BookmarkDetailComponent() {
                     this._submitted = false;
                     this.bookmarkChanged = new core_3.EventEmitter();
+                    this.bookmarkDeleted = new core_3.EventEmitter();
                 }
                 BookmarkDetailComponent.prototype.onSubmit = function (bookmark) {
                     this._submitted = false;
                     this.bookmarkChanged.emit(bookmark);
                 };
+                BookmarkDetailComponent.prototype.onDelete = function (bookmark) {
+                    this.bookmarkDeleted.emit(bookmark);
+                };
                 __decorate([
                     core_2.Output(), 
                     __metadata('design:type', core_3.EventEmitter)
                 ], BookmarkDetailComponent.prototype, "bookmarkChanged", void 0);
+                __decorate([
+                    core_2.Output(), 
+                    __metadata('design:type', core_3.EventEmitter)
+                ], BookmarkDetailComponent.prototype, "bookmarkDeleted", void 0);
                 BookmarkDetailComponent = __decorate([
                     core_1.Component({
                         selector: 'bookmark',

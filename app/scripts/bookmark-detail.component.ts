@@ -16,9 +16,14 @@ export class BookmarkDetailComponent {
   _submitted = false;
 
   @Output() bookmarkChanged : EventEmitter<any> = new EventEmitter();
+  @Output() bookmarkDeleted : EventEmitter<any> = new EventEmitter();
 
   onSubmit( bookmark : Bookmark ) {
     this._submitted = false;
     this.bookmarkChanged.emit( bookmark );
+  }
+
+  onDelete( bookmark : Bookmark ) {
+    this.bookmarkDeleted.emit( bookmark );
   }
 }

@@ -9,8 +9,17 @@ import { BookmarkService } from './bookmark.service';
     selector: 'lisht',
     template: `
     <ul class="bookmark__list">
-      <li>
-        <bookmark *ngFor="#bookmark of bookmarks" [bookmark]="bookmark" (bookmarkChanged)="setBookmarks()"></bookmark>
+      <li *ngFor="#bookmarkList of bookmarkLists; #i = index">
+        <ul class="bookmark__list">
+          <li>
+            <bookmark *ngFor="#bookmark of bookmarkList.hyperlinks; #j = index" [bookmark]="bookmark" (bookmarkChanged)="setBookmarks()" (bookmarkDeleted)="deleteBookmark(bookmark, i, j)"></bookmark>
+          </li>
+        </ul>
+        <form>
+          <input type="text" placeholder="Enter new name" [(ngModel)]="name">
+          <input type="text" placeholder="Enter new link" [(ngModel)]="url">
+          <button value="Add" (click)="addBookmarkListItem( { 'name' : name, 'url' : url }, i )">Add</button>
+        </form>
       </li>
     </ul>
       `,
@@ -33,21 +42,34 @@ import { BookmarkService } from './bookmark.service';
 
 export class AppComponent implements OnInit {
 
-  public bookmarks : Object;
+  public bookmarkLists : Object;
 
   constructor( private _bookmarkService : BookmarkService ) { }
 
-  getBookmarks() {
-    this._bookmarkService.getBookmarks().then( bookmarks => this.bookmarks = bookmarks );
+  getBookmarkLists() {
+    this._bookmarkService.getBookmarks().then( bookmarkLists => this.bookmarkLists = bookmarkLists );
   }
 
   setBookmarks() {
-    this._bookmarkService.setBookmarks( this.bookmarks );
-    console.log( 'OnChanges' );
+    this._bookmarkService.setBookmarks( this.bookmarkLists );
   }
 
+  deleteBookmark( bookmark : Bookmark, i : number, j : number ) {
+    this.bookmarkLists[ i ].hyperlinks.splice( j, 1 );
+    this.setBookmarks();
+  }
+
+  addBookmarkListItem( bookmark : Bookmark, index : number ) {
+
+    this.bookmarkLists[ index ].hyperlinks.push( bookmark );
+    console.log( bookmark );
+    console.log( this.bookmarkLists[ index ].hyperlinks );
+
+    this.setBookmarks();
+  };
+
   ngOnInit() {
-    this.getBookmarks();
+    this.getBookmarkLists();
   }
 
 }

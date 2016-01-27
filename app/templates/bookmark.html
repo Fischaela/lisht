@@ -1,6 +1,7 @@
 <div class="bookmark">
   <a href="{{bookmark.url}}" class="bookmark__link">{{bookmark.name}}</a>
   <button (click)="_submitted=true" [hidden]="_submitted">Edit</button>
+  <button (click)="onDelete(bookmark)">Delete</button>
   <form [hidden]="!_submitted" (ngSubmit)="onSubmit()">
     <label>Name: </label>
     <input [(ngModel)]="bookmark.name" placeholder="name"/>
