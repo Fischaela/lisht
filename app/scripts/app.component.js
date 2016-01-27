@@ -37,7 +37,7 @@ System.register(['angular2/core', './bookmark-detail.component', './bookmark.ser
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'lisht',
-                        template: "\n    <ul class=\"bookmark__list\">\n      <li>\n        <bookmark *ngFor=\"#bookmark of bookmarks\" [bookmark]=\"bookmark\" [setBookmarkFunction]=\"setBookmark()\"></bookmark>\n      </li>\n    </ul>\n      ",
+                        template: "\n    <ul class=\"bookmark__list\">\n      <li>\n        <bookmark *ngFor=\"#bookmark of bookmarks\" [bookmark]=\"bookmark\"></bookmark>\n      </li>\n    </ul>\n      ",
                         styles: ["\n      .bookmark {\n        list-style: none;\n      }\n      .bookmark__list {\n        margin: 0;\n        padding: 0;\n      }\n      .bookmark__link {\n        color: #000;\n        text-decoration: none;\n      }\n    "],
                         directives: [bookmark_detail_component_1.BookmarkDetailComponent],
                         providers: [bookmark_service_1.BookmarkService]

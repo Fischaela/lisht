@@ -10,7 +10,7 @@ import { BookmarkService } from './bookmark.service';
     template: `
     <ul class="bookmark__list">
       <li>
-        <bookmark *ngFor="#bookmark of bookmarks" [bookmark]="bookmark" [setBookmarkFunction]="setBookmark()"></bookmark>
+        <bookmark *ngFor="#bookmark of bookmarks" [bookmark]="bookmark"></bookmark>
       </li>
     </ul>
       `,
