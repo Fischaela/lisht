@@ -66,4 +66,38 @@ bookmark {
 .bookmark__link {
   display: inline-block;
   padding: 18px 0 18px 9px;
-  transition: color 0.25s ease-in-out; }
+  transition: color 0.1s ease-in-out; }
+
+.bookmarkform {
+  text-align: right; }
+
+.bookmarkform__input {
+  color: #ffffff;
+  font-family: 'Questrial';
+  font-size: 14px;
+  background-color: #ffc6b3;
+  border: none;
+  margin-bottom: 5px;
+  padding: 18px 9px;
+  width: 100%; }
+  .bookmarkform__input::-webkit-input-placeholder {
+    color: #FF8D66; }
+  .bookmarkform__input:active, .bookmarkform__input:focus {
+    outline: none; }
+
+.bookmarkform__button {
+  color: #ffc6b3;
+  font-size: 14px;
+  border: 1px solid #ffc6b3;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  padding: 12px 6px;
+  transition: background-color, color 0.25s, 0.1s ease-in-out;
+  width: calc(100% / 3); }
+  .bookmarkform__button:active, .bookmarkform__button:focus {
+    outline: none; }
+  .bookmarkform__button:hover, .bookmarkform__button:active {
+    color: #FF8D66;
+    background-color: #ffc6b3; }

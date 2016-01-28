@@ -115,5 +115,55 @@ bookmark {
 .bookmark__link {
   display: inline-block;
   padding: 18px 0 18px 9px;
-  transition: color 0.25s ease-in-out;
+  transition: color 0.1s ease-in-out;
+}
+
+.bookmarkform {
+  text-align: right;
+}
+
+.bookmarkform__input {
+  color: $white;
+  font-family: 'Questrial';
+  font-size: 14px;
+
+  background-color: lighten($orange, 15%);
+  border: none;
+  margin-bottom: 5px;
+  padding: 18px 9px;
+  width: 100%;
+
+  &::-webkit-input-placeholder {
+     color: $orange;
+  }
+
+  &:active,
+	&:focus {
+		outline: none;
+	}
+}
+
+.bookmarkform__button {
+  color: lighten($orange, 15%);
+  font-size: 14px;
+
+  border: 1px solid lighten($orange, 15%);
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  padding: 12px 6px;
+  transition: background-color, color 0.25s, 0.1s ease-in-out;
+  width: calc(100% / 3);
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:active {
+    color: $orange;
+    background-color: lighten($orange, 15%);
+  }
 }

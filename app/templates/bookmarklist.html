@@ -5,10 +5,10 @@
         <bookmark *ngFor="#bookmark of bookmarkList.hyperlinks; #j = index" [bookmark]="bookmark" (bookmarkChanged)="setBookmarks()" (bookmarkDeleted)="deleteBookmark(bookmark, i, j)"></bookmark>
       </li>
     </ul>
-    <form>
-      <input type="text" placeholder="Enter new name" [(ngModel)]="name[i]">
-      <input type="text" placeholder="Enter new link" [(ngModel)]="url[i]">
-      <button value="Add" (click)="addBookmarkListItem( { 'name' : name[i], 'url' : url[i] }, i )">Add</button>
+    <form class="bookmarkform">
+      <input class="bookmarkform__input" type="text" placeholder="Enter new name" [(ngModel)]="name[i]">
+      <input class="bookmarkform__input" type="text" placeholder="Enter new link" [(ngModel)]="url[i]">
+      <button class="bookmarkform__button" value="Add" (click)="addBookmarkListItem( { 'name' : name[i], 'url' : url[i] }, i )">Add</button>
     </form>
   </li>
 </ul>
