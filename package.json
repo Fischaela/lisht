@@ -2,7 +2,7 @@
   "name": "LISHT",
   "version": "2.0.0",
   "scripts": {
-    "tsc": "tsc",
+    "tsc": "tsc --out main.js",
     "tsc:w": "tsc -w",
     "lite": "lite-server --open app",
     "build-css": "node-sass --include-path scss app/scss/main.scss app/css/main.css",

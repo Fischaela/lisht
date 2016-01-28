@@ -4,11 +4,13 @@
     <button class="bookmark__button" (click)="_submitted=true" [hidden]="_submitted">Edit</button>
     <button class="bookmark__button" (click)="onDelete(bookmark)">Delete</button>
   </span>
-  <form class="bookmark__form" [hidden]="!_submitted" (ngSubmit)="onSubmit()">
-    <label>Name: </label>
-    <input [(ngModel)]="bookmark.name" placeholder="name"/>
-    <label>URL: </label>
-    <input [(ngModel)]="bookmark.url" placeholder="name"/>
-    <button type="submit">Done</button>
-  </form>
+  <div class="bookmark__form-wrapper" [hidden]="!_submitted">
+    <form class="bookmark__form" (ngSubmit)="onSubmit()">
+      <label class="bookmark__form__label">Name: </label>
+      <input class="bookmark__form__input" [(ngModel)]="bookmark.name" placeholder="name"/>
+      <label class="bookmark__form__label">URL: </label>
+      <input class="bookmark__form__input" [(ngModel)]="bookmark.url" placeholder="name"/>
+      <button class="bookmark__form__button" type="submit">Done</button>
+    </form>
+  </div>
 </div>

@@ -9,7 +9,7 @@ $red: #F66B62;
 $red-dark: darken($red, 25%);
 
 $orange: #FF8D66;
-$orange-dark: darken($orange, 25%);
+$orange-dark: darken($orange,20%);
 
 $yellow: #FFC666;
 $yellow-dark: darken($yellow, 25%);
@@ -103,7 +103,7 @@ lisht {
   font-size: 14px;
 
   background-color: lighten($orange, 15%);
-  border: none;
+  border: 1px solid lighten($orange, 15%);
   margin-bottom: 5px;
   padding: 18px 9px;
   width: 100%;
@@ -114,6 +114,7 @@ lisht {
 
   &:active,
 	&:focus {
+    border: 1px solid $white;
 		outline: none;
 	}
 }
@@ -133,6 +134,9 @@ lisht {
 
   &:active,
   &:focus {
+    color: $white;
+    
+    border-color: $white;
     outline: none;
   }
 
@@ -203,5 +207,64 @@ bookmark {
   &:hover,
   &:active {
     background-color: $orange;
+  }
+}
+
+.bookmark__form-wrapper {
+  background-color: $white;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.bookmark__form {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bookmark__form__label {
+  color: $orange;
+
+  display: block;
+  margin-bottom: 5px;
+}
+
+.bookmark__form__input {
+  @extend .bookmarklist__form__input;
+
+  border: 1px solid lighten($orange, 15%);
+  margin-bottom: 18px;
+  width: 400px;
+
+  &:focus {
+    border: 1px solid $orange-dark;
+  }
+}
+
+.bookmark__form__button {
+  @extend .bookmarklist__form__button;
+
+  color: $orange;
+
+  border-color: $orange;
+
+  &:hover,
+  &:active {
+    color: $white;
+
+    background-color: $orange;
+  }
+
+  &:focus {
+    color: $orange-dark;
+
+    border-color: $orange-dark;
   }
 }
