@@ -51,27 +51,10 @@ lisht {
   margin: 0 0 9px 0;
   padding: 0; }
 
-bookmark {
-  display: block;
-  transition: background-color 0.25s ease-in-out;
-  height: 52px; }
-  bookmark:hover, bookmark:active {
-    background-color: #ffffff; }
-    bookmark:hover .bookmark__link, bookmark:active .bookmark__link {
-      color: #FF8D66; }
-
-.bookmark {
-  height: 100%; }
-
-.bookmark__link {
-  display: inline-block;
-  padding: 18px 0 18px 9px;
-  transition: color 0.1s ease-in-out; }
-
-.bookmarkform {
+.bookmarklist__form {
   text-align: right; }
 
-.bookmarkform__input {
+.bookmarklist__form__input {
   color: #ffffff;
   font-family: 'Questrial';
   font-size: 14px;
@@ -80,12 +63,12 @@ bookmark {
   margin-bottom: 5px;
   padding: 18px 9px;
   width: 100%; }
-  .bookmarkform__input::-webkit-input-placeholder {
+  .bookmarklist__form__input::-webkit-input-placeholder {
     color: #FF8D66; }
-  .bookmarkform__input:active, .bookmarkform__input:focus {
+  .bookmarklist__form__input:active, .bookmarklist__form__input:focus {
     outline: none; }
 
-.bookmarkform__button {
+.bookmarklist__form__button {
   color: #ffc6b3;
   font-size: 14px;
   border: 1px solid #ffc6b3;
@@ -96,8 +79,46 @@ bookmark {
   padding: 12px 6px;
   transition: background-color, color 0.25s, 0.1s ease-in-out;
   width: calc(100% / 3); }
-  .bookmarkform__button:active, .bookmarkform__button:focus {
+  .bookmarklist__form__button:active, .bookmarklist__form__button:focus {
     outline: none; }
-  .bookmarkform__button:hover, .bookmarkform__button:active {
+  .bookmarklist__form__button:hover, .bookmarklist__form__button:active {
     color: #FF8D66;
     background-color: #ffc6b3; }
+
+bookmark {
+  display: block;
+  transition: background-color 0.25s ease-in-out;
+  height: 52px; }
+  bookmark:hover, bookmark:active {
+    background-color: #ffffff; }
+    bookmark:hover .bookmark__link, bookmark:active .bookmark__link {
+      color: #FF8D66; }
+
+.bookmark {
+  position: relative;
+  height: 100%; }
+
+.bookmark__link {
+  display: inline-block;
+  padding: 18px 0 18px 9px;
+  transition: color 0.1s ease-in-out; }
+
+.bookmark__button-wrapper {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.bookmark__button {
+  color: #ffffff;
+  background-color: #ffc6b3;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; }
+  bookmark:hover .bookmark__button,
+  bookmark:active .bookmark__button {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out 0.5s; }
+  .bookmark__button:hover, .bookmark__button:active {
+    background-color: #FF8D66; }

@@ -93,36 +93,11 @@ lisht {
   padding: 0;
 }
 
-bookmark {
-  display: block;
-  transition: background-color 0.25s ease-in-out;
-  height: 52px;
-
-  &:hover,
-  &:active {
-    background-color: $white;
-
-    .bookmark__link {
-      color: $orange;
-    }
-  }
-}
-
-.bookmark {
-  height: 100%;
-}
-
-.bookmark__link {
-  display: inline-block;
-  padding: 18px 0 18px 9px;
-  transition: color 0.1s ease-in-out;
-}
-
-.bookmarkform {
+.bookmarklist__form {
   text-align: right;
 }
 
-.bookmarkform__input {
+.bookmarklist__form__input {
   color: $white;
   font-family: 'Questrial';
   font-size: 14px;
@@ -143,7 +118,7 @@ bookmark {
 	}
 }
 
-.bookmarkform__button {
+.bookmarklist__form__button {
   color: lighten($orange, 15%);
   font-size: 14px;
 
@@ -165,5 +140,59 @@ bookmark {
   &:active {
     color: $orange;
     background-color: lighten($orange, 15%);
+  }
+}
+
+bookmark {
+  display: block;
+  transition: background-color 0.25s ease-in-out;
+  height: 52px;
+
+  &:hover,
+  &:active {
+    background-color: $white;
+
+    .bookmark__link {
+      color: $orange;
+    }
+  }
+}
+
+.bookmark {
+  position: relative;
+  height: 100%;
+}
+
+.bookmark__link {
+  display: inline-block;
+  padding: 18px 0 18px 9px;
+  transition: color 0.1s ease-in-out;
+}
+
+.bookmark__button-wrapper {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bookmark__button {
+  color: $white;
+
+  background-color: lighten($orange, 15%);;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+
+  bookmark:hover &,
+  bookmark:active & {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out 0.5s;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $orange;
   }
 }
