@@ -164,9 +164,19 @@ bookmark {
 }
 
 .bookmark__link {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
   display: inline-block;
-  padding: 18px 0 18px 9px;
+  padding: 18px 9px 18px 9px;
+  overflow: hidden;
   transition: color 0.1s ease-in-out;
+  max-width: calc(100% - 18px);
+
+  bookmark:hover &,
+  bookmark:active & {
+    max-width: calc(100% - 100px);
+  }
 }
 
 .bookmark__button-wrapper {
@@ -183,7 +193,6 @@ bookmark {
   border: none;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
 
   bookmark:hover &,
   bookmark:active & {
