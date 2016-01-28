@@ -52,7 +52,7 @@ System.register(['angular2/core', './bookmark-detail.component', './bookmark.ser
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'lisht',
-                        templateUrl: './app/templates/bookmarklist.html',
+                        templateUrl: './templates/bookmarklist.html',
                         directives: [bookmark_detail_component_1.BookmarkDetailComponent],
                         providers: [bookmark_service_1.BookmarkService]
                     }), 

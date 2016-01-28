@@ -6,7 +6,7 @@ import { Bookmark } from './bookmark';
 
 @Component({
   selector: 'bookmark',
-  templateUrl: './app/templates/bookmark.html',
+  templateUrl: './templates/bookmark.html',
   inputs: [ 'bookmark' ]
 })
 

@@ -42,7 +42,7 @@ System.register(['angular2/core'], function(exports_1) {
                 BookmarkDetailComponent = __decorate([
                     core_1.Component({
                         selector: 'bookmark',
-                        templateUrl: './app/templates/bookmark.html',
+                        templateUrl: './templates/bookmark.html',
                         inputs: ['bookmark']
                     }), 
                     __metadata('design:paramtypes', [])

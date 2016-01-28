@@ -8,30 +8,36 @@
 	"author": "Michaela Lehr @fischaelameer",
 
 	"icons": {
-		"19": "Icon-19.png",
-		"38": "Icon-38.png",
-		"48": "Icon-48.png",
-		"128": "Icon-128.png"
+		"19": "app/Icon-19.png",
+		"38": "app/Icon-38.png",
+		"48": "app/Icon-48.png",
+		"128": "app/Icon-128.png"
 	},
 
 	"browser_action": {
 		"default_icon": {
-			"19": "Icon-19.png",
-			"38": "Icon-38.png"
+			"19": "app/Icon-19.png",
+			"38": "app/Icon-38.png"
 		},
 		"default_title": "Open a new tab to view your lisht"
 	},
 
 	"chrome_url_overrides" : {
-		"newtab": "index.html"
+		"newtab": "app/index.html"
 	},
 
+	"content_security_policy": "script-src 'self' 'unsafe-eval' 'sha256-RvTQyHleCexMSmrNLTKXypbfgT/zNKxvCKsBqEsEfig'; object-src 'self'",
+
 	"permissions": [
+		"<all_urls>",
 		"activeTab",
-		"tabs"
+		"tabs",
+		"http://*/"
 	],
 
 	"web_accessible_resources": [
-	    "css/main.css"
+	    "app/css/main.css",
+			"app/scripts/*",
+			"node_modules/*"
 	]
 }

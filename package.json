@@ -2,12 +2,13 @@
   "name": "LISHT",
   "version": "2.0.0",
   "scripts": {
-    "tsc": "tsc --out main.js",
+    "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server --open app",
     "build-css": "node-sass --include-path scss app/scss/main.scss app/css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
-    "start": "concurrent \"npm run tsc:w\" \"npm run watch-css\" \"npm run lite\""
+    "start": "concurrent \"npm run tsc:w\" \"npm run watch-css\" \"npm run lite\"",
+    "build": "concurrent \"npm run tsc\" \"npm run build-css\""
   },
   "license": "ISC",
   "dependencies": {
