@@ -26,6 +26,8 @@ System.register(['angular2/core', './bookmark-detail.component', './bookmark.ser
             AppComponent = (function () {
                 function AppComponent(_bookmarkService) {
                     this._bookmarkService = _bookmarkService;
+                    this.name = [];
+                    this.url = [];
                 }
                 AppComponent.prototype.getBookmarkLists = function () {
                     var _this = this;
@@ -40,9 +42,9 @@ System.register(['angular2/core', './bookmark-detail.component', './bookmark.ser
                 };
                 AppComponent.prototype.addBookmarkListItem = function (bookmark, index) {
                     this.bookmarkLists[index].hyperlinks.push(bookmark);
-                    console.log(bookmark);
-                    console.log(this.bookmarkLists[index].hyperlinks);
                     this.setBookmarks();
+                    this.name[index] = '';
+                    this.url[index] = '';
                 };
                 ;
                 AppComponent.prototype.ngOnInit = function () {
@@ -51,7 +53,7 @@ System.register(['angular2/core', './bookmark-detail.component', './bookmark.ser
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'lisht',
-                        template: "\n    <ul class=\"bookmark__list\">\n      <li *ngFor=\"#bookmarkList of bookmarkLists; #i = index\">\n        <ul class=\"bookmark__list\">\n          <li>\n            <bookmark *ngFor=\"#bookmark of bookmarkList.hyperlinks; #j = index\" [bookmark]=\"bookmark\" (bookmarkChanged)=\"setBookmarks()\" (bookmarkDeleted)=\"deleteBookmark(bookmark, i, j)\"></bookmark>\n          </li>\n        </ul>\n        <form>\n          <input type=\"text\" placeholder=\"Enter new name\" [(ngModel)]=\"name\">\n          <input type=\"text\" placeholder=\"Enter new link\" [(ngModel)]=\"url\">\n          <button value=\"Add\" (click)=\"addBookmarkListItem( { 'name' : name, 'url' : url }, i )\">Add</button>\n        </form>\n      </li>\n    </ul>\n      ",
+                        template: "\n    <ul class=\"bookmark__list\">\n      <li *ngFor=\"#bookmarkList of bookmarkLists; #i = index\">\n        <ul class=\"bookmark__list\">\n          <li>\n            <bookmark *ngFor=\"#bookmark of bookmarkList.hyperlinks; #j = index\" [bookmark]=\"bookmark\" (bookmarkChanged)=\"setBookmarks()\" (bookmarkDeleted)=\"deleteBookmark(bookmark, i, j)\"></bookmark>\n          </li>\n        </ul>\n        <form>\n          <input type=\"text\" placeholder=\"Enter new name\" [(ngModel)]=\"name[i]\">\n          <input type=\"text\" placeholder=\"Enter new link\" [(ngModel)]=\"url[i]\">\n          <button value=\"Add\" (click)=\"addBookmarkListItem( { 'name' : name[i], 'url' : url[i] }, i )\">Add</button>\n        </form>\n      </li>\n    </ul>\n      ",
                         styles: ["\n      .bookmark {\n        list-style: none;\n      }\n      .bookmark__list {\n        margin: 0;\n        padding: 0;\n      }\n      .bookmark__link {\n        color: #000;\n        text-decoration: none;\n      }\n    "],
                         directives: [bookmark_detail_component_1.BookmarkDetailComponent],
                         providers: [bookmark_service_1.BookmarkService]

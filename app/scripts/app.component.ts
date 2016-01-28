@@ -16,9 +16,9 @@ import { BookmarkService } from './bookmark.service';
           </li>
         </ul>
         <form>
-          <input type="text" placeholder="Enter new name" [(ngModel)]="name">
-          <input type="text" placeholder="Enter new link" [(ngModel)]="url">
-          <button value="Add" (click)="addBookmarkListItem( { 'name' : name, 'url' : url }, i )">Add</button>
+          <input type="text" placeholder="Enter new name" [(ngModel)]="name[i]">
+          <input type="text" placeholder="Enter new link" [(ngModel)]="url[i]">
+          <button value="Add" (click)="addBookmarkListItem( { 'name' : name[i], 'url' : url[i] }, i )">Add</button>
         </form>
       </li>
     </ul>
@@ -44,6 +44,9 @@ export class AppComponent implements OnInit {
 
   public bookmarkLists : Object;
 
+  name : Object[] = [];
+  url : Object[] = [];
+
   constructor( private _bookmarkService : BookmarkService ) { }
 
   getBookmarkLists() {
@@ -60,12 +63,10 @@ export class AppComponent implements OnInit {
   }
 
   addBookmarkListItem( bookmark : Bookmark, index : number ) {
-
     this.bookmarkLists[ index ].hyperlinks.push( bookmark );
-    console.log( bookmark );
-    console.log( this.bookmarkLists[ index ].hyperlinks );
-
     this.setBookmarks();
+    this.name[ index ] = '';
+    this.url[ index ] = '';
   };
 
   ngOnInit() {
