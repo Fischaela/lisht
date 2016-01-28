@@ -1,0 +1,119 @@
+$mq: 800px;
+
+$white: #ffffff;
+
+$pink: #FF6698;
+$pink-dark: darken($pink, 25%);
+
+$red: #F66B62;
+$red-dark: darken($red, 25%);
+
+$orange: #FF8D66;
+$orange-dark: darken($orange, 25%);
+
+$yellow: #FFC666;
+$yellow-dark: darken($yellow, 25%);
+
+$green: #52CC82;
+$green-dark: darken($green, 25%);
+
+$blue: #50CCCC;
+$blue-dark: darken($blue, 25%);
+
+$black: #4B5454;
+$black-dark: darken($black, 25%);
+$black-light: lighten($black, 25%);
+
+@font-face {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/Questrial-Regular.ttf') format('ttf');
+}
+
+* + * {
+  box-sizing: border-box;
+}
+
+body {
+  color: $white;
+  font-family: 'Questrial', sans-serif;
+  font-size: 14px;
+
+  background-color: $orange;
+  margin: 0;
+  padding: 9px;
+  height: 100vh;
+
+  @media screen and (min-width: $mq) {
+    font-size: 16px;
+  }
+}
+
+a {
+  color: lighten($orange, 25%);
+  text-decoration: none;
+}
+
+lisht {
+  display: block;
+}
+
+.bookmarklist {
+  list-style: none;
+
+  display: flex;
+  flex: wrap;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: $mq) {
+    flex-direction: row;
+  }
+}
+
+.bookmarklist__listelement {
+  width: 100%;
+
+  @media screen and (min-width: $mq) {
+    margin-right: 9px;
+    width: calc((100% / 3) - ((2 * 9px) / 3));
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.bookmarklist__sublist {
+  list-style: none;
+
+  margin: 0 0 9px 0;
+  padding: 0;
+}
+
+bookmark {
+  display: block;
+  transition: background-color 0.25s ease-in-out;
+  height: 52px;
+
+  &:hover,
+  &:active {
+    background-color: $white;
+
+    .bookmark__link {
+      color: $orange;
+    }
+  }
+}
+
+.bookmark {
+  height: 100%;
+}
+
+.bookmark__link {
+  display: inline-block;
+  padding: 18px 0 18px 9px;
+  transition: color 0.25s ease-in-out;
+}

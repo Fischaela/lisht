@@ -1,6 +1,6 @@
-<ul class="bookmark__list">
-  <li *ngFor="#bookmarkList of bookmarkLists; #i = index">
-    <ul class="bookmark__list">
+<ul class="bookmarklist">
+  <li class="bookmarklist__listelement" *ngFor="#bookmarkList of bookmarkLists; #i = index">
+    <ul class="bookmarklist__sublist">
       <li>
         <bookmark *ngFor="#bookmark of bookmarkList.hyperlinks; #j = index" [bookmark]="bookmark" (bookmarkChanged)="setBookmarks()" (bookmarkDeleted)="deleteBookmark(bookmark, i, j)"></bookmark>
       </li>

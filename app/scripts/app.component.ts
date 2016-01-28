@@ -7,7 +7,7 @@ import { BookmarkService } from './bookmark.service';
 
 @Component( {
     selector: 'lisht',
-    templateUrl: './app/templates/bookmark-list.html',
+    templateUrl: './app/templates/bookmarklist.html',
     directives: [ BookmarkDetailComponent ],
     providers: [ BookmarkService ]
 } )

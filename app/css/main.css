@@ -1,11 +1,69 @@
-.bookmark {
-  list-style: none; }
+@font-face {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/Questrial-Regular.ttf") format("ttf"); }
 
-.bookmark__list {
+* + * {
+  box-sizing: border-box; }
+
+body {
+  color: #ffffff;
+  font-family: 'Questrial', sans-serif;
+  font-size: 14px;
+  background-color: #FF8D66;
+  margin: 0;
+  padding: 9px;
+  height: 100vh; }
+  @media screen and (min-width: 800px) {
+    body {
+      font-size: 16px; } }
+
+a {
+  color: #ffece6;
+  text-decoration: none; }
+
+lisht {
+  display: block; }
+
+.bookmarklist {
+  list-style: none;
+  display: flex;
+  flex: wrap;
+  flex-direction: column;
   margin: 0;
   padding: 0; }
+  @media screen and (min-width: 800px) {
+    .bookmarklist {
+      flex-direction: row; } }
+
+.bookmarklist__listelement {
+  width: 100%; }
+  @media screen and (min-width: 800px) {
+    .bookmarklist__listelement {
+      margin-right: 9px;
+      width: calc((100% / 3) - ((2 * 9px) / 3)); }
+      .bookmarklist__listelement:last-child {
+        margin-right: 0; } }
+
+.bookmarklist__sublist {
+  list-style: none;
+  margin: 0 0 9px 0;
+  padding: 0; }
+
+bookmark {
+  display: block;
+  transition: background-color 0.25s ease-in-out;
+  height: 52px; }
+  bookmark:hover, bookmark:active {
+    background-color: #ffffff; }
+    bookmark:hover .bookmark__link, bookmark:active .bookmark__link {
+      color: #FF8D66; }
+
+.bookmark {
+  height: 100%; }
 
 .bookmark__link {
-  color: #123456;
-  text-decoration: none;
-  text-transform: uppercase; }
+  display: inline-block;
+  padding: 18px 0 18px 9px;
+  transition: color 0.25s ease-in-out; }
