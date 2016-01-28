@@ -1,0 +1,16 @@
+$color: #123456;
+
+.bookmark {
+  list-style: none;
+}
+
+.bookmark__list {
+  margin: 0;
+  padding: 0;
+}
+
+.bookmark__link {
+  color: $color;
+  text-decoration: none;
+  text-transform: uppercase;
+}

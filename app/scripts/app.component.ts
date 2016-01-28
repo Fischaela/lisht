@@ -7,35 +7,7 @@ import { BookmarkService } from './bookmark.service';
 
 @Component( {
     selector: 'lisht',
-    template: `
-    <ul class="bookmark__list">
-      <li *ngFor="#bookmarkList of bookmarkLists; #i = index">
-        <ul class="bookmark__list">
-          <li>
-            <bookmark *ngFor="#bookmark of bookmarkList.hyperlinks; #j = index" [bookmark]="bookmark" (bookmarkChanged)="setBookmarks()" (bookmarkDeleted)="deleteBookmark(bookmark, i, j)"></bookmark>
-          </li>
-        </ul>
-        <form>
-          <input type="text" placeholder="Enter new name" [(ngModel)]="name[i]">
-          <input type="text" placeholder="Enter new link" [(ngModel)]="url[i]">
-          <button value="Add" (click)="addBookmarkListItem( { 'name' : name[i], 'url' : url[i] }, i )">Add</button>
-        </form>
-      </li>
-    </ul>
-      `,
-    styles: [`
-      .bookmark {
-        list-style: none;
-      }
-      .bookmark__list {
-        margin: 0;
-        padding: 0;
-      }
-      .bookmark__link {
-        color: #000;
-        text-decoration: none;
-      }
-    `],
+    templateUrl: './app/templates/bookmark-list.html',
     directives: [ BookmarkDetailComponent ],
     providers: [ BookmarkService ]
 } )

@@ -1,0 +1,11 @@
+.bookmark {
+  list-style: none; }
+
+.bookmark__list {
+  margin: 0;
+  padding: 0; }
+
+.bookmark__link {
+  color: #123456;
+  text-decoration: none;
+  text-transform: uppercase; }

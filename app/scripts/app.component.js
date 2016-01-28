@@ -1,5 +1,4 @@
 System.register(['angular2/core', './bookmark-detail.component', './bookmark.service'], function(exports_1) {
-    "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -53,15 +52,14 @@ System.register(['angular2/core', './bookmark-detail.component', './bookmark.ser
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'lisht',
-                        template: "\n    <ul class=\"bookmark__list\">\n      <li *ngFor=\"#bookmarkList of bookmarkLists; #i = index\">\n        <ul class=\"bookmark__list\">\n          <li>\n            <bookmark *ngFor=\"#bookmark of bookmarkList.hyperlinks; #j = index\" [bookmark]=\"bookmark\" (bookmarkChanged)=\"setBookmarks()\" (bookmarkDeleted)=\"deleteBookmark(bookmark, i, j)\"></bookmark>\n          </li>\n        </ul>\n        <form>\n          <input type=\"text\" placeholder=\"Enter new name\" [(ngModel)]=\"name[i]\">\n          <input type=\"text\" placeholder=\"Enter new link\" [(ngModel)]=\"url[i]\">\n          <button value=\"Add\" (click)=\"addBookmarkListItem( { 'name' : name[i], 'url' : url[i] }, i )\">Add</button>\n        </form>\n      </li>\n    </ul>\n      ",
-                        styles: ["\n      .bookmark {\n        list-style: none;\n      }\n      .bookmark__list {\n        margin: 0;\n        padding: 0;\n      }\n      .bookmark__link {\n        color: #000;\n        text-decoration: none;\n      }\n    "],
+                        templateUrl: './app/templates/bookmark-list.html',
                         directives: [bookmark_detail_component_1.BookmarkDetailComponent],
                         providers: [bookmark_service_1.BookmarkService]
                     }), 
                     __metadata('design:paramtypes', [bookmark_service_1.BookmarkService])
                 ], AppComponent);
                 return AppComponent;
-            }());
+            })();
             exports_1("AppComponent", AppComponent);
         }
     }
