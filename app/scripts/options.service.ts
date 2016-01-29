@@ -14,7 +14,6 @@ export class OptionsService {
     if ( this._optionsLocalStorage != null ) {
       this._optionsToReturn = this._optionsLocalStorage;
     }
-    console.log( 'Getting', this._optionsToReturn );
     return Promise.resolve( this._optionsToReturn );
   }
 

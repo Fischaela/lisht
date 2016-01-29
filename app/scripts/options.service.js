@@ -1,4 +1,5 @@
 System.register(['./mock-options', 'angular2/core'], function(exports_1) {
+    "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -29,7 +30,6 @@ System.register(['./mock-options', 'angular2/core'], function(exports_1) {
                     if (this._optionsLocalStorage != null) {
                         this._optionsToReturn = this._optionsLocalStorage;
                     }
-                    console.log('Getting', this._optionsToReturn);
                     return Promise.resolve(this._optionsToReturn);
                 };
                 OptionsService.prototype.getActiveColor = function () {
@@ -51,7 +51,7 @@ System.register(['./mock-options', 'angular2/core'], function(exports_1) {
                     __metadata('design:paramtypes', [])
                 ], OptionsService);
                 return OptionsService;
-            })();
+            }());
             exports_1("OptionsService", OptionsService);
         }
     }

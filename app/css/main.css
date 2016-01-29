@@ -34,6 +34,7 @@ a {
 .bookmarklist-container {
   background-color: #FF6698;
   display: block;
+  overflow: scroll;
   padding: 9px;
   height: calc(100vh - 18px); }
 

@@ -1,6 +1,7 @@
   .bookmarklist-container {
     background-color: $default-color;
     display: block;
+    overflow: scroll;
     padding: 9px;
     height: calc(100vh - 18px);
   }
