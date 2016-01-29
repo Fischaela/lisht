@@ -7,18 +7,19 @@ import { OptionsService } from './options.service';
 @Component({
   selector: 'lisht-options',
   templateUrl: './templates/options.html',
-  providers: [ OptionsService ],
   directives: [ NgClass ]
 })
 
 export class OptionsComponent implements OnInit {
 
   public options : Object;
+  public activeColor : string;
 
   constructor( private _optionsService : OptionsService ) { }
 
   getOptions() {
     this._optionsService.getOptions().then( options => this.options = options );
+    this._optionsService.getActiveColor().then( activeColor => this.activeColor = activeColor );
   }
 
   setOptions() {
@@ -30,6 +31,7 @@ export class OptionsComponent implements OnInit {
       this.options[ i ].isActive = false;
     }
     this.options[ index ].isActive = true;
+    this.activeColor = this.options[ index ].color;
     this.setOptions();
   }
 

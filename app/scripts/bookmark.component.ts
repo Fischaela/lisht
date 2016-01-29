@@ -4,6 +4,7 @@ import { OnInit } from 'angular2/core';
 import { Bookmark } from './bookmark';
 import { BookmarkDetailComponent } from './bookmark-detail.component';
 import { BookmarkService } from './bookmark.service';
+import { OptionsService } from './options.service';
 
 @Component( {
     selector: 'lisht-bookmarks',
@@ -15,14 +16,16 @@ import { BookmarkService } from './bookmark.service';
 export class BookmarkComponent implements OnInit {
 
   public bookmarkLists : Object;
+  public activeColor : string;
 
   name : Object[] = [];
   url : Object[] = [];
 
-  constructor( private _bookmarkService : BookmarkService ) { }
+  constructor( private _bookmarkService : BookmarkService, private _optionsService : OptionsService ) {}
 
   getBookmarkLists() {
     this._bookmarkService.getBookmarks().then( bookmarkLists => this.bookmarkLists = bookmarkLists );
+    this._optionsService.getActiveColor().then( activeColor => this.activeColor = activeColor );
   }
 
   setBookmarks() {

@@ -29,10 +29,22 @@ System.register(['./mock-options', 'angular2/core'], function(exports_1) {
                     if (this._optionsLocalStorage != null) {
                         this._optionsToReturn = this._optionsLocalStorage;
                     }
+                    console.log('Getting', this._optionsToReturn);
                     return Promise.resolve(this._optionsToReturn);
+                };
+                OptionsService.prototype.getActiveColor = function () {
+                    var _this = this;
+                    this.getOptions().then(function (_optionsLocalStorage) { return _this._optionsLocalStorage = _optionsLocalStorage; });
+                    for (var i in this._optionsToReturn) {
+                        if (this._optionsToReturn[i].isActive) {
+                            this._activeColor = this._optionsToReturn[i].color;
+                        }
+                    }
+                    return Promise.resolve(this._activeColor);
                 };
                 OptionsService.prototype.setOptions = function (options) {
                     localStorage.setItem('GEILDANKE-options', JSON.stringify(options));
+                    this.getOptions();
                 };
                 OptionsService = __decorate([
                     core_1.Injectable(), 
