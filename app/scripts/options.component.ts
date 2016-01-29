@@ -1,28 +1,30 @@
 import { Component } from 'angular2/core';
+import { OnInit } from 'angular2/core';
+
+import { OptionsService } from './options.service';
 
 @Component({
   selector: 'lisht-options',
-  templateUrl: './templates/options.html'
+  templateUrl: './templates/options.html',
+  providers: [ OptionsService ]
 })
 
-export class OptionsComponent {
+export class OptionsComponent implements OnInit {
 
-  public colors = [
-    { color : 'pink-dark' },
-    { color : 'pink' },
-    { color : 'red-dark' },
-    { color : 'red' },
-    { color : 'orange-dark' },
-    { color : 'orange' },
-    { color : 'yellow-dark' },
-    { color : 'yellow' },
-    { color : 'green-dark' },
-    { color : 'green' },
-    { color : 'blue-dark' },
-    { color : 'blue' },
-    { color : 'black-dark' },
-    { color : 'black' },
-    { color : 'black-light' }
-  ];
+  public options : Object;
+
+  constructor( private _optionsService : OptionsService ) { }
+
+  getOptions() {
+    this._optionsService.getOptions().then( options => this.options = options );
+  }
+
+  setOptions() {
+    this._optionsService.setBookmarks( this.options );
+  }
+
+  ngOnInit() {
+    this.getOptions();
+  }
 
 }
