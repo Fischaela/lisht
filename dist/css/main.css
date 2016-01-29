@@ -1,0 +1,1040 @@
+@font-face {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/Questrial-Regular.ttf") format("ttf"); }
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(5deg) rotateX(-5deg) perspective(2000px); }
+  33% {
+    transform: rotateY(5deg) rotateX(5deg) perspective(2000px); }
+  66% {
+    transform: rotateY(-5deg) rotateX(5deg) perspective(2000px); }
+  100% {
+    transform: rotateY(-5deg) rotateX(-5deg) perspective(2000px); } }
+
+* + * {
+  box-sizing: border-box; }
+
+body {
+  color: #ffffff;
+  font-family: 'Questrial', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  height: 100vh; }
+  @media screen and (min-width: 800px) {
+    body {
+      font-size: 16px; } }
+
+a {
+  color: #ffe6ee;
+  text-decoration: none; }
+
+.bookmarklist-container {
+  background-color: #FF6698;
+  display: block;
+  overflow: scroll;
+  padding: 9px;
+  height: calc(100vh - 18px); }
+
+.bookmarklist {
+  list-style: none;
+  display: flex;
+  flex: wrap;
+  flex-direction: column;
+  margin: 0;
+  padding: 0; }
+  @media screen and (min-width: 800px) {
+    .bookmarklist {
+      flex-direction: row; } }
+
+.bookmarklist__form {
+  text-align: right; }
+
+.bookmarklist__form__button, .bookmark__form__button {
+  color: #ffb3cc;
+  font-size: 14px;
+  border: 1px solid #ffb3cc;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  padding: 12px 6px;
+  transition: background-color, color 0.25s, 0.1s ease-in-out;
+  width: calc(100% / 3); }
+  .bookmarklist__form__button:active, .bookmark__form__button:active, .bookmarklist__form__button:focus, .bookmark__form__button:focus {
+    color: #ffffff;
+    border-color: #ffffff;
+    outline: none; }
+  .bookmarklist__form__button:hover, .bookmark__form__button:hover, .bookmarklist__form__button:active, .bookmark__form__button:active {
+    color: #FF6698;
+    background-color: #ffb3cc; }
+
+.bookmarklist__form__input, .bookmark__form__input {
+  color: #ffffff;
+  font-family: 'Questrial';
+  font-size: 14px;
+  background-color: #ffb3cc;
+  border: 1px solid #ffb3cc;
+  margin-bottom: 5px;
+  padding: 18px 9px;
+  width: 100%; }
+  .bookmarklist__form__input::-webkit-input-placeholder, .bookmark__form__input::-webkit-input-placeholder {
+    color: #FF6698; }
+  .bookmarklist__form__input:active, .bookmark__form__input:active, .bookmarklist__form__input:focus, .bookmark__form__input:focus {
+    border: 1px solid #ffffff;
+    outline: none; }
+
+.bookmarklist__listelement {
+  width: 100%; }
+  @media screen and (min-width: 800px) {
+    .bookmarklist__listelement {
+      margin-right: 9px;
+      width: calc((100% / 3) - ((2 * 9px) / 3)); }
+      .bookmarklist__listelement:last-child {
+        margin-right: 0; } }
+
+.bookmarklist__sublist {
+  list-style: none;
+  margin: 0 0 9px 0;
+  padding: 0; }
+
+bookmark {
+  display: block;
+  transition: background-color 0.25s ease-in-out;
+  height: 52px; }
+  bookmark:hover, bookmark:active {
+    background-color: #ffffff; }
+    bookmark:hover .bookmark__link, bookmark:active .bookmark__link {
+      color: #FF6698; }
+
+.bookmark {
+  position: relative;
+  height: 100%; }
+
+.bookmark__button-wrapper {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.bookmark__button {
+  color: #ffffff;
+  background-color: #ffb3cc;
+  border: none;
+  cursor: pointer;
+  opacity: 0; }
+  bookmark:hover .bookmark__button,
+  bookmark:active .bookmark__button {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out 0.5s; }
+  .bookmark__button:hover, .bookmark__button:active {
+    background-color: #FF6698; }
+
+.bookmark__form-wrapper {
+  background-color: #ffffff;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1; }
+
+.bookmark__form {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.bookmark__form__button {
+  color: #FF6698;
+  border-color: #FF6698; }
+  .bookmark__form__button:hover, .bookmark__form__button:active {
+    color: #ffffff;
+    background-color: #FF6698; }
+  .bookmark__form__button:focus {
+    color: #ff1a65;
+    border-color: #ff1a65; }
+    .bookmark__form__button:focus:hover, .bookmark__form__button:focus:active {
+      color: #ffffff;
+      background-color: #ff3376; }
+
+.bookmark__form__input {
+  border: 1px solid #ffb3cc;
+  margin-bottom: 18px;
+  width: 400px; }
+  .bookmark__form__input:focus {
+    border: 1px solid #ff3376; }
+
+.bookmark__form__label {
+  color: #FF6698;
+  display: block;
+  margin-bottom: 5px; }
+
+.bookmark__link {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 18px 9px 18px 9px;
+  overflow: hidden;
+  transition: color 0.1s ease-in-out;
+  max-width: calc(100% - 18px); }
+  bookmark:hover .bookmark__link,
+  bookmark:active .bookmark__link {
+    max-width: calc(100% - 100px); }
+
+.options {
+  text-align: center;
+  background-color: white;
+  border: 9px solid #FF6698;
+  display: block;
+  overflow: scroll;
+  width: calc(100vw - 18px);
+  height: calc(100vh - 18px); }
+
+.options__headline {
+  color: #899696;
+  font-size: 30px;
+  margin: 0;
+  padding: 90px 18px 0 18px; }
+
+.options__paragraph {
+  color: #899696;
+  padding: 0 18px 36px 18px; }
+
+.options__list {
+  margin: 18px 27px 18px 36px;
+  padding: 0; }
+
+.options__list__element {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 9px 9px 0;
+  transition: box-shadow 0.25s ease-in-out;
+  width: 120px;
+  height: 120px; }
+  .options__list__element:hover {
+    animation: rotate infinite 1s ease-in-out alternate;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+  @media screen and (min-width: 800px) {
+    .options__list__element {
+      width: 150px;
+      height: 150px; } }
+
+.options__list__element--active {
+  animation: rotate infinite 3s ease-in-out alternate;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
+
+.options__list__element--pink-dark {
+  background-color: #e6004b; }
+
+.options__list__element--pink {
+  background-color: #FF6698; }
+
+.options__list__element--red-dark {
+  background-color: #cd170c; }
+
+.options__list__element--red {
+  background-color: #F66B62; }
+
+.options__list__element--orange-dark {
+  background-color: #ff4100; }
+
+.options__list__element--orange {
+  background-color: #FF8D66; }
+
+.options__list__element--yellow-dark {
+  background-color: #e69000; }
+
+.options__list__element--yellow {
+  background-color: #FFC666; }
+
+.options__list__element--green-dark {
+  background-color: #247a46; }
+
+.options__list__element--green {
+  background-color: #52CC82; }
+
+.options__list__element--blue-dark {
+  background-color: #237979; }
+
+.options__list__element--blue {
+  background-color: #50CCCC; }
+
+.options__list__element--black-dark {
+  background-color: #0f1111; }
+
+.options__list__element--black {
+  background-color: #4B5454; }
+
+.options__list__element--black-light {
+  background-color: #899696; }
+
+/* PINK DARK */
+.options--pink-dark {
+  border-color: #e6004b; }
+
+.bookmarklist-container--pink-dark {
+  background-color: #e6004b; }
+  .bookmarklist-container--pink-dark a {
+    color: #ff6698; }
+  .bookmarklist-container--pink-dark .bookmarklist__form__button, .bookmarklist-container--pink-dark .bookmark__form__button {
+    color: #ff6698;
+    border-color: #ff6698; }
+    .bookmarklist-container--pink-dark .bookmarklist__form__button:active, .bookmarklist-container--pink-dark .bookmark__form__button:active, .bookmarklist-container--pink-dark .bookmarklist__form__button:focus, .bookmarklist-container--pink-dark .bookmark__form__button:focus {
+      color: #ffffff;
+      border-color: #ffffff; }
+    .bookmarklist-container--pink-dark .bookmarklist__form__button:hover, .bookmarklist-container--pink-dark .bookmark__form__button:hover, .bookmarklist-container--pink-dark .bookmarklist__form__button:active, .bookmarklist-container--pink-dark .bookmark__form__button:active {
+      color: #e6004b;
+      background-color: #ff6698; }
+  .bookmarklist-container--pink-dark .bookmarklist__form__input, .bookmarklist-container--pink-dark .bookmark__form__input {
+    color: #ffffff;
+    background-color: #ff6698;
+    border-color: #ff6698; }
+    .bookmarklist-container--pink-dark .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--pink-dark .bookmark__form__input::-webkit-input-placeholder {
+      color: #e6004b; }
+    .bookmarklist-container--pink-dark .bookmarklist__form__input:active, .bookmarklist-container--pink-dark .bookmark__form__input:active, .bookmarklist-container--pink-dark .bookmarklist__form__input:focus, .bookmarklist-container--pink-dark .bookmark__form__input:focus {
+      border-color: #ffffff; }
+  .bookmarklist-container--pink-dark bookmark:hover .bookmark__link, .bookmarklist-container--pink-dark bookmark:active .bookmark__link {
+    color: #e6004b; }
+  .bookmarklist-container--pink-dark .bookmark__button {
+    color: #ffffff;
+    background-color: #ff6698; }
+    .bookmarklist-container--pink-dark .bookmark__button:hover, .bookmarklist-container--pink-dark .bookmark__button:active {
+      background-color: #e6004b; }
+  .bookmarklist-container--pink-dark .bookmark__form__button {
+    color: #e6004b;
+    border-color: #e6004b; }
+    .bookmarklist-container--pink-dark .bookmark__form__button:hover, .bookmarklist-container--pink-dark .bookmark__form__button:active {
+      color: #ffffff;
+      background-color: #e6004b; }
+    .bookmarklist-container--pink-dark .bookmark__form__button:focus {
+      color: #990032;
+      border-color: #990032; }
+      .bookmarklist-container--pink-dark .bookmark__form__button:focus:hover, .bookmarklist-container--pink-dark .bookmark__form__button:focus:active {
+        color: #ffffff;
+        background-color: #b3003a; }
+  .bookmarklist-container--pink-dark .bookmark__form__input {
+    border-color: #ff6698; }
+    .bookmarklist-container--pink-dark .bookmark__form__input:focus {
+      border-color: #b3003a; }
+  .bookmarklist-container--pink-dark .bookmark__form__label {
+    color: #e6004b; }
+
+/* PINK */
+.options--pink {
+  border-color: #FF6698; }
+
+.bookmarklist-container--pink {
+  background-color: #FF6698; }
+  .bookmarklist-container--pink a {
+    color: #ffe6ee; }
+  .bookmarklist-container--pink .bookmarklist__form__button, .bookmarklist-container--pink .bookmark__form__button {
+    color: #ffe6ee;
+    border-color: #ffe6ee; }
+    .bookmarklist-container--pink .bookmarklist__form__button:active, .bookmarklist-container--pink .bookmark__form__button:active, .bookmarklist-container--pink .bookmarklist__form__button:focus, .bookmarklist-container--pink .bookmark__form__button:focus {
+      color: #ffffff;
+      border-color: #ffffff; }
+    .bookmarklist-container--pink .bookmarklist__form__button:hover, .bookmarklist-container--pink .bookmark__form__button:hover, .bookmarklist-container--pink .bookmarklist__form__button:active, .bookmarklist-container--pink .bookmark__form__button:active {
+      color: #FF6698;
+      background-color: #ffe6ee; }
+  .bookmarklist-container--pink .bookmarklist__form__input, .bookmarklist-container--pink .bookmark__form__input {
+    color: #ffffff;
+    background-color: #ffe6ee;
+    border-color: #ffe6ee; }
+    .bookmarklist-container--pink .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--pink .bookmark__form__input::-webkit-input-placeholder {
+      color: #FF6698; }
+    .bookmarklist-container--pink .bookmarklist__form__input:active, .bookmarklist-container--pink .bookmark__form__input:active, .bookmarklist-container--pink .bookmarklist__form__input:focus, .bookmarklist-container--pink .bookmark__form__input:focus {
+      border-color: #ffffff; }
+  .bookmarklist-container--pink bookmark:hover .bookmark__link, .bookmarklist-container--pink bookmark:active .bookmark__link {
+    color: #FF6698; }
+  .bookmarklist-container--pink .bookmark__button {
+    color: #ffffff;
+    background-color: #ffe6ee; }
+    .bookmarklist-container--pink .bookmark__button:hover, .bookmarklist-container--pink .bookmark__button:active {
+      background-color: #FF6698; }
+  .bookmarklist-container--pink .bookmark__form__button {
+    color: #FF6698;
+    border-color: #FF6698; }
+    .bookmarklist-container--pink .bookmark__form__button:hover, .bookmarklist-container--pink .bookmark__form__button:active {
+      color: #ffffff;
+      background-color: #FF6698; }
+    .bookmarklist-container--pink .bookmark__form__button:focus {
+      color: #ff1a65;
+      border-color: #ff1a65; }
+      .bookmarklist-container--pink .bookmark__form__button:focus:hover, .bookmarklist-container--pink .bookmark__form__button:focus:active {
+        color: #ffffff;
+        background-color: #ff3376; }
+  .bookmarklist-container--pink .bookmark__form__input {
+    border-color: #ffe6ee; }
+    .bookmarklist-container--pink .bookmark__form__input:focus {
+      border-color: #ff3376; }
+  .bookmarklist-container--pink .bookmark__form__label {
+    color: #FF6698; }
+
+/* RED DARK */
+.options--red-dark {
+  border-color: #cd170c; }
+
+.bookmarklist-container--red-dark {
+  background-color: #cd170c; }
+  .bookmarklist-container--red-dark a {
+    color: #f66b62; }
+  .bookmarklist-container--red-dark .bookmarklist__form__button, .bookmarklist-container--red-dark .bookmark__form__button {
+    color: #f66b62;
+    border-color: #f66b62; }
+    .bookmarklist-container--red-dark .bookmarklist__form__button:active, .bookmarklist-container--red-dark .bookmark__form__button:active, .bookmarklist-container--red-dark .bookmarklist__form__button:focus, .bookmarklist-container--red-dark .bookmark__form__button:focus {
+      color: #ffffff;
+      border-color: #ffffff; }
+    .bookmarklist-container--red-dark .bookmarklist__form__button:hover, .bookmarklist-container--red-dark .bookmark__form__button:hover, .bookmarklist-container--red-dark .bookmarklist__form__button:active, .bookmarklist-container--red-dark .bookmark__form__button:active {
+      color: #cd170c;
+      background-color: #f66b62; }
+  .bookmarklist-container--red-dark .bookmarklist__form__input, .bookmarklist-container--red-dark .bookmark__form__input {
+    color: #ffffff;
+    background-color: #f66b62;
+    border-color: #f66b62; }
+    .bookmarklist-container--red-dark .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--red-dark .bookmark__form__input::-webkit-input-placeholder {
+      color: #cd170c; }
+    .bookmarklist-container--red-dark .bookmarklist__form__input:active, .bookmarklist-container--red-dark .bookmark__form__input:active, .bookmarklist-container--red-dark .bookmarklist__form__input:focus, .bookmarklist-container--red-dark .bookmark__form__input:focus {
+      border-color: #ffffff; }
+  .bookmarklist-container--red-dark bookmark:hover .bookmark__link, .bookmarklist-container--red-dark bookmark:active .bookmark__link {
+    color: #cd170c; }
+  .bookmarklist-container--red-dark .bookmark__button {
+    color: #ffffff;
+    background-color: #f66b62; }
+    .bookmarklist-container--red-dark .bookmark__button:hover, .bookmarklist-container--red-dark .bookmark__button:active {
+      background-color: #cd170c; }
+  .bookmarklist-container--red-dark .bookmark__form__button {
+    color: #cd170c;
+    border-color: #cd170c; }
+    .bookmarklist-container--red-dark .bookmark__form__button:hover, .bookmarklist-container--red-dark .bookmark__form__button:active {
+      color: #ffffff;
+      background-color: #cd170c; }
+    .bookmarklist-container--red-dark .bookmark__form__button:focus {
+      color: #840f08;
+      border-color: #840f08; }
+      .bookmarklist-container--red-dark .bookmark__form__button:focus:hover, .bookmarklist-container--red-dark .bookmark__form__button:focus:active {
+        color: #ffffff;
+        background-color: #9d1209; }
+  .bookmarklist-container--red-dark .bookmark__form__input {
+    border-color: #f66b62; }
+    .bookmarklist-container--red-dark .bookmark__form__input:focus {
+      border-color: #9d1209; }
+  .bookmarklist-container--red-dark .bookmark__form__label {
+    color: #cd170c; }
+
+/* RED */
+.options--red {
+  border-color: #F66B62; }
+
+.bookmarklist-container--red {
+  background-color: #F66B62; }
+  .bookmarklist-container--red a {
+    color: #fddddb; }
+  .bookmarklist-container--red .bookmarklist__form__button, .bookmarklist-container--red .bookmark__form__button {
+    color: #fddddb;
+    border-color: #fddddb; }
+    .bookmarklist-container--red .bookmarklist__form__button:active, .bookmarklist-container--red .bookmark__form__button:active, .bookmarklist-container--red .bookmarklist__form__button:focus, .bookmarklist-container--red .bookmark__form__button:focus {
+      color: #ffffff;
+      border-color: #ffffff; }
+    .bookmarklist-container--red .bookmarklist__form__button:hover, .bookmarklist-container--red .bookmark__form__button:hover, .bookmarklist-container--red .bookmarklist__form__button:active, .bookmarklist-container--red .bookmark__form__button:active {
+      color: #F66B62;
+      background-color: #fddddb; }
+  .bookmarklist-container--red .bookmarklist__form__input, .bookmarklist-container--red .bookmark__form__input {
+    color: #ffffff;
+    background-color: #fddddb;
+    border-color: #fddddb; }
+    .bookmarklist-container--red .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--red .bookmark__form__input::-webkit-input-placeholder {
+      color: #F66B62; }
+    .bookmarklist-container--red .bookmarklist__form__input:active, .bookmarklist-container--red .bookmark__form__input:active, .bookmarklist-container--red .bookmarklist__form__input:focus, .bookmarklist-container--red .bookmark__form__input:focus {
+      border-color: #ffffff; }
+  .bookmarklist-container--red bookmark:hover .bookmark__link, .bookmarklist-container--red bookmark:active .bookmark__link {
+    color: #F66B62; }
+  .bookmarklist-container--red .bookmark__button {
+    color: #ffffff;
+    background-color: #fddddb; }
+    .bookmarklist-container--red .bookmark__button:hover, .bookmarklist-container--red .bookmark__button:active {
+      background-color: #F66B62; }
+  .bookmarklist-container--red .bookmark__form__button {
+    color: #F66B62;
+    border-color: #F66B62; }
+    .bookmarklist-container--red .bookmark__form__button:hover, .bookmarklist-container--red .bookmark__form__button:active {
+      color: #ffffff;
+      background-color: #F66B62; }
+    .bookmarklist-container--red .bookmark__form__button:focus {
+      color: #f2271a;
+      border-color: #f2271a; }
+      .bookmarklist-container--red .bookmark__form__button:focus:hover, .bookmarklist-container--red .bookmark__form__button:focus:active {
+        color: #ffffff;
+        background-color: #f33e32; }
+  .bookmarklist-container--red .bookmark__form__input {
+    border-color: #fddddb; }
+    .bookmarklist-container--red .bookmark__form__input:focus {
+      border-color: #f33e32; }
+  .bookmarklist-container--red .bookmark__form__label {
+    color: #F66B62; }
+
+/* ORANGE DARK */
+.options--orange-dark {
+  border-color: #ff4100; }
+
+.bookmarklist-container--orange-dark {
+  background-color: #ff4100; }
+  .bookmarklist-container--orange-dark a {
+    color: #ffa080; }
+  .bookmarklist-container--orange-dark .bookmarklist__form__button, .bookmarklist-container--orange-dark .bookmark__form__button {
+    color: #ffa080;
+    border-color: #ffa080; }
+    .bookmarklist-container--orange-dark .bookmarklist__form__button:active, .bookmarklist-container--orange-dark .bookmark__form__button:active, .bookmarklist-container--orange-dark .bookmarklist__form__button:focus, .bookmarklist-container--orange-dark .bookmark__form__button:focus {
+      color: #ffffff;
+      border-color: #ffffff; }
+    .bookmarklist-container--orange-dark .bookmarklist__form__button:hover, .bookmarklist-container--orange-dark .bookmark__form__button:hover, .bookmarklist-container--orange-dark .bookmarklist__form__button:active, .bookmarklist-container--orange-dark .bookmark__form__button:active {
+      color: #ff4100;
+      background-color: #ffa080; }
+  .bookmarklist-container--orange-dark .bookmarklist__form__input, .bookmarklist-container--orange-dark .bookmark__form__input {
+    color: #ffffff;
+    background-color: #ffa080;
+    border-color: #ffa080; }
+    .bookmarklist-container--orange-dark .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--orange-dark .bookmark__form__input::-webkit-input-placeholder {
+      color: #ff4100; }
+    .bookmarklist-container--orange-dark .bookmarklist__form__input:active, .bookmarklist-container--orange-dark .bookmark__form__input:active, .bookmarklist-container--orange-dark .bookmarklist__form__input:focus, .bookmarklist-container--orange-dark .bookmark__form__input:focus {
+      border-color: #ffffff; }
+  .bookmarklist-container--orange-dark bookmark:hover .bookmark__link, .bookmarklist-container--orange-dark bookmark:active .bookmark__link {
+    color: #ff4100; }
+  .bookmarklist-container--orange-dark .bookmark__button {
+    color: #ffffff;
+    background-color: #ffa080; }
+    .bookmarklist-container--orange-dark .bookmark__button:hover, .bookmarklist-container--orange-dark .bookmark__button:active {
+      background-color: #ff4100; }
+  .bookmarklist-container--orange-dark .bookmark__form__button {
+    color: #ff4100;
+    border-color: #ff4100; }
+    .bookmarklist-container--orange-dark .bookmark__form__button:hover, .bookmarklist-container--orange-dark .bookmark__form__button:active {
+      color: #ffffff;
+      background-color: #ff4100; }
+    .bookmarklist-container--orange-dark .bookmark__form__button:focus {
+      color: #b32e00;
+      border-color: #b32e00; }
+      .bookmarklist-container--orange-dark .bookmark__form__button:focus:hover, .bookmarklist-container--orange-dark .bookmark__form__button:focus:active {
+        color: #ffffff;
+        background-color: #cc3400; }
+  .bookmarklist-container--orange-dark .bookmark__form__input {
+    border-color: #ffa080; }
+    .bookmarklist-container--orange-dark .bookmark__form__input:focus {
+      border-color: #cc3400; }
+  .bookmarklist-container--orange-dark .bookmark__form__label {
+    color: #ff4100; }
+
+/* ORANGE */
+.options--orange {
+  border-color: #FF8D66; }
+
+.bookmarklist-container--orange {
+  background-color: #FF8D66; }
+  .bookmarklist-container--orange a {
+    color: #ffece6; }
+  .bookmarklist-container--orange .bookmarklist__form__button, .bookmarklist-container--orange .bookmark__form__button {
+    color: #ffece6;
+    border-color: #ffece6; }
+    .bookmarklist-container--orange .bookmarklist__form__button:active, .bookmarklist-container--orange .bookmark__form__button:active, .bookmarklist-container--orange .bookmarklist__form__button:focus, .bookmarklist-container--orange .bookmark__form__button:focus {
+      color: #ffffff;
+      border-color: #ffffff; }
+    .bookmarklist-container--orange .bookmarklist__form__button:hover, .bookmarklist-container--orange .bookmark__form__button:hover, .bookmarklist-container--orange .bookmarklist__form__button:active, .bookmarklist-container--orange .bookmark__form__button:active {
+      color: #FF8D66;
+      background-color: #ffece6; }
+  .bookmarklist-container--orange .bookmarklist__form__input, .bookmarklist-container--orange .bookmark__form__input {
+    color: #ffffff;
+    background-color: #ffece6;
+    border-color: #ffece6; }
+    .bookmarklist-container--orange .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--orange .bookmark__form__input::-webkit-input-placeholder {
+      color: #FF8D66; }
+    .bookmarklist-container--orange .bookmarklist__form__input:active, .bookmarklist-container--orange .bookmark__form__input:active, .bookmarklist-container--orange .bookmarklist__form__input:focus, .bookmarklist-container--orange .bookmark__form__input:focus {
+      border-color: #ffffff; }
+  .bookmarklist-container--orange bookmark:hover .bookmark__link, .bookmarklist-container--orange bookmark:active .bookmark__link {
+    color: #FF8D66; }
+  .bookmarklist-container--orange .bookmark__button {
+    color: #ffffff;
+    background-color: #ffece6; }
+    .bookmarklist-container--orange .bookmark__button:hover, .bookmarklist-container--orange .bookmark__button:active {
+      background-color: #FF8D66; }
+  .bookmarklist-container--orange .bookmark__form__button {
+    color: #FF8D66;
+    border-color: #FF8D66; }
+    .bookmarklist-container--orange .bookmark__form__button:hover, .bookmarklist-container--orange .bookmark__form__button:active {
+      color: #ffffff;
+      background-color: #FF8D66; }
+    .bookmarklist-container--orange .bookmark__form__button:focus {
+      color: #ff541a;
+      border-color: #ff541a; }
+      .bookmarklist-container--orange .bookmark__form__button:focus:hover, .bookmarklist-container--orange .bookmark__form__button:focus:active {
+        color: #ffffff;
+        background-color: #ff6733; }
+  .bookmarklist-container--orange .bookmark__form__input {
+    border-color: #ffece6; }
+    .bookmarklist-container--orange .bookmark__form__input:focus {
+      border-color: #ff6733; }
+  .bookmarklist-container--orange .bookmark__form__label {
+    color: #FF8D66; }
+
+/* YELLOW DARK */
+.options--yellow-dark {
+  border-color: #e69000; }
+
+.bookmarklist-container--yellow-dark {
+  background-color: #e69000; }
+  .bookmarklist-container--yellow-dark a {
+    color: #ffc666; }
+  .bookmarklist-container--yellow-dark .bookmarklist__form__button, .bookmarklist-container--yellow-dark .bookmark__form__button {
+    color: #ffc666;
+    border-color: #ffc666; }
+    .bookmarklist-container--yellow-dark .bookmarklist__form__button:active, .bookmarklist-container--yellow-dark .bookmark__form__button:active, .bookmarklist-container--yellow-dark .bookmarklist__form__button:focus, .bookmarklist-container--yellow-dark .bookmark__form__button:focus {
+      color: #ffffff;
+      border-color: #ffffff; }
+    .bookmarklist-container--yellow-dark .bookmarklist__form__button:hover, .bookmarklist-container--yellow-dark .bookmark__form__button:hover, .bookmarklist-container--yellow-dark .bookmarklist__form__button:active, .bookmarklist-container--yellow-dark .bookmark__form__button:active {
+      color: #e69000;
+      background-color: #ffc666; }
+  .bookmarklist-container--yellow-dark .bookmarklist__form__input, .bookmarklist-container--yellow-dark .bookmark__form__input {
+    color: #ffffff;
+    background-color: #ffc666;
+    border-color: #ffc666; }
+    .bookmarklist-container--yellow-dark .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--yellow-dark .bookmark__form__input::-webkit-input-placeholder {
+      color: #e69000; }
+    .bookmarklist-container--yellow-dark .bookmarklist__form__input:active, .bookmarklist-container--yellow-dark .bookmark__form__input:active, .bookmarklist-container--yellow-dark .bookmarklist__form__input:focus, .bookmarklist-container--yellow-dark .bookmark__form__input:focus {
+      border-color: #ffffff; }
+  .bookmarklist-container--yellow-dark bookmark:hover .bookmark__link, .bookmarklist-container--yellow-dark bookmark:active .bookmark__link {
+    color: #e69000; }
+  .bookmarklist-container--yellow-dark .bookmark__button {
+    color: #ffffff;
+    background-color: #ffc666; }
+    .bookmarklist-container--yellow-dark .bookmark__button:hover, .bookmarklist-container--yellow-dark .bookmark__button:active {
+      background-color: #e69000; }
+  .bookmarklist-container--yellow-dark .bookmark__form__button {
+    color: #e69000;
+    border-color: #e69000; }
+    .bookmarklist-container--yellow-dark .bookmark__form__button:hover, .bookmarklist-container--yellow-dark .bookmark__form__button:active {
+      color: #ffffff;
+      background-color: #e69000; }
+    .bookmarklist-container--yellow-dark .bookmark__form__button:focus {
+      color: #996000;
+      border-color: #996000; }
+      .bookmarklist-container--yellow-dark .bookmark__form__button:focus:hover, .bookmarklist-container--yellow-dark .bookmark__form__button:focus:active {
+        color: #ffffff;
+        background-color: #b37000; }
+  .bookmarklist-container--yellow-dark .bookmark__form__input {
+    border-color: #ffc666; }
+    .bookmarklist-container--yellow-dark .bookmark__form__input:focus {
+      border-color: #b37000; }
+  .bookmarklist-container--yellow-dark .bookmark__form__label {
+    color: #e69000; }
+
+/* YELLOW */
+.options--yellow {
+  border-color: #FFC666; }
+
+.bookmarklist-container--yellow {
+  background-color: #FFC666; }
+  .bookmarklist-container--yellow a {
+    color: #fff6e6; }
+  .bookmarklist-container--yellow .bookmarklist__form__button, .bookmarklist-container--yellow .bookmark__form__button {
+    color: #fff6e6;
+    border-color: #fff6e6; }
+    .bookmarklist-container--yellow .bookmarklist__form__button:active, .bookmarklist-container--yellow .bookmark__form__button:active, .bookmarklist-container--yellow .bookmarklist__form__button:focus, .bookmarklist-container--yellow .bookmark__form__button:focus {
+      color: #ffffff;
+      border-color: #ffffff; }
+    .bookmarklist-container--yellow .bookmarklist__form__button:hover, .bookmarklist-container--yellow .bookmark__form__button:hover, .bookmarklist-container--yellow .bookmarklist__form__button:active, .bookmarklist-container--yellow .bookmark__form__button:active {
+      color: #FFC666;
+      background-color: #fff6e6; }
+  .bookmarklist-container--yellow .bookmarklist__form__input, .bookmarklist-container--yellow .bookmark__form__input {
+    color: #ffffff;
+    background-color: #fff6e6;
+    border-color: #fff6e6; }
+    .bookmarklist-container--yellow .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--yellow .bookmark__form__input::-webkit-input-placeholder {
+      color: #FFC666; }
+    .bookmarklist-container--yellow .bookmarklist__form__input:active, .bookmarklist-container--yellow .bookmark__form__input:active, .bookmarklist-container--yellow .bookmarklist__form__input:focus, .bookmarklist-container--yellow .bookmark__form__input:focus {
+      border-color: #ffffff; }
+  .bookmarklist-container--yellow bookmark:hover .bookmark__link, .bookmarklist-container--yellow bookmark:active .bookmark__link {
+    color: #FFC666; }
+  .bookmarklist-container--yellow .bookmark__button {
+    color: #ffffff;
+    background-color: #fff6e6; }
+    .bookmarklist-container--yellow .bookmark__button:hover, .bookmarklist-container--yellow .bookmark__button:active {
+      background-color: #FFC666; }
+  .bookmarklist-container--yellow .bookmark__form__button {
+    color: #FFC666;
+    border-color: #FFC666; }
+    .bookmarklist-container--yellow .bookmark__form__button:hover, .bookmarklist-container--yellow .bookmark__form__button:active {
+      color: #ffffff;
+      background-color: #FFC666; }
+    .bookmarklist-container--yellow .bookmark__form__button:focus {
+      color: #ffaa1a;
+      border-color: #ffaa1a; }
+      .bookmarklist-container--yellow .bookmark__form__button:focus:hover, .bookmarklist-container--yellow .bookmark__form__button:focus:active {
+        color: #ffffff;
+        background-color: #ffb333; }
+  .bookmarklist-container--yellow .bookmark__form__input {
+    border-color: #fff6e6; }
+    .bookmarklist-container--yellow .bookmark__form__input:focus {
+      border-color: #ffb333; }
+  .bookmarklist-container--yellow .bookmark__form__label {
+    color: #FFC666; }
+
+/* GREEN DARK */
+.options--green-dark {
+  border-color: #247a46; }
+
+.bookmarklist-container--green-dark {
+  background-color: #247a46; }
+  .bookmarklist-container--green-dark a {
+    color: #52cc82; }
+  .bookmarklist-container--green-dark .bookmarklist__form__button, .bookmarklist-container--green-dark .bookmark__form__button {
+    color: #52cc82;
+    border-color: #52cc82; }
+    .bookmarklist-container--green-dark .bookmarklist__form__button:active, .bookmarklist-container--green-dark .bookmark__form__button:active, .bookmarklist-container--green-dark .bookmarklist__form__button:focus, .bookmarklist-container--green-dark .bookmark__form__button:focus {
+      color: #ffffff;
+      border-color: #ffffff; }
+    .bookmarklist-container--green-dark .bookmarklist__form__button:hover, .bookmarklist-container--green-dark .bookmark__form__button:hover, .bookmarklist-container--green-dark .bookmarklist__form__button:active, .bookmarklist-container--green-dark .bookmark__form__button:active {
+      color: #247a46;
+      background-color: #52cc82; }
+  .bookmarklist-container--green-dark .bookmarklist__form__input, .bookmarklist-container--green-dark .bookmark__form__input {
+    color: #ffffff;
+    background-color: #52cc82;
+    border-color: #52cc82; }
+    .bookmarklist-container--green-dark .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--green-dark .bookmark__form__input::-webkit-input-placeholder {
+      color: #247a46; }
+    .bookmarklist-container--green-dark .bookmarklist__form__input:active, .bookmarklist-container--green-dark .bookmark__form__input:active, .bookmarklist-container--green-dark .bookmarklist__form__input:focus, .bookmarklist-container--green-dark .bookmark__form__input:focus {
+      border-color: #ffffff; }
+  .bookmarklist-container--green-dark bookmark:hover .bookmark__link, .bookmarklist-container--green-dark bookmark:active .bookmark__link {
+    color: #247a46; }
+  .bookmarklist-container--green-dark .bookmark__button {
+    color: #ffffff;
+    background-color: #52cc82; }
+    .bookmarklist-container--green-dark .bookmark__button:hover, .bookmarklist-container--green-dark .bookmark__button:active {
+      background-color: #247a46; }
+  .bookmarklist-container--green-dark .bookmark__form__button {
+    color: #247a46;
+    border-color: #247a46; }
+    .bookmarklist-container--green-dark .bookmark__form__button:hover, .bookmarklist-container--green-dark .bookmark__form__button:active {
+      color: #ffffff;
+      background-color: #247a46; }
+    .bookmarklist-container--green-dark .bookmark__form__button:focus {
+      color: #133f24;
+      border-color: #133f24; }
+      .bookmarklist-container--green-dark .bookmark__form__button:focus:hover, .bookmarklist-container--green-dark .bookmark__form__button:focus:active {
+        color: #ffffff;
+        background-color: #185330; }
+  .bookmarklist-container--green-dark .bookmark__form__input {
+    border-color: #52cc82; }
+    .bookmarklist-container--green-dark .bookmark__form__input:focus {
+      border-color: #185330; }
+  .bookmarklist-container--green-dark .bookmark__form__label {
+    color: #247a46; }
+
+/* GREEN */
+.options--green {
+  border-color: #52CC82; }
+
+.bookmarklist-container--green {
+  background-color: #52CC82; }
+  .bookmarklist-container--green a {
+    color: #b4e9c9; }
+  .bookmarklist-container--green .bookmarklist__form__button, .bookmarklist-container--green .bookmark__form__button {
+    color: #b4e9c9;
+    border-color: #b4e9c9; }
+    .bookmarklist-container--green .bookmarklist__form__button:active, .bookmarklist-container--green .bookmark__form__button:active, .bookmarklist-container--green .bookmarklist__form__button:focus, .bookmarklist-container--green .bookmark__form__button:focus {
+      color: #ffffff;
+      border-color: #ffffff; }
+    .bookmarklist-container--green .bookmarklist__form__button:hover, .bookmarklist-container--green .bookmark__form__button:hover, .bookmarklist-container--green .bookmarklist__form__button:active, .bookmarklist-container--green .bookmark__form__button:active {
+      color: #52CC82;
+      background-color: #b4e9c9; }
+  .bookmarklist-container--green .bookmarklist__form__input, .bookmarklist-container--green .bookmark__form__input {
+    color: #ffffff;
+    background-color: #b4e9c9;
+    border-color: #b4e9c9; }
+    .bookmarklist-container--green .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--green .bookmark__form__input::-webkit-input-placeholder {
+      color: #52CC82; }
+    .bookmarklist-container--green .bookmarklist__form__input:active, .bookmarklist-container--green .bookmark__form__input:active, .bookmarklist-container--green .bookmarklist__form__input:focus, .bookmarklist-container--green .bookmark__form__input:focus {
+      border-color: #ffffff; }
+  .bookmarklist-container--green bookmark:hover .bookmark__link, .bookmarklist-container--green bookmark:active .bookmark__link {
+    color: #52CC82; }
+  .bookmarklist-container--green .bookmark__button {
+    color: #ffffff;
+    background-color: #b4e9c9; }
+    .bookmarklist-container--green .bookmark__button:hover, .bookmarklist-container--green .bookmark__button:active {
+      background-color: #52CC82; }
+  .bookmarklist-container--green .bookmark__form__button {
+    color: #52CC82;
+    border-color: #52CC82; }
+    .bookmarklist-container--green .bookmark__form__button:hover, .bookmarklist-container--green .bookmark__form__button:active {
+      color: #ffffff;
+      background-color: #52CC82; }
+    .bookmarklist-container--green .bookmark__form__button:focus {
+      color: #30a25d;
+      border-color: #30a25d; }
+      .bookmarklist-container--green .bookmark__form__button:focus:hover, .bookmarklist-container--green .bookmark__form__button:focus:active {
+        color: #ffffff;
+        background-color: #36b568; }
+  .bookmarklist-container--green .bookmark__form__input {
+    border-color: #b4e9c9; }
+    .bookmarklist-container--green .bookmark__form__input:focus {
+      border-color: #36b568; }
+  .bookmarklist-container--green .bookmark__form__label {
+    color: #52CC82; }
+
+/* BLUE DARK */
+.options--blue-dark {
+  border-color: #237979; }
+
+.bookmarklist-container--blue-dark {
+  background-color: #237979; }
+  .bookmarklist-container--blue-dark a {
+    color: #50cccc; }
+  .bookmarklist-container--blue-dark .bookmarklist__form__button, .bookmarklist-container--blue-dark .bookmark__form__button {
+    color: #50cccc;
+    border-color: #50cccc; }
+    .bookmarklist-container--blue-dark .bookmarklist__form__button:active, .bookmarklist-container--blue-dark .bookmark__form__button:active, .bookmarklist-container--blue-dark .bookmarklist__form__button:focus, .bookmarklist-container--blue-dark .bookmark__form__button:focus {
+      color: #ffffff;
+      border-color: #ffffff; }
+    .bookmarklist-container--blue-dark .bookmarklist__form__button:hover, .bookmarklist-container--blue-dark .bookmark__form__button:hover, .bookmarklist-container--blue-dark .bookmarklist__form__button:active, .bookmarklist-container--blue-dark .bookmark__form__button:active {
+      color: #237979;
+      background-color: #50cccc; }
+  .bookmarklist-container--blue-dark .bookmarklist__form__input, .bookmarklist-container--blue-dark .bookmark__form__input {
+    color: #ffffff;
+    background-color: #50cccc;
+    border-color: #50cccc; }
+    .bookmarklist-container--blue-dark .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--blue-dark .bookmark__form__input::-webkit-input-placeholder {
+      color: #237979; }
+    .bookmarklist-container--blue-dark .bookmarklist__form__input:active, .bookmarklist-container--blue-dark .bookmark__form__input:active, .bookmarklist-container--blue-dark .bookmarklist__form__input:focus, .bookmarklist-container--blue-dark .bookmark__form__input:focus {
+      border-color: #ffffff; }
+  .bookmarklist-container--blue-dark bookmark:hover .bookmark__link, .bookmarklist-container--blue-dark bookmark:active .bookmark__link {
+    color: #237979; }
+  .bookmarklist-container--blue-dark .bookmark__button {
+    color: #ffffff;
+    background-color: #50cccc; }
+    .bookmarklist-container--blue-dark .bookmark__button:hover, .bookmarklist-container--blue-dark .bookmark__button:active {
+      background-color: #237979; }
+  .bookmarklist-container--blue-dark .bookmark__form__button {
+    color: #237979;
+    border-color: #237979; }
+    .bookmarklist-container--blue-dark .bookmark__form__button:hover, .bookmarklist-container--blue-dark .bookmark__form__button:active {
+      color: #ffffff;
+      background-color: #237979; }
+    .bookmarklist-container--blue-dark .bookmark__form__button:focus {
+      color: #123e3e;
+      border-color: #123e3e; }
+      .bookmarklist-container--blue-dark .bookmark__form__button:focus:hover, .bookmarklist-container--blue-dark .bookmark__form__button:focus:active {
+        color: #ffffff;
+        background-color: #185252; }
+  .bookmarklist-container--blue-dark .bookmark__form__input {
+    border-color: #50cccc; }
+    .bookmarklist-container--blue-dark .bookmark__form__input:focus {
+      border-color: #185252; }
+  .bookmarklist-container--blue-dark .bookmark__form__label {
+    color: #237979; }
+
+/* BUE */
+.options--blue {
+  border-color: #50CCCC; }
+
+.bookmarklist-container--blue {
+  background-color: #50CCCC; }
+  .bookmarklist-container--blue a {
+    color: #b3e9e9; }
+  .bookmarklist-container--blue .bookmarklist__form__button, .bookmarklist-container--blue .bookmark__form__button {
+    color: #b3e9e9;
+    border-color: #b3e9e9; }
+    .bookmarklist-container--blue .bookmarklist__form__button:active, .bookmarklist-container--blue .bookmark__form__button:active, .bookmarklist-container--blue .bookmarklist__form__button:focus, .bookmarklist-container--blue .bookmark__form__button:focus {
+      color: #ffffff;
+      border-color: #ffffff; }
+    .bookmarklist-container--blue .bookmarklist__form__button:hover, .bookmarklist-container--blue .bookmark__form__button:hover, .bookmarklist-container--blue .bookmarklist__form__button:active, .bookmarklist-container--blue .bookmark__form__button:active {
+      color: #50CCCC;
+      background-color: #b3e9e9; }
+  .bookmarklist-container--blue .bookmarklist__form__input, .bookmarklist-container--blue .bookmark__form__input {
+    color: #ffffff;
+    background-color: #b3e9e9;
+    border-color: #b3e9e9; }
+    .bookmarklist-container--blue .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--blue .bookmark__form__input::-webkit-input-placeholder {
+      color: #50CCCC; }
+    .bookmarklist-container--blue .bookmarklist__form__input:active, .bookmarklist-container--blue .bookmark__form__input:active, .bookmarklist-container--blue .bookmarklist__form__input:focus, .bookmarklist-container--blue .bookmark__form__input:focus {
+      border-color: #ffffff; }
+  .bookmarklist-container--blue bookmark:hover .bookmark__link, .bookmarklist-container--blue bookmark:active .bookmark__link {
+    color: #50CCCC; }
+  .bookmarklist-container--blue .bookmark__button {
+    color: #ffffff;
+    background-color: #b3e9e9; }
+    .bookmarklist-container--blue .bookmark__button:hover, .bookmarklist-container--blue .bookmark__button:active {
+      background-color: #50CCCC; }
+  .bookmarklist-container--blue .bookmark__form__button {
+    color: #50CCCC;
+    border-color: #50CCCC; }
+    .bookmarklist-container--blue .bookmark__form__button:hover, .bookmarklist-container--blue .bookmark__form__button:active {
+      color: #ffffff;
+      background-color: #50CCCC; }
+    .bookmarklist-container--blue .bookmark__form__button:focus {
+      color: #2fa1a1;
+      border-color: #2fa1a1; }
+      .bookmarklist-container--blue .bookmark__form__button:focus:hover, .bookmarklist-container--blue .bookmark__form__button:focus:active {
+        color: #ffffff;
+        background-color: #35b4b4; }
+  .bookmarklist-container--blue .bookmark__form__input {
+    border-color: #b3e9e9; }
+    .bookmarklist-container--blue .bookmark__form__input:focus {
+      border-color: #35b4b4; }
+  .bookmarklist-container--blue .bookmark__form__label {
+    color: #50CCCC; }
+
+/* BLACK DARK */
+.options--black-dark {
+  border-color: #0f1111; }
+
+.bookmarklist-container--black-dark {
+  background-color: #0f1111; }
+  .bookmarklist-container--black-dark a {
+    color: #4b5454; }
+  .bookmarklist-container--black-dark .bookmarklist__form__button, .bookmarklist-container--black-dark .bookmark__form__button {
+    color: #4b5454;
+    border-color: #4b5454; }
+    .bookmarklist-container--black-dark .bookmarklist__form__button:active, .bookmarklist-container--black-dark .bookmark__form__button:active, .bookmarklist-container--black-dark .bookmarklist__form__button:focus, .bookmarklist-container--black-dark .bookmark__form__button:focus {
+      color: #ffffff;
+      border-color: #ffffff; }
+    .bookmarklist-container--black-dark .bookmarklist__form__button:hover, .bookmarklist-container--black-dark .bookmark__form__button:hover, .bookmarklist-container--black-dark .bookmarklist__form__button:active, .bookmarklist-container--black-dark .bookmark__form__button:active {
+      color: #0f1111;
+      background-color: #4b5454; }
+  .bookmarklist-container--black-dark .bookmarklist__form__input, .bookmarklist-container--black-dark .bookmark__form__input {
+    color: #ffffff;
+    background-color: #4b5454;
+    border-color: #4b5454; }
+    .bookmarklist-container--black-dark .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--black-dark .bookmark__form__input::-webkit-input-placeholder {
+      color: #0f1111; }
+    .bookmarklist-container--black-dark .bookmarklist__form__input:active, .bookmarklist-container--black-dark .bookmark__form__input:active, .bookmarklist-container--black-dark .bookmarklist__form__input:focus, .bookmarklist-container--black-dark .bookmark__form__input:focus {
+      border-color: #ffffff; }
+  .bookmarklist-container--black-dark bookmark:hover .bookmark__link, .bookmarklist-container--black-dark bookmark:active .bookmark__link {
+    color: #0f1111; }
+  .bookmarklist-container--black-dark .bookmark__button {
+    color: #ffffff;
+    background-color: #4b5454; }
+    .bookmarklist-container--black-dark .bookmark__button:hover, .bookmarklist-container--black-dark .bookmark__button:active {
+      background-color: #0f1111; }
+  .bookmarklist-container--black-dark .bookmark__form__button {
+    color: #0f1111;
+    border-color: #0f1111; }
+    .bookmarklist-container--black-dark .bookmark__form__button:hover, .bookmarklist-container--black-dark .bookmark__form__button:active {
+      color: #ffffff;
+      background-color: #0f1111; }
+    .bookmarklist-container--black-dark .bookmark__form__button:focus {
+      color: black;
+      border-color: black; }
+      .bookmarklist-container--black-dark .bookmark__form__button:focus:hover, .bookmarklist-container--black-dark .bookmark__form__button:focus:active {
+        color: #ffffff;
+        background-color: black; }
+  .bookmarklist-container--black-dark .bookmark__form__input {
+    border-color: #4b5454; }
+    .bookmarklist-container--black-dark .bookmark__form__input:focus {
+      border-color: black; }
+  .bookmarklist-container--black-dark .bookmark__form__label {
+    color: #0f1111; }
+
+/* BLACK */
+.options--black {
+  border-color: #4B5454; }
+
+.bookmarklist-container--black {
+  background-color: #4B5454; }
+  .bookmarklist-container--black a {
+    color: #899696; }
+  .bookmarklist-container--black .bookmarklist__form__button, .bookmarklist-container--black .bookmark__form__button {
+    color: #899696;
+    border-color: #899696; }
+    .bookmarklist-container--black .bookmarklist__form__button:active, .bookmarklist-container--black .bookmark__form__button:active, .bookmarklist-container--black .bookmarklist__form__button:focus, .bookmarklist-container--black .bookmark__form__button:focus {
+      color: #ffffff;
+      border-color: #ffffff; }
+    .bookmarklist-container--black .bookmarklist__form__button:hover, .bookmarklist-container--black .bookmark__form__button:hover, .bookmarklist-container--black .bookmarklist__form__button:active, .bookmarklist-container--black .bookmark__form__button:active {
+      color: #4B5454;
+      background-color: #899696; }
+  .bookmarklist-container--black .bookmarklist__form__input, .bookmarklist-container--black .bookmark__form__input {
+    color: #ffffff;
+    background-color: #899696;
+    border-color: #899696; }
+    .bookmarklist-container--black .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--black .bookmark__form__input::-webkit-input-placeholder {
+      color: #4B5454; }
+    .bookmarklist-container--black .bookmarklist__form__input:active, .bookmarklist-container--black .bookmark__form__input:active, .bookmarklist-container--black .bookmarklist__form__input:focus, .bookmarklist-container--black .bookmark__form__input:focus {
+      border-color: #ffffff; }
+  .bookmarklist-container--black bookmark:hover .bookmark__link, .bookmarklist-container--black bookmark:active .bookmark__link {
+    color: #4B5454; }
+  .bookmarklist-container--black .bookmark__button {
+    color: #ffffff;
+    background-color: #899696; }
+    .bookmarklist-container--black .bookmark__button:hover, .bookmarklist-container--black .bookmark__button:active {
+      background-color: #4B5454; }
+  .bookmarklist-container--black .bookmark__form__button {
+    color: #4B5454;
+    border-color: #4B5454; }
+    .bookmarklist-container--black .bookmark__form__button:hover, .bookmarklist-container--black .bookmark__form__button:active {
+      color: #ffffff;
+      background-color: #4B5454; }
+    .bookmarklist-container--black .bookmark__form__button:focus {
+      color: #272c2c;
+      border-color: #272c2c; }
+      .bookmarklist-container--black .bookmark__form__button:focus:hover, .bookmarklist-container--black .bookmark__form__button:focus:active {
+        color: #ffffff;
+        background-color: #333939; }
+  .bookmarklist-container--black .bookmark__form__input {
+    border-color: #899696; }
+    .bookmarklist-container--black .bookmark__form__input:focus {
+      border-color: #333939; }
+  .bookmarklist-container--black .bookmark__form__label {
+    color: #4B5454; }
+
+/* BLACK LIGHT */
+.options--black-light {
+  border-color: #899696; }
+
+.bookmarklist-container--black-light {
+  background-color: #899696; }
+  .bookmarklist-container--black-light a {
+    color: #ccd2d2; }
+  .bookmarklist-container--black-light .bookmarklist__form__button, .bookmarklist-container--black-light .bookmark__form__button {
+    color: #ccd2d2;
+    border-color: #ccd2d2; }
+    .bookmarklist-container--black-light .bookmarklist__form__button:active, .bookmarklist-container--black-light .bookmark__form__button:active, .bookmarklist-container--black-light .bookmarklist__form__button:focus, .bookmarklist-container--black-light .bookmark__form__button:focus {
+      color: #ffffff;
+      border-color: #ffffff; }
+    .bookmarklist-container--black-light .bookmarklist__form__button:hover, .bookmarklist-container--black-light .bookmark__form__button:hover, .bookmarklist-container--black-light .bookmarklist__form__button:active, .bookmarklist-container--black-light .bookmark__form__button:active {
+      color: #899696;
+      background-color: #ccd2d2; }
+  .bookmarklist-container--black-light .bookmarklist__form__input, .bookmarklist-container--black-light .bookmark__form__input {
+    color: #ffffff;
+    background-color: #ccd2d2;
+    border-color: #ccd2d2; }
+    .bookmarklist-container--black-light .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--black-light .bookmark__form__input::-webkit-input-placeholder {
+      color: #899696; }
+    .bookmarklist-container--black-light .bookmarklist__form__input:active, .bookmarklist-container--black-light .bookmark__form__input:active, .bookmarklist-container--black-light .bookmarklist__form__input:focus, .bookmarklist-container--black-light .bookmark__form__input:focus {
+      border-color: #ffffff; }
+  .bookmarklist-container--black-light bookmark:hover .bookmark__link, .bookmarklist-container--black-light bookmark:active .bookmark__link {
+    color: #899696; }
+  .bookmarklist-container--black-light .bookmark__button {
+    color: #ffffff;
+    background-color: #ccd2d2; }
+    .bookmarklist-container--black-light .bookmark__button:hover, .bookmarklist-container--black-light .bookmark__button:active {
+      background-color: #899696; }
+  .bookmarklist-container--black-light .bookmark__form__button {
+    color: #899696;
+    border-color: #899696; }
+    .bookmarklist-container--black-light .bookmark__form__button:hover, .bookmarklist-container--black-light .bookmark__form__button:active {
+      color: #ffffff;
+      background-color: #899696; }
+    .bookmarklist-container--black-light .bookmark__form__button:focus {
+      color: #636f6f;
+      border-color: #636f6f; }
+      .bookmarklist-container--black-light .bookmark__form__button:focus:hover, .bookmarklist-container--black-light .bookmark__form__button:focus:active {
+        color: #ffffff;
+        background-color: #6f7c7c; }
+  .bookmarklist-container--black-light .bookmark__form__input {
+    border-color: #ccd2d2; }
+    .bookmarklist-container--black-light .bookmark__form__input:focus {
+      border-color: #6f7c7c; }
+  .bookmarklist-container--black-light .bookmark__form__label {
+    color: #899696; }

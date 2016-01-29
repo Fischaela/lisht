@@ -1,0 +1,7 @@
+<section class="options options--{{activeColor}}">
+	<h1 class="options__headline">Options</h1>
+	<p class="options__paragraph">Please choose your favorite color.</p>
+	<ul class="options__list">
+		<li class="options__list__element options__list__element--{{option.color}}" [ngClass]="{'options__list__element--active': option.isActive}" *ngFor="#option of options; #i = index" (click)="setActiveColor(i)"></li>
+	</ul>
+</section>

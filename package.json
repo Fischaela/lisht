@@ -2,13 +2,20 @@
   "name": "LISHT",
   "version": "2.0.0",
   "scripts": {
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
+    "clean": "rimraf dist/*",
+    "tsc": "tsc --outDir dist/scripts",
+    "tsc:w": "tsc -w --outDir dist",
+    "copy-scripts": "cp app/scripts/extension.js dist/scripts",
+    "copy-lib": "cp node_modules/{es6-shim/es6-sham.min.js,systemjs/dist/system-polyfills.js,angular2/bundles/angular2-polyfills.js,systemjs/dist/system.src.js,rxjs/bundles/Rx.js,angular2/bundles/angular2.dev.js,angular2/bundles/router.dev.js} dist/lib/",
+    "copy-manifest": "cp manifest.json dist/",
+    "copy-assets": "cp app/assets/* dist/assets/",
+    "copy-images": "cp app/{*.png,*.ico,*.html} dist/",
+    "copy-templates": "cp app/templates/* dist/templates",
     "lite": "lite-server --baseDir 'app' --baseDir './'",
-    "build-css": "node-sass --include-path scss app/scss/main.scss app/css/main.css",
+    "build-css": "node-sass --include-path scss app/scss/main.scss dist/css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "start": "concurrent \"npm run tsc:w\" \"npm run watch-css\" \"npm run lite\"",
-    "build": "concurrent \"npm run tsc\" \"npm run build-css\""
+    "build": "npm run clean && npm run tsc && npm run build-css && mkdir dist/lib && mkdir dist/templates && mkdir dist/assets && npm run copy-lib && npm run copy-manifest && npm run copy-assets && npm run copy-images && npm run copy-templates && npm run copy-scripts"
   },
   "license": "ISC",
   "dependencies": {
