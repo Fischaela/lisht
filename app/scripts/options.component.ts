@@ -5,7 +5,7 @@ import { Component } from 'angular2/core';
   templateUrl: './templates/options.html'
 })
 
-export class BookmarkOptionsComponent {
+export class OptionsComponent {
 
   public colors = [
     { color : 'pink-dark' },

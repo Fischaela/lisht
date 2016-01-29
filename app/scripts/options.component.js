@@ -9,15 +9,15 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var BookmarkOptionsComponent;
+    var OptionsComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            BookmarkOptionsComponent = (function () {
-                function BookmarkOptionsComponent() {
+            OptionsComponent = (function () {
+                function OptionsComponent() {
                     this.colors = [
                         { color: 'pink-dark' },
                         { color: 'pink' },
@@ -36,17 +36,17 @@ System.register(['angular2/core'], function(exports_1) {
                         { color: 'black-light' }
                     ];
                 }
-                BookmarkOptionsComponent = __decorate([
+                OptionsComponent = __decorate([
                     core_1.Component({
                         selector: 'lisht-options',
                         templateUrl: './templates/options.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], BookmarkOptionsComponent);
-                return BookmarkOptionsComponent;
+                ], OptionsComponent);
+                return OptionsComponent;
             })();
-            exports_1("BookmarkOptionsComponent", BookmarkOptionsComponent);
+            exports_1("OptionsComponent", OptionsComponent);
         }
     }
 });
-//# sourceMappingURL=bookmark-options.component.js.map
+//# sourceMappingURL=options.component.js.map
