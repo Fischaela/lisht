@@ -31,7 +31,7 @@ System.register(['./mock-options', 'angular2/core'], function(exports_1) {
                     }
                     return Promise.resolve(this._optionsToReturn);
                 };
-                OptionsService.prototype.setBookmarks = function (options) {
+                OptionsService.prototype.setOptions = function (options) {
                     localStorage.setItem('GEILDANKE-options', JSON.stringify(options));
                 };
                 OptionsService = __decorate([

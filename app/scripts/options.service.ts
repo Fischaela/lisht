@@ -16,7 +16,7 @@ export class OptionsService {
     return Promise.resolve( this._optionsToReturn );
   }
 
-  setBookmarks( options : Object ) {
+  setOptions( options : Object ) {
     localStorage.setItem( 'GEILDANKE-options', JSON.stringify( options ) );
   }
 
