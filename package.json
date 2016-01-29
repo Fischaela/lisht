@@ -4,7 +4,7 @@
   "scripts": {
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "lite": "lite-server --open app",
+    "lite": "lite-server --baseDir 'app' --baseDir './'",
     "build-css": "node-sass --include-path scss app/scss/main.scss app/css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "start": "concurrent \"npm run tsc:w\" \"npm run watch-css\" \"npm run lite\"",

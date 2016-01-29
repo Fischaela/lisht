@@ -1,4 +1,4 @@
-System.register(['angular2/core', './bookmark-detail.component', './bookmark.service'], function(exports_1) {
+System.register(['angular2/core', './bookmark-options.component', './bookmark-detail.component', './bookmark.service'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,12 +8,15 @@ System.register(['angular2/core', './bookmark-detail.component', './bookmark.ser
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, bookmark_detail_component_1, bookmark_service_1;
+    var core_1, bookmark_options_component_1, bookmark_detail_component_1, bookmark_service_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (bookmark_options_component_1_1) {
+                bookmark_options_component_1 = bookmark_options_component_1_1;
             },
             function (bookmark_detail_component_1_1) {
                 bookmark_detail_component_1 = bookmark_detail_component_1_1;
@@ -53,7 +56,7 @@ System.register(['angular2/core', './bookmark-detail.component', './bookmark.ser
                     core_1.Component({
                         selector: 'lisht',
                         templateUrl: './templates/bookmarklist.html',
-                        directives: [bookmark_detail_component_1.BookmarkDetailComponent],
+                        directives: [bookmark_detail_component_1.BookmarkDetailComponent, bookmark_options_component_1.BookmarkOptionsComponent],
                         providers: [bookmark_service_1.BookmarkService]
                     }), 
                     __metadata('design:paramtypes', [bookmark_service_1.BookmarkService])

@@ -1,14 +1,15 @@
 import { Component } from 'angular2/core';
 import { OnInit } from 'angular2/core';
 
-import { Bookmark } from './bookmark'
+import { Bookmark } from './bookmark';
+import { BookmarkOptionsComponent } from './bookmark-options.component';
 import { BookmarkDetailComponent } from './bookmark-detail.component';
 import { BookmarkService } from './bookmark.service';
 
 @Component( {
     selector: 'lisht',
     templateUrl: './templates/bookmarklist.html',
-    directives: [ BookmarkDetailComponent ],
+    directives: [ BookmarkDetailComponent, BookmarkOptionsComponent ],
     providers: [ BookmarkService ]
 } )
 

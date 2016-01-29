@@ -1,0 +1,34 @@
+<html>
+
+	<head>
+
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>LISHT</title>
+
+		<meta name="description" content="Beautiful Bookmarks">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/main.css">
+
+		<!-- IE required polyfills, in this exact order -->
+		<script src="../node_modules/es6-shim/es6-shim.min.js"></script>
+		<script src="../node_modules/systemjs/dist/system-polyfills.js"></script>
+
+		<script src="../node_modules/angular2/bundles/angular2-polyfills.js"></script>
+		<script src="../node_modules/systemjs/dist/system.src.js"></script>
+		<script src="../node_modules/rxjs/bundles/Rx.js"></script>
+		<script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+		<script src="../node_modules/angular2/bundles/router.dev.js"></script>
+
+		<!-- Configure SystemJS, used http://approsto.com/sha-generator/ sha256, base64 to hash for csp -->
+		<script>System.config({packages:{scripts:{format:"register",defaultExtension:"js"}}}),System["import"]("scripts/app.boot").then(null,console.error.bind(console));</script>
+
+	</head>
+
+	<body>
+		<lisht-options>Loading...</lisht-options>
+	</body>
+
+</html>
