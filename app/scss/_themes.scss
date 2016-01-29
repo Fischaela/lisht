@@ -1,0 +1,1516 @@
+/* PINK DARK */
+
+$color: $pink-dark;
+
+.options--pink-dark { border-color: $color; }
+
+.bookmarklist-container--pink-dark {
+  background-color: $color;
+
+  a {
+    color: lighten($color, 25%);
+  }
+
+  .bookmarklist__form__button {
+    color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &:active,
+    &:focus {
+      color: $white;
+      border-color: $white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color;
+      background-color: lighten($color, 25%);
+    }
+  }
+
+  .bookmarklist__form__input {
+    color: $white;
+    background-color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &::-webkit-input-placeholder {
+       color: $color;
+    }
+
+    &:active,
+  	&:focus {
+      border-color: $white;
+  	}
+  }
+
+  bookmark {
+
+    &:hover,
+    &:active {
+
+      .bookmark__link {
+        color: $color;
+      }
+    }
+  }
+
+  .bookmark__button {
+    color: $white;
+    background-color: lighten($color, 25%);
+
+    &:hover,
+    &:active {
+      background-color: $color;
+    }
+  }
+
+  .bookmark__form__button {
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $color;
+    }
+
+    &:focus {
+      color: darken($color, 15%);
+      border-color: darken($color, 15%);
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
+  .bookmark__form__input {
+    border-color: lighten($color, 25%);
+
+    &:focus {
+      border-color: darken($color, 10%);
+    }
+  }
+
+  .bookmark__form__label {
+    color: $color;
+  }
+}
+
+/* PINK */
+
+$color: $pink;
+
+.options--pink { border-color: $color; }
+
+.bookmarklist-container--pink {
+  background-color: $color;
+
+  a {
+    color: lighten($color, 25%);
+  }
+
+  .bookmarklist__form__button {
+    color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &:active,
+    &:focus {
+      color: $white;
+      border-color: $white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color;
+      background-color: lighten($color, 25%);
+    }
+  }
+
+  .bookmarklist__form__input {
+    color: $white;
+    background-color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &::-webkit-input-placeholder {
+       color: $color;
+    }
+
+    &:active,
+  	&:focus {
+      border-color: $white;
+  	}
+  }
+
+  bookmark {
+
+    &:hover,
+    &:active {
+
+      .bookmark__link {
+        color: $color;
+      }
+    }
+  }
+
+  .bookmark__button {
+    color: $white;
+    background-color: lighten($color, 25%);
+
+    &:hover,
+    &:active {
+      background-color: $color;
+    }
+  }
+
+  .bookmark__form__button {
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $color;
+    }
+
+    &:focus {
+      color: darken($color, 15%);
+      border-color: darken($color, 15%);
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
+  .bookmark__form__input {
+    border-color: lighten($color, 25%);
+
+    &:focus {
+      border-color: darken($color, 10%);
+    }
+  }
+
+  .bookmark__form__label {
+    color: $color;
+  }
+}
+
+/* RED DARK */
+
+$color: $red-dark;
+
+.options--red-dark { border-color: $color; }
+
+.bookmarklist-container--red-dark {
+  background-color: $color;
+
+  a {
+    color: lighten($color, 25%);
+  }
+
+  .bookmarklist__form__button {
+    color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &:active,
+    &:focus {
+      color: $white;
+      border-color: $white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color;
+      background-color: lighten($color, 25%);
+    }
+  }
+
+  .bookmarklist__form__input {
+    color: $white;
+    background-color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &::-webkit-input-placeholder {
+       color: $color;
+    }
+
+    &:active,
+  	&:focus {
+      border-color: $white;
+  	}
+  }
+
+  bookmark {
+
+    &:hover,
+    &:active {
+
+      .bookmark__link {
+        color: $color;
+      }
+    }
+  }
+
+  .bookmark__button {
+    color: $white;
+    background-color: lighten($color, 25%);
+
+    &:hover,
+    &:active {
+      background-color: $color;
+    }
+  }
+
+  .bookmark__form__button {
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $color;
+    }
+
+    &:focus {
+      color: darken($color, 15%);
+      border-color: darken($color, 15%);
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
+  .bookmark__form__input {
+    border-color: lighten($color, 25%);
+
+    &:focus {
+      border-color: darken($color, 10%);
+    }
+  }
+
+  .bookmark__form__label {
+    color: $color;
+  }
+}
+
+/* RED */
+
+$color: $red;
+
+.options--red { border-color: $color; }
+
+.bookmarklist-container--red {
+  background-color: $color;
+
+  a {
+    color: lighten($color, 25%);
+  }
+
+  .bookmarklist__form__button {
+    color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &:active,
+    &:focus {
+      color: $white;
+      border-color: $white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color;
+      background-color: lighten($color, 25%);
+    }
+  }
+
+  .bookmarklist__form__input {
+    color: $white;
+    background-color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &::-webkit-input-placeholder {
+       color: $color;
+    }
+
+    &:active,
+  	&:focus {
+      border-color: $white;
+  	}
+  }
+
+  bookmark {
+
+    &:hover,
+    &:active {
+
+      .bookmark__link {
+        color: $color;
+      }
+    }
+  }
+
+  .bookmark__button {
+    color: $white;
+    background-color: lighten($color, 25%);
+
+    &:hover,
+    &:active {
+      background-color: $color;
+    }
+  }
+
+  .bookmark__form__button {
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $color;
+    }
+
+    &:focus {
+      color: darken($color, 15%);
+      border-color: darken($color, 15%);
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
+  .bookmark__form__input {
+    border-color: lighten($color, 25%);
+
+    &:focus {
+      border-color: darken($color, 10%);
+    }
+  }
+
+  .bookmark__form__label {
+    color: $color;
+  }
+}
+
+/* ORANGE DARK */
+
+$color: $orange-dark;
+
+.options--orange-dark { border-color: $color; }
+
+.bookmarklist-container--orange-dark {
+  background-color: $color;
+
+  a {
+    color: lighten($color, 25%);
+  }
+
+  .bookmarklist__form__button {
+    color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &:active,
+    &:focus {
+      color: $white;
+      border-color: $white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color;
+      background-color: lighten($color, 25%);
+    }
+  }
+
+  .bookmarklist__form__input {
+    color: $white;
+    background-color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &::-webkit-input-placeholder {
+       color: $color;
+    }
+
+    &:active,
+  	&:focus {
+      border-color: $white;
+  	}
+  }
+
+  bookmark {
+
+    &:hover,
+    &:active {
+
+      .bookmark__link {
+        color: $color;
+      }
+    }
+  }
+
+  .bookmark__button {
+    color: $white;
+    background-color: lighten($color, 25%);
+
+    &:hover,
+    &:active {
+      background-color: $color;
+    }
+  }
+
+  .bookmark__form__button {
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $color;
+    }
+
+    &:focus {
+      color: darken($color, 15%);
+      border-color: darken($color, 15%);
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
+  .bookmark__form__input {
+    border-color: lighten($color, 25%);
+
+    &:focus {
+      border-color: darken($color, 10%);
+    }
+  }
+
+  .bookmark__form__label {
+    color: $color;
+  }
+}
+
+
+/* ORANGE */
+
+$color: $orange;
+
+.options--orange { border-color: $color; }
+
+.bookmarklist-container--orange {
+  background-color: $color;
+
+  a {
+    color: lighten($color, 25%);
+  }
+
+  .bookmarklist__form__button {
+    color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &:active,
+    &:focus {
+      color: $white;
+      border-color: $white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color;
+      background-color: lighten($color, 25%);
+    }
+  }
+
+  .bookmarklist__form__input {
+    color: $white;
+    background-color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &::-webkit-input-placeholder {
+       color: $color;
+    }
+
+    &:active,
+  	&:focus {
+      border-color: $white;
+  	}
+  }
+
+  bookmark {
+
+    &:hover,
+    &:active {
+
+      .bookmark__link {
+        color: $color;
+      }
+    }
+  }
+
+  .bookmark__button {
+    color: $white;
+    background-color: lighten($color, 25%);
+
+    &:hover,
+    &:active {
+      background-color: $color;
+    }
+  }
+
+  .bookmark__form__button {
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $color;
+    }
+
+    &:focus {
+      color: darken($color, 15%);
+      border-color: darken($color, 15%);
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
+  .bookmark__form__input {
+    border-color: lighten($color, 25%);
+
+    &:focus {
+      border-color: darken($color, 10%);
+    }
+  }
+
+  .bookmark__form__label {
+    color: $color;
+  }
+}
+
+/* YELLOW DARK */
+
+$color: $yellow-dark;
+
+.options--yellow-dark { border-color: $color; }
+
+.bookmarklist-container--yellow-dark {
+  background-color: $color;
+
+  a {
+    color: lighten($color, 25%);
+  }
+
+  .bookmarklist__form__button {
+    color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &:active,
+    &:focus {
+      color: $white;
+      border-color: $white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color;
+      background-color: lighten($color, 25%);
+    }
+  }
+
+  .bookmarklist__form__input {
+    color: $white;
+    background-color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &::-webkit-input-placeholder {
+       color: $color;
+    }
+
+    &:active,
+  	&:focus {
+      border-color: $white;
+  	}
+  }
+
+  bookmark {
+
+    &:hover,
+    &:active {
+
+      .bookmark__link {
+        color: $color;
+      }
+    }
+  }
+
+  .bookmark__button {
+    color: $white;
+    background-color: lighten($color, 25%);
+
+    &:hover,
+    &:active {
+      background-color: $color;
+    }
+  }
+
+  .bookmark__form__button {
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $color;
+    }
+
+    &:focus {
+      color: darken($color, 15%);
+      border-color: darken($color, 15%);
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
+  .bookmark__form__input {
+    border-color: lighten($color, 25%);
+
+    &:focus {
+      border-color: darken($color, 10%);
+    }
+  }
+
+  .bookmark__form__label {
+    color: $color;
+  }
+}
+
+/* YELLOW */
+
+$color: $yellow;
+
+.options--yellow { border-color: $color; }
+
+.bookmarklist-container--yellow {
+  background-color: $color;
+
+  a {
+    color: lighten($color, 25%);
+  }
+
+  .bookmarklist__form__button {
+    color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &:active,
+    &:focus {
+      color: $white;
+      border-color: $white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color;
+      background-color: lighten($color, 25%);
+    }
+  }
+
+  .bookmarklist__form__input {
+    color: $white;
+    background-color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &::-webkit-input-placeholder {
+       color: $color;
+    }
+
+    &:active,
+  	&:focus {
+      border-color: $white;
+  	}
+  }
+
+  bookmark {
+
+    &:hover,
+    &:active {
+
+      .bookmark__link {
+        color: $color;
+      }
+    }
+  }
+
+  .bookmark__button {
+    color: $white;
+    background-color: lighten($color, 25%);
+
+    &:hover,
+    &:active {
+      background-color: $color;
+    }
+  }
+
+  .bookmark__form__button {
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $color;
+    }
+
+    &:focus {
+      color: darken($color, 15%);
+      border-color: darken($color, 15%);
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
+  .bookmark__form__input {
+    border-color: lighten($color, 25%);
+
+    &:focus {
+      border-color: darken($color, 10%);
+    }
+  }
+
+  .bookmark__form__label {
+    color: $color;
+  }
+}
+
+/* GREEN DARK */
+
+$color: $green-dark;
+
+.options--green-dark { border-color: $color; }
+
+.bookmarklist-container--green-dark {
+  background-color: $color;
+
+  a {
+    color: lighten($color, 25%);
+  }
+
+  .bookmarklist__form__button {
+    color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &:active,
+    &:focus {
+      color: $white;
+      border-color: $white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color;
+      background-color: lighten($color, 25%);
+    }
+  }
+
+  .bookmarklist__form__input {
+    color: $white;
+    background-color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &::-webkit-input-placeholder {
+       color: $color;
+    }
+
+    &:active,
+  	&:focus {
+      border-color: $white;
+  	}
+  }
+
+  bookmark {
+
+    &:hover,
+    &:active {
+
+      .bookmark__link {
+        color: $color;
+      }
+    }
+  }
+
+  .bookmark__button {
+    color: $white;
+    background-color: lighten($color, 25%);
+
+    &:hover,
+    &:active {
+      background-color: $color;
+    }
+  }
+
+  .bookmark__form__button {
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $color;
+    }
+
+    &:focus {
+      color: darken($color, 15%);
+      border-color: darken($color, 15%);
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
+  .bookmark__form__input {
+    border-color: lighten($color, 25%);
+
+    &:focus {
+      border-color: darken($color, 10%);
+    }
+  }
+
+  .bookmark__form__label {
+    color: $color;
+  }
+}
+
+/* GREEN */
+
+$color: $green;
+
+.options--green { border-color: $color; }
+
+.bookmarklist-container--green {
+  background-color: $color;
+
+  a {
+    color: lighten($color, 25%);
+  }
+
+  .bookmarklist__form__button {
+    color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &:active,
+    &:focus {
+      color: $white;
+      border-color: $white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color;
+      background-color: lighten($color, 25%);
+    }
+  }
+
+  .bookmarklist__form__input {
+    color: $white;
+    background-color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &::-webkit-input-placeholder {
+       color: $color;
+    }
+
+    &:active,
+  	&:focus {
+      border-color: $white;
+  	}
+  }
+
+  bookmark {
+
+    &:hover,
+    &:active {
+
+      .bookmark__link {
+        color: $color;
+      }
+    }
+  }
+
+  .bookmark__button {
+    color: $white;
+    background-color: lighten($color, 25%);
+
+    &:hover,
+    &:active {
+      background-color: $color;
+    }
+  }
+
+  .bookmark__form__button {
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $color;
+    }
+
+    &:focus {
+      color: darken($color, 15%);
+      border-color: darken($color, 15%);
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
+  .bookmark__form__input {
+    border-color: lighten($color, 25%);
+
+    &:focus {
+      border-color: darken($color, 10%);
+    }
+  }
+
+  .bookmark__form__label {
+    color: $color;
+  }
+}
+
+/* BLUE DARK */
+
+$color: $blue-dark;
+
+.options--blue-dark { border-color: $color; }
+
+.bookmarklist-container--blue-dark {
+  background-color: $color;
+
+  a {
+    color: lighten($color, 25%);
+  }
+
+  .bookmarklist__form__button {
+    color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &:active,
+    &:focus {
+      color: $white;
+      border-color: $white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color;
+      background-color: lighten($color, 25%);
+    }
+  }
+
+  .bookmarklist__form__input {
+    color: $white;
+    background-color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &::-webkit-input-placeholder {
+       color: $color;
+    }
+
+    &:active,
+  	&:focus {
+      border-color: $white;
+  	}
+  }
+
+  bookmark {
+
+    &:hover,
+    &:active {
+
+      .bookmark__link {
+        color: $color;
+      }
+    }
+  }
+
+  .bookmark__button {
+    color: $white;
+    background-color: lighten($color, 25%);
+
+    &:hover,
+    &:active {
+      background-color: $color;
+    }
+  }
+
+  .bookmark__form__button {
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $color;
+    }
+
+    &:focus {
+      color: darken($color, 15%);
+      border-color: darken($color, 15%);
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
+  .bookmark__form__input {
+    border-color: lighten($color, 25%);
+
+    &:focus {
+      border-color: darken($color, 10%);
+    }
+  }
+
+  .bookmark__form__label {
+    color: $color;
+  }
+}
+
+/* BUE */
+
+$color: $blue;
+
+.options--blue { border-color: $color; }
+
+.bookmarklist-container--blue {
+  background-color: $color;
+
+  a {
+    color: lighten($color, 25%);
+  }
+
+  .bookmarklist__form__button {
+    color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &:active,
+    &:focus {
+      color: $white;
+      border-color: $white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color;
+      background-color: lighten($color, 25%);
+    }
+  }
+
+  .bookmarklist__form__input {
+    color: $white;
+    background-color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &::-webkit-input-placeholder {
+       color: $color;
+    }
+
+    &:active,
+  	&:focus {
+      border-color: $white;
+  	}
+  }
+
+  bookmark {
+
+    &:hover,
+    &:active {
+
+      .bookmark__link {
+        color: $color;
+      }
+    }
+  }
+
+  .bookmark__button {
+    color: $white;
+    background-color: lighten($color, 25%);
+
+    &:hover,
+    &:active {
+      background-color: $color;
+    }
+  }
+
+  .bookmark__form__button {
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $color;
+    }
+
+    &:focus {
+      color: darken($color, 15%);
+      border-color: darken($color, 15%);
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
+  .bookmark__form__input {
+    border-color: lighten($color, 25%);
+
+    &:focus {
+      border-color: darken($color, 10%);
+    }
+  }
+
+  .bookmark__form__label {
+    color: $color;
+  }
+}
+
+/* BLACK DARK */
+
+$color: $black-dark;
+
+.options--black-dark { border-color: $color; }
+
+.bookmarklist-container--black-dark {
+  background-color: $color;
+
+  a {
+    color: lighten($color, 25%);
+  }
+
+  .bookmarklist__form__button {
+    color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &:active,
+    &:focus {
+      color: $white;
+      border-color: $white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color;
+      background-color: lighten($color, 25%);
+    }
+  }
+
+  .bookmarklist__form__input {
+    color: $white;
+    background-color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &::-webkit-input-placeholder {
+       color: $color;
+    }
+
+    &:active,
+  	&:focus {
+      border-color: $white;
+  	}
+  }
+
+  bookmark {
+
+    &:hover,
+    &:active {
+
+      .bookmark__link {
+        color: $color;
+      }
+    }
+  }
+
+  .bookmark__button {
+    color: $white;
+    background-color: lighten($color, 25%);
+
+    &:hover,
+    &:active {
+      background-color: $color;
+    }
+  }
+
+  .bookmark__form__button {
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $color;
+    }
+
+    &:focus {
+      color: darken($color, 15%);
+      border-color: darken($color, 15%);
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
+  .bookmark__form__input {
+    border-color: lighten($color, 25%);
+
+    &:focus {
+      border-color: darken($color, 10%);
+    }
+  }
+
+  .bookmark__form__label {
+    color: $color;
+  }
+}
+
+/* BLACK */
+
+$color: $black;
+
+.options--black { border-color: $color; }
+
+.bookmarklist-container--black {
+  background-color: $color;
+
+  a {
+    color: lighten($color, 25%);
+  }
+
+  .bookmarklist__form__button {
+    color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &:active,
+    &:focus {
+      color: $white;
+      border-color: $white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color;
+      background-color: lighten($color, 25%);
+    }
+  }
+
+  .bookmarklist__form__input {
+    color: $white;
+    background-color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &::-webkit-input-placeholder {
+       color: $color;
+    }
+
+    &:active,
+  	&:focus {
+      border-color: $white;
+  	}
+  }
+
+  bookmark {
+
+    &:hover,
+    &:active {
+
+      .bookmark__link {
+        color: $color;
+      }
+    }
+  }
+
+  .bookmark__button {
+    color: $white;
+    background-color: lighten($color, 25%);
+
+    &:hover,
+    &:active {
+      background-color: $color;
+    }
+  }
+
+  .bookmark__form__button {
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $color;
+    }
+
+    &:focus {
+      color: darken($color, 15%);
+      border-color: darken($color, 15%);
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
+  .bookmark__form__input {
+    border-color: lighten($color, 25%);
+
+    &:focus {
+      border-color: darken($color, 10%);
+    }
+  }
+
+  .bookmark__form__label {
+    color: $color;
+  }
+}
+
+
+/* BLACK LIGHT */
+
+$color: $black-light;
+
+.options--black-light { border-color: $color; }
+
+.bookmarklist-container--black-light {
+   a {
+     color: lighten($color, 25%);
+  } background-color: $color;
+
+
+
+  .bookmarklist__form__button {
+    color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &:active,
+    &:focus {
+      color: $white;
+      border-color: $white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color;
+      background-color: lighten($color, 25%);
+    }
+  }
+
+  .bookmarklist__form__input {
+    color: $white;
+    background-color: lighten($color, 25%);
+    border-color: lighten($color, 25%);
+
+    &::-webkit-input-placeholder {
+       color: $color;
+    }
+
+    &:active,
+  	&:focus {
+      border-color: $white;
+  	}
+  }
+
+  bookmark {
+
+    &:hover,
+    &:active {
+
+      .bookmark__link {
+        color: $color;
+      }
+    }
+  }
+
+  .bookmark__button {
+    color: $white;
+    background-color: lighten($color, 25%);
+
+    &:hover,
+    &:active {
+      background-color: $color;
+    }
+  }
+
+  .bookmark__form__button {
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $color;
+    }
+
+    &:focus {
+      color: darken($color, 15%);
+      border-color: darken($color, 15%);
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
+  .bookmark__form__input {
+    border-color: lighten($color, 25%);
+
+    &:focus {
+      border-color: darken($color, 10%);
+    }
+  }
+
+  .bookmark__form__label {
+    color: $color;
+  }
+}

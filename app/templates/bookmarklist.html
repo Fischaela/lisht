@@ -1,14 +1,16 @@
-<ul class="bookmarklist bookmarklist--{{activeColor}}">
-  <li class="bookmarklist__listelement" *ngFor="#bookmarkList of bookmarkLists; #i = index">
-    <ul class="bookmarklist__sublist">
-      <li>
-        <bookmark *ngFor="#bookmark of bookmarkList.hyperlinks; #j = index" [bookmark]="bookmark" (bookmarkChanged)="setBookmarks()" (bookmarkDeleted)="deleteBookmark(bookmark, i, j)"></bookmark>
-      </li>
-    </ul>
-    <form class="bookmarklist__form">
-      <input class="bookmarklist__form__input" type="text" placeholder="Enter new name" [(ngModel)]="name[i]">
-      <input class="bookmarklist__form__input" type="text" placeholder="Enter new link" [(ngModel)]="url[i]">
-      <button class="bookmarklist__form__button" value="Add" (click)="addBookmarkListItem( { 'name' : name[i], 'url' : url[i] }, i )">Add</button>
-    </form>
-  </li>
-</ul>
+<section class="bookmarklist-container bookmarklist-container--{{activeColor}}">  
+  <ul class="bookmarklist">
+    <li class="bookmarklist__listelement" *ngFor="#bookmarkList of bookmarkLists; #i = index">
+      <ul class="bookmarklist__sublist">
+        <li>
+          <bookmark *ngFor="#bookmark of bookmarkList.hyperlinks; #j = index" [bookmark]="bookmark" (bookmarkChanged)="setBookmarks()" (bookmarkDeleted)="deleteBookmark(bookmark, i, j)"></bookmark>
+        </li>
+      </ul>
+      <form class="bookmarklist__form">
+        <input class="bookmarklist__form__input" type="text" placeholder="Enter new name" [(ngModel)]="name[i]">
+        <input class="bookmarklist__form__input" type="text" placeholder="Enter new link" [(ngModel)]="url[i]">
+        <button class="bookmarklist__form__button" value="Add" (click)="addBookmarkListItem( { 'name' : name[i], 'url' : url[i] }, i )">Add</button>
+      </form>
+    </li>
+  </ul>
+</section>

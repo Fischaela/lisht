@@ -1,0 +1,115 @@
+.options {
+  text-align: center;
+
+  background-color: white;
+  border: 9px solid $default-color;
+  display: block;
+  overflow: scroll;
+  width: calc(100vw - 18px);
+  height: calc(100vh - 18px);
+}
+
+.options__headline {
+  color: $black-light;
+  font-size: 30px;
+
+  margin: 0;
+  padding: 90px 18px 0 18px;
+}
+
+.options__paragraph {
+  color: $black-light;
+
+  padding: 0 18px 36px 18px;
+}
+
+.options__list {
+  margin: 18px 27px 18px 36px;
+  padding: 0;
+}
+
+.options__list__element {
+  list-style: none;
+
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 9px 9px 0;
+  transition: box-shadow 0.25s ease-in-out;
+  width: 120px;
+  height: 120px;
+
+  &:hover {
+    animation: rotate infinite 1s ease-in-out alternate;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
+  @media screen and (min-width: $mq) {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.options__list__element--active {
+  animation: rotate infinite 3s ease-in-out alternate;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.options__list__element--pink-dark {
+  background-color: $pink-dark;
+}
+
+.options__list__element--pink {
+  background-color: $pink;
+}
+
+.options__list__element--red-dark {
+  background-color: $red-dark;
+}
+
+.options__list__element--red {
+  background-color: $red;
+}
+
+.options__list__element--orange-dark {
+  background-color: $orange-dark;
+}
+
+.options__list__element--orange {
+  background-color: $orange;
+}
+
+.options__list__element--yellow-dark {
+  background-color: $yellow-dark;
+}
+
+.options__list__element--yellow {
+  background-color: $yellow;
+}
+
+.options__list__element--green-dark {
+  background-color: $green-dark;
+}
+
+.options__list__element--green {
+  background-color: $green;
+}
+
+.options__list__element--blue-dark {
+  background-color: $blue-dark;
+}
+
+.options__list__element--blue {
+  background-color: $blue;
+}
+
+.options__list__element--black-dark {
+  background-color: $black-dark;
+}
+
+.options__list__element--black {
+  background-color: $black;
+}
+
+.options__list__element--black-light {
+  background-color: $black-light;
+}
