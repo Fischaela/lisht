@@ -13,7 +13,7 @@ import { BookmarkComponent } from './bookmark.component';
 
 @RouteConfig( [
   { path :'/', name : 'Lisht Bookmarks', component : BookmarkComponent },
-  { path :'/options', name : 'Lisht Options', component : OptionsComponent }
+  { path :'/', name : 'Lisht Options', component : OptionsComponent }
 ] )
 
 export class AppComponent { }

@@ -1,4 +1,5 @@
 System.register(['angular2/core', 'angular2/router', './options.component', './bookmark.component'], function(exports_1) {
+    "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -37,12 +38,12 @@ System.register(['angular2/core', 'angular2/router', './options.component', './b
                     }),
                     router_1.RouteConfig([
                         { path: '/', name: 'Lisht Bookmarks', component: bookmark_component_1.BookmarkComponent },
-                        { path: '/options', name: 'Lisht Options', component: options_component_1.OptionsComponent }
+                        { path: '/', name: 'Lisht Options', component: options_component_1.OptionsComponent }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;
-            })();
+            }());
             exports_1("AppComponent", AppComponent);
         }
     }

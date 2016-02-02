@@ -36,7 +36,8 @@ System.register(['angular2/core', 'angular2/router', './options.component', './b
                         providers: [router_1.ROUTER_PROVIDERS]
                     }),
                     router_1.RouteConfig([
-                        { path: '/', name: 'Lisht Bookmarks', component: bookmark_component_1.BookmarkComponent }
+                        { path: '/', name: 'Lisht Bookmarks', component: bookmark_component_1.BookmarkComponent },
+                        { path: '/', name: 'Lisht Options', component: options_component_1.OptionsComponent }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
