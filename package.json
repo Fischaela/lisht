@@ -1,6 +1,6 @@
 {
   "name": "LISHT",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "scripts": {
     "clean": "rimraf dist/*",
     "tsc": "tsc --outDir dist/scripts",
