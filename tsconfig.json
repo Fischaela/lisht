@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES5",
+    "outDir": "dist/scripts",
     "module": "system",
     "moduleResolution": "node",
     "sourceMap": true,

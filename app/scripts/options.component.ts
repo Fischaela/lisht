@@ -22,7 +22,7 @@ export class OptionsComponent implements OnInit {
     this._optionsService.getActiveColor().then( activeColor => this.activeColor = activeColor );
   }
 
-  setActiveColor( index : number ) {
+  setActiveColor( index : number ) { 
     this.activeColor = this.options[ index ].color;
     this._optionsService.setActiveColor( this.activeColor );
   }
