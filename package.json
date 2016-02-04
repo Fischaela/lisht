@@ -1,6 +1,6 @@
 {
   "name": "LISHT",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "scripts": {
     "clean": "rimraf dist/*",
     "tsc": "tsc --outDir dist/scripts",
@@ -15,7 +15,9 @@
     "build-css": "node-sass --include-path scss app/scss/main.scss dist/css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "start": "concurrent \"npm run build\" \"npm run tsc:w\" \"npm run watch-css\" \"npm run lite\"",
-    "build": "npm run clean && npm run tsc && npm run build-css && mkdir dist/lib && mkdir dist/templates && mkdir dist/assets && npm run copy-lib && npm run copy-manifest && npm run copy-assets && npm run copy-images && npm run copy-templates && npm run copy-scripts"
+    "build": "npm run clean && npm run tsc && npm run build-css && mkdir dist/lib && mkdir dist/templates && mkdir dist/assets && npm run copy-lib && npm run copy-manifest && npm run copy-assets && npm run copy-images && npm run copy-templates && npm run copy-scripts",
+    "zip": "zip -r -X $npm_package_name-$npm_package_version.zip ./dist",
+    "compress": "concurrent \"npm run build\" \"npm run zip\""
   },
   "license": "ISC",
   "dependencies": {

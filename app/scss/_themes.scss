@@ -29,12 +29,12 @@ $color: $pink-dark;
   }
 
   .bookmarklist__form__input {
-    color: $white;
+    color: $color;
     background-color: lighten($color, 25%);
     border-color: lighten($color, 25%);
 
     &::-webkit-input-placeholder {
-       color: $color;
+       color: lighten($color, 8%);
     }
 
     &:active,
@@ -130,12 +130,12 @@ $color: $pink;
   }
 
   .bookmarklist__form__input {
-    color: $white;
+    color: $color;
     background-color: lighten($color, 25%);
     border-color: lighten($color, 25%);
 
     &::-webkit-input-placeholder {
-       color: $color;
+       color: lighten($color, 8%);
     }
 
     &:active,
@@ -231,12 +231,12 @@ $color: $red-dark;
   }
 
   .bookmarklist__form__input {
-    color: $white;
+    color: $color;
     background-color: lighten($color, 25%);
     border-color: lighten($color, 25%);
 
     &::-webkit-input-placeholder {
-       color: $color;
+       color: lighten($color, 8%);
     }
 
     &:active,
@@ -332,12 +332,12 @@ $color: $red;
   }
 
   .bookmarklist__form__input {
-    color: $white;
+    color: $color;
     background-color: lighten($color, 25%);
     border-color: lighten($color, 25%);
 
     &::-webkit-input-placeholder {
-       color: $color;
+       color: lighten($color, 8%);
     }
 
     &:active,
@@ -433,12 +433,12 @@ $color: $orange-dark;
   }
 
   .bookmarklist__form__input {
-    color: $white;
+    color: $color;
     background-color: lighten($color, 25%);
     border-color: lighten($color, 25%);
 
     &::-webkit-input-placeholder {
-       color: $color;
+       color: lighten($color, 8%);
     }
 
     &:active,
@@ -535,12 +535,12 @@ $color: $orange;
   }
 
   .bookmarklist__form__input {
-    color: $white;
+    color: $color;
     background-color: lighten($color, 25%);
     border-color: lighten($color, 25%);
 
     &::-webkit-input-placeholder {
-       color: $color;
+       color: lighten($color, 8%);
     }
 
     &:active,
@@ -636,12 +636,12 @@ $color: $yellow-dark;
   }
 
   .bookmarklist__form__input {
-    color: $white;
+    color: $color;
     background-color: lighten($color, 25%);
     border-color: lighten($color, 25%);
 
     &::-webkit-input-placeholder {
-       color: $color;
+       color: lighten($color, 8%);
     }
 
     &:active,
@@ -737,12 +737,12 @@ $color: $yellow;
   }
 
   .bookmarklist__form__input {
-    color: $white;
+    color: $color;
     background-color: lighten($color, 25%);
     border-color: lighten($color, 25%);
 
     &::-webkit-input-placeholder {
-       color: $color;
+       color: lighten($color, 8%);
     }
 
     &:active,
@@ -838,12 +838,12 @@ $color: $green-dark;
   }
 
   .bookmarklist__form__input {
-    color: $white;
+    color: $color;
     background-color: lighten($color, 25%);
     border-color: lighten($color, 25%);
 
     &::-webkit-input-placeholder {
-       color: $color;
+       color: lighten($color, 8%);
     }
 
     &:active,
@@ -939,12 +939,12 @@ $color: $green;
   }
 
   .bookmarklist__form__input {
-    color: $white;
+    color: $color;
     background-color: lighten($color, 25%);
     border-color: lighten($color, 25%);
 
     &::-webkit-input-placeholder {
-       color: $color;
+       color: lighten($color, 8%);
     }
 
     &:active,
@@ -1040,12 +1040,12 @@ $color: $blue-dark;
   }
 
   .bookmarklist__form__input {
-    color: $white;
+    color: $color;
     background-color: lighten($color, 25%);
     border-color: lighten($color, 25%);
 
     &::-webkit-input-placeholder {
-       color: $color;
+       color: lighten($color, 8%);
     }
 
     &:active,
@@ -1141,12 +1141,12 @@ $color: $blue;
   }
 
   .bookmarklist__form__input {
-    color: $white;
+    color: $color;
     background-color: lighten($color, 25%);
     border-color: lighten($color, 25%);
 
     &::-webkit-input-placeholder {
-       color: $color;
+       color: lighten($color, 8%);
     }
 
     &:active,
@@ -1242,12 +1242,12 @@ $color: $black-dark;
   }
 
   .bookmarklist__form__input {
-    color: $white;
+    color: $color;
     background-color: lighten($color, 25%);
     border-color: lighten($color, 25%);
 
     &::-webkit-input-placeholder {
-       color: $color;
+       color: lighten($color, 8%);
     }
 
     &:active,
@@ -1343,12 +1343,12 @@ $color: $black;
   }
 
   .bookmarklist__form__input {
-    color: $white;
+    color: $color;
     background-color: lighten($color, 25%);
     border-color: lighten($color, 25%);
 
     &::-webkit-input-placeholder {
-       color: $color;
+       color: lighten($color, 8%);
     }
 
     &:active,
@@ -1445,12 +1445,12 @@ $color: $black-light;
   }
 
   .bookmarklist__form__input {
-    color: $white;
+    color: $color;
     background-color: lighten($color, 25%);
     border-color: lighten($color, 25%);
 
     &::-webkit-input-placeholder {
-       color: $color;
+       color: lighten($color, 8%);
     }
 
     &:active,
