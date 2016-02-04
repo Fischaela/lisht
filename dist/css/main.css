@@ -102,12 +102,11 @@ a {
 
 bookmark {
   display: block;
-  transition: background-color, transform 0.125s ease-in-out;
+  transition: background-color 0.125s ease-in-out;
   height: 52px; }
   bookmark:hover, bookmark:active {
     background-color: #ffffff;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    transform: scale(1.05); }
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
     bookmark:hover .bookmark__link, bookmark:active .bookmark__link {
       color: #FF6698; }
 
@@ -294,11 +293,11 @@ bookmark {
       color: #e6004b;
       background-color: #ff6698; }
   .bookmarklist-container--pink-dark .bookmarklist__form__input, .bookmarklist-container--pink-dark .bookmark__form__input {
-    color: #ffffff;
+    color: #e6004b;
     background-color: #ff6698;
     border-color: #ff6698; }
     .bookmarklist-container--pink-dark .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--pink-dark .bookmark__form__input::-webkit-input-placeholder {
-      color: #e6004b; }
+      color: #ff0f5e; }
     .bookmarklist-container--pink-dark .bookmarklist__form__input:active, .bookmarklist-container--pink-dark .bookmark__form__input:active, .bookmarklist-container--pink-dark .bookmarklist__form__input:focus, .bookmarklist-container--pink-dark .bookmark__form__input:focus {
       border-color: #ffffff; }
   .bookmarklist-container--pink-dark bookmark:hover .bookmark__link, .bookmarklist-container--pink-dark bookmark:active .bookmark__link {
@@ -345,11 +344,11 @@ bookmark {
       color: #FF6698;
       background-color: #ffe6ee; }
   .bookmarklist-container--pink .bookmarklist__form__input, .bookmarklist-container--pink .bookmark__form__input {
-    color: #ffffff;
+    color: #FF6698;
     background-color: #ffe6ee;
     border-color: #ffe6ee; }
     .bookmarklist-container--pink .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--pink .bookmark__form__input::-webkit-input-placeholder {
-      color: #FF6698; }
+      color: #ff8fb3; }
     .bookmarklist-container--pink .bookmarklist__form__input:active, .bookmarklist-container--pink .bookmark__form__input:active, .bookmarklist-container--pink .bookmarklist__form__input:focus, .bookmarklist-container--pink .bookmark__form__input:focus {
       border-color: #ffffff; }
   .bookmarklist-container--pink bookmark:hover .bookmark__link, .bookmarklist-container--pink bookmark:active .bookmark__link {
@@ -396,11 +395,11 @@ bookmark {
       color: #cd170c;
       background-color: #f66b62; }
   .bookmarklist-container--red-dark .bookmarklist__form__input, .bookmarklist-container--red-dark .bookmark__form__input {
-    color: #ffffff;
+    color: #cd170c;
     background-color: #f66b62;
     border-color: #f66b62; }
     .bookmarklist-container--red-dark .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--red-dark .bookmark__form__input::-webkit-input-placeholder {
-      color: #cd170c; }
+      color: #f11e10; }
     .bookmarklist-container--red-dark .bookmarklist__form__input:active, .bookmarklist-container--red-dark .bookmark__form__input:active, .bookmarklist-container--red-dark .bookmarklist__form__input:focus, .bookmarklist-container--red-dark .bookmark__form__input:focus {
       border-color: #ffffff; }
   .bookmarklist-container--red-dark bookmark:hover .bookmark__link, .bookmarklist-container--red-dark bookmark:active .bookmark__link {
@@ -447,11 +446,11 @@ bookmark {
       color: #F66B62;
       background-color: #fddddb; }
   .bookmarklist-container--red .bookmarklist__form__input, .bookmarklist-container--red .bookmark__form__input {
-    color: #ffffff;
+    color: #F66B62;
     background-color: #fddddb;
     border-color: #fddddb; }
     .bookmarklist-container--red .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--red .bookmark__form__input::-webkit-input-placeholder {
-      color: #F66B62; }
+      color: #f88f89; }
     .bookmarklist-container--red .bookmarklist__form__input:active, .bookmarklist-container--red .bookmark__form__input:active, .bookmarklist-container--red .bookmarklist__form__input:focus, .bookmarklist-container--red .bookmark__form__input:focus {
       border-color: #ffffff; }
   .bookmarklist-container--red bookmark:hover .bookmark__link, .bookmarklist-container--red bookmark:active .bookmark__link {
@@ -498,11 +497,11 @@ bookmark {
       color: #ff4100;
       background-color: #ffa080; }
   .bookmarklist-container--orange-dark .bookmarklist__form__input, .bookmarklist-container--orange-dark .bookmark__form__input {
-    color: #ffffff;
+    color: #ff4100;
     background-color: #ffa080;
     border-color: #ffa080; }
     .bookmarklist-container--orange-dark .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--orange-dark .bookmark__form__input::-webkit-input-placeholder {
-      color: #ff4100; }
+      color: #ff5f29; }
     .bookmarklist-container--orange-dark .bookmarklist__form__input:active, .bookmarklist-container--orange-dark .bookmark__form__input:active, .bookmarklist-container--orange-dark .bookmarklist__form__input:focus, .bookmarklist-container--orange-dark .bookmark__form__input:focus {
       border-color: #ffffff; }
   .bookmarklist-container--orange-dark bookmark:hover .bookmark__link, .bookmarklist-container--orange-dark bookmark:active .bookmark__link {
@@ -549,11 +548,11 @@ bookmark {
       color: #FF8D66;
       background-color: #ffece6; }
   .bookmarklist-container--orange .bookmarklist__form__input, .bookmarklist-container--orange .bookmark__form__input {
-    color: #ffffff;
+    color: #FF8D66;
     background-color: #ffece6;
     border-color: #ffece6; }
     .bookmarklist-container--orange .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--orange .bookmark__form__input::-webkit-input-placeholder {
-      color: #FF8D66; }
+      color: #ffab8f; }
     .bookmarklist-container--orange .bookmarklist__form__input:active, .bookmarklist-container--orange .bookmark__form__input:active, .bookmarklist-container--orange .bookmarklist__form__input:focus, .bookmarklist-container--orange .bookmark__form__input:focus {
       border-color: #ffffff; }
   .bookmarklist-container--orange bookmark:hover .bookmark__link, .bookmarklist-container--orange bookmark:active .bookmark__link {
@@ -600,11 +599,11 @@ bookmark {
       color: #e69000;
       background-color: #ffc666; }
   .bookmarklist-container--yellow-dark .bookmarklist__form__input, .bookmarklist-container--yellow-dark .bookmark__form__input {
-    color: #ffffff;
+    color: #e69000;
     background-color: #ffc666;
     border-color: #ffc666; }
     .bookmarklist-container--yellow-dark .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--yellow-dark .bookmark__form__input::-webkit-input-placeholder {
-      color: #e69000; }
+      color: #ffa60f; }
     .bookmarklist-container--yellow-dark .bookmarklist__form__input:active, .bookmarklist-container--yellow-dark .bookmark__form__input:active, .bookmarklist-container--yellow-dark .bookmarklist__form__input:focus, .bookmarklist-container--yellow-dark .bookmark__form__input:focus {
       border-color: #ffffff; }
   .bookmarklist-container--yellow-dark bookmark:hover .bookmark__link, .bookmarklist-container--yellow-dark bookmark:active .bookmark__link {
@@ -651,11 +650,11 @@ bookmark {
       color: #FFC666;
       background-color: #fff6e6; }
   .bookmarklist-container--yellow .bookmarklist__form__input, .bookmarklist-container--yellow .bookmark__form__input {
-    color: #ffffff;
+    color: #FFC666;
     background-color: #fff6e6;
     border-color: #fff6e6; }
     .bookmarklist-container--yellow .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--yellow .bookmark__form__input::-webkit-input-placeholder {
-      color: #FFC666; }
+      color: #ffd58f; }
     .bookmarklist-container--yellow .bookmarklist__form__input:active, .bookmarklist-container--yellow .bookmark__form__input:active, .bookmarklist-container--yellow .bookmarklist__form__input:focus, .bookmarklist-container--yellow .bookmark__form__input:focus {
       border-color: #ffffff; }
   .bookmarklist-container--yellow bookmark:hover .bookmark__link, .bookmarklist-container--yellow bookmark:active .bookmark__link {
@@ -702,11 +701,11 @@ bookmark {
       color: #247a46;
       background-color: #52cc82; }
   .bookmarklist-container--green-dark .bookmarklist__form__input, .bookmarklist-container--green-dark .bookmark__form__input {
-    color: #ffffff;
+    color: #247a46;
     background-color: #52cc82;
     border-color: #52cc82; }
     .bookmarklist-container--green-dark .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--green-dark .bookmark__form__input::-webkit-input-placeholder {
-      color: #247a46; }
+      color: #2d9a58; }
     .bookmarklist-container--green-dark .bookmarklist__form__input:active, .bookmarklist-container--green-dark .bookmark__form__input:active, .bookmarklist-container--green-dark .bookmarklist__form__input:focus, .bookmarklist-container--green-dark .bookmark__form__input:focus {
       border-color: #ffffff; }
   .bookmarklist-container--green-dark bookmark:hover .bookmark__link, .bookmarklist-container--green-dark bookmark:active .bookmark__link {
@@ -753,11 +752,11 @@ bookmark {
       color: #52CC82;
       background-color: #b4e9c9; }
   .bookmarklist-container--green .bookmarklist__form__input, .bookmarklist-container--green .bookmark__form__input {
-    color: #ffffff;
+    color: #52CC82;
     background-color: #b4e9c9;
     border-color: #b4e9c9; }
     .bookmarklist-container--green .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--green .bookmark__form__input::-webkit-input-placeholder {
-      color: #52CC82; }
+      color: #72d599; }
     .bookmarklist-container--green .bookmarklist__form__input:active, .bookmarklist-container--green .bookmark__form__input:active, .bookmarklist-container--green .bookmarklist__form__input:focus, .bookmarklist-container--green .bookmark__form__input:focus {
       border-color: #ffffff; }
   .bookmarklist-container--green bookmark:hover .bookmark__link, .bookmarklist-container--green bookmark:active .bookmark__link {
@@ -804,11 +803,11 @@ bookmark {
       color: #237979;
       background-color: #50cccc; }
   .bookmarklist-container--blue-dark .bookmarklist__form__input, .bookmarklist-container--blue-dark .bookmark__form__input {
-    color: #ffffff;
+    color: #237979;
     background-color: #50cccc;
     border-color: #50cccc; }
     .bookmarklist-container--blue-dark .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--blue-dark .bookmark__form__input::-webkit-input-placeholder {
-      color: #237979; }
+      color: #2d9999; }
     .bookmarklist-container--blue-dark .bookmarklist__form__input:active, .bookmarklist-container--blue-dark .bookmark__form__input:active, .bookmarklist-container--blue-dark .bookmarklist__form__input:focus, .bookmarklist-container--blue-dark .bookmark__form__input:focus {
       border-color: #ffffff; }
   .bookmarklist-container--blue-dark bookmark:hover .bookmark__link, .bookmarklist-container--blue-dark bookmark:active .bookmark__link {
@@ -855,11 +854,11 @@ bookmark {
       color: #50CCCC;
       background-color: #b3e9e9; }
   .bookmarklist-container--blue .bookmarklist__form__input, .bookmarklist-container--blue .bookmark__form__input {
-    color: #ffffff;
+    color: #50CCCC;
     background-color: #b3e9e9;
     border-color: #b3e9e9; }
     .bookmarklist-container--blue .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--blue .bookmark__form__input::-webkit-input-placeholder {
-      color: #50CCCC; }
+      color: #70d5d5; }
     .bookmarklist-container--blue .bookmarklist__form__input:active, .bookmarklist-container--blue .bookmark__form__input:active, .bookmarklist-container--blue .bookmarklist__form__input:focus, .bookmarklist-container--blue .bookmark__form__input:focus {
       border-color: #ffffff; }
   .bookmarklist-container--blue bookmark:hover .bookmark__link, .bookmarklist-container--blue bookmark:active .bookmark__link {
@@ -906,11 +905,11 @@ bookmark {
       color: #0f1111;
       background-color: #4b5454; }
   .bookmarklist-container--black-dark .bookmarklist__form__input, .bookmarklist-container--black-dark .bookmark__form__input {
-    color: #ffffff;
+    color: #0f1111;
     background-color: #4b5454;
     border-color: #4b5454; }
     .bookmarklist-container--black-dark .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--black-dark .bookmark__form__input::-webkit-input-placeholder {
-      color: #0f1111; }
+      color: #222626; }
     .bookmarklist-container--black-dark .bookmarklist__form__input:active, .bookmarklist-container--black-dark .bookmark__form__input:active, .bookmarklist-container--black-dark .bookmarklist__form__input:focus, .bookmarklist-container--black-dark .bookmark__form__input:focus {
       border-color: #ffffff; }
   .bookmarklist-container--black-dark bookmark:hover .bookmark__link, .bookmarklist-container--black-dark bookmark:active .bookmark__link {
@@ -957,11 +956,11 @@ bookmark {
       color: #4B5454;
       background-color: #899696; }
   .bookmarklist-container--black .bookmarklist__form__input, .bookmarklist-container--black .bookmark__form__input {
-    color: #ffffff;
+    color: #4B5454;
     background-color: #899696;
     border-color: #899696; }
     .bookmarklist-container--black .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--black .bookmark__form__input::-webkit-input-placeholder {
-      color: #4B5454; }
+      color: #5e6a6a; }
     .bookmarklist-container--black .bookmarklist__form__input:active, .bookmarklist-container--black .bookmark__form__input:active, .bookmarklist-container--black .bookmarklist__form__input:focus, .bookmarklist-container--black .bookmark__form__input:focus {
       border-color: #ffffff; }
   .bookmarklist-container--black bookmark:hover .bookmark__link, .bookmarklist-container--black bookmark:active .bookmark__link {
@@ -1008,11 +1007,11 @@ bookmark {
       color: #899696;
       background-color: #ccd2d2; }
   .bookmarklist-container--black-light .bookmarklist__form__input, .bookmarklist-container--black-light .bookmark__form__input {
-    color: #ffffff;
+    color: #899696;
     background-color: #ccd2d2;
     border-color: #ccd2d2; }
     .bookmarklist-container--black-light .bookmarklist__form__input::-webkit-input-placeholder, .bookmarklist-container--black-light .bookmark__form__input::-webkit-input-placeholder {
-      color: #899696; }
+      color: #9ea9a9; }
     .bookmarklist-container--black-light .bookmarklist__form__input:active, .bookmarklist-container--black-light .bookmark__form__input:active, .bookmarklist-container--black-light .bookmarklist__form__input:focus, .bookmarklist-container--black-light .bookmark__form__input:focus {
       border-color: #ffffff; }
   .bookmarklist-container--black-light bookmark:hover .bookmark__link, .bookmarklist-container--black-light bookmark:active .bookmark__link {
