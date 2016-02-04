@@ -1,0 +1,74 @@
+// Reset
+*  {
+  outline: none;
+}
+
+// Styling the standard button
+.btn {
+	@include btn-animation;
+	background: none;
+	@include border-radius(4em);
+	cursor: pointer;
+	margin:1.2em 0 0.25em 0;
+	padding: 1.2em;
+	min-width: 12em;
+
+	font-size: 0.75em;
+
+	&:active {
+		@include box-shadow (none);
+	}
+}
+
+// Styling the close button
+
+.btn-close {
+	display: none;
+	cursor: pointer;
+	padding: 0.2em 0.48em 0.25em 0.48em;
+	position: absolute;
+	top: 1em;
+	right: 1.2em;
+}
+
+.btn-options {
+	clear: both;
+	display: inline-block;
+	margin-top: 2rem;
+	min-width: 0rem;
+
+	font-size: 1rem;
+}
+
+.btn-draggable {
+	background-image: url("../images/draganddrop.png");
+	@include btn-animation-draggable;
+	cursor: move;
+	display: none;
+	margin: 0.5%;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 12px;
+	height: 92%;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+// Make close and draggable buttons visible on hover 
+.link-list {
+
+	li {
+
+		&:hover {
+
+			.btn-close,
+			.btn-draggable {
+				display: inline;
+			}
+		}
+	}
+}
