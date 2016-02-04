@@ -7,29 +7,25 @@ export class OptionsService {
 
   _optionsLocalStorage = JSON.parse( localStorage.getItem('GEILDANKE-options') );
   _optionsMockData = OPTIONS;
-  _optionsToReturn = this._optionsMockData;
   _activeColor : string;
 
-  getOptions() {
-    if ( this._optionsLocalStorage != null ) {
-      this._optionsToReturn = this._optionsLocalStorage;
-    }
-    return Promise.resolve( this._optionsToReturn );
+  getColors() {
+    return Promise.resolve( this._optionsMockData );
   }
 
   getActiveColor() {
-    this.getOptions().then( _optionsLocalStorage => this._optionsLocalStorage = _optionsLocalStorage );
-    for ( let i in this._optionsToReturn ) {
-      if ( this._optionsToReturn[ i ].isActive ) {
-        this._activeColor = this._optionsToReturn[ i ].color;
-      }
+    if ( !this._activeColor || this._activeColor === '' ) {
+      this._activeColor = 'pink';
+    }
+    if ( this._optionsLocalStorage != null ) {
+      this._activeColor = this._optionsLocalStorage;
     }
     return Promise.resolve( this._activeColor );
   }
 
-  setOptions( options : Object ) {
-    localStorage.setItem( 'GEILDANKE-options', JSON.stringify( options ) );
-    this.getOptions();
+  setActiveColor( activeColor : string ) {
+    localStorage.setItem( 'GEILDANKE-options', JSON.stringify( activeColor ) );
+    this._activeColor = activeColor;
   }
 
 }

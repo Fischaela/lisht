@@ -30,7 +30,9 @@
 		"scripts": ["scripts/extension.js"]
 	},
 
-	"content_security_policy": "script-src 'self' 'unsafe-eval' 'sha256-RvTQyHleCexMSmrNLTKXypbfgT/zNKxvCKsBqEsEfig'; object-src 'self'",
+	"options_page": "options.html",
+
+	"content_security_policy": "script-src 'self' 'unsafe-eval' 'sha256-e2mbCcYVduaVv1oDVzrOEUX2FdFHAkqgmhkoVQKbgPA' 'sha256-iTLA81vbHvJirstpFb6vFIOEXQM7PcDzF9tCbdLzV4A'; object-src 'self'",
 
 	"permissions": [
 		"<all_urls>",

@@ -1,4 +1,5 @@
 System.register(['./mock-options', 'angular2/core'], function(exports_1) {
+    "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -23,34 +24,29 @@ System.register(['./mock-options', 'angular2/core'], function(exports_1) {
                 function OptionsService() {
                     this._optionsLocalStorage = JSON.parse(localStorage.getItem('GEILDANKE-options'));
                     this._optionsMockData = mock_options_1.OPTIONS;
-                    this._optionsToReturn = this._optionsMockData;
                 }
-                OptionsService.prototype.getOptions = function () {
-                    if (this._optionsLocalStorage != null) {
-                        this._optionsToReturn = this._optionsLocalStorage;
-                    }
-                    return Promise.resolve(this._optionsToReturn);
+                OptionsService.prototype.getColors = function () {
+                    return Promise.resolve(this._optionsMockData);
                 };
                 OptionsService.prototype.getActiveColor = function () {
-                    var _this = this;
-                    this.getOptions().then(function (_optionsLocalStorage) { return _this._optionsLocalStorage = _optionsLocalStorage; });
-                    for (var i in this._optionsToReturn) {
-                        if (this._optionsToReturn[i].isActive) {
-                            this._activeColor = this._optionsToReturn[i].color;
-                        }
+                    if (!this._activeColor || this._activeColor === '') {
+                        this._activeColor = 'pink';
+                    }
+                    if (this._optionsLocalStorage != null) {
+                        this._activeColor = this._optionsLocalStorage;
                     }
                     return Promise.resolve(this._activeColor);
                 };
-                OptionsService.prototype.setOptions = function (options) {
-                    localStorage.setItem('GEILDANKE-options', JSON.stringify(options));
-                    this.getOptions();
+                OptionsService.prototype.setActiveColor = function (activeColor) {
+                    localStorage.setItem('GEILDANKE-options', JSON.stringify(activeColor));
+                    this._activeColor = activeColor;
                 };
                 OptionsService = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [])
                 ], OptionsService);
                 return OptionsService;
-            })();
+            }());
             exports_1("OptionsService", OptionsService);
         }
     }

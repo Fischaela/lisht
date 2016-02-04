@@ -1,5 +1,5 @@
 import { bootstrap } from 'angular2/platform/browser';
-import { AppComponent } from './app.component';
+import { OptionsComponent } from './options.component';
 import { OptionsService } from './options.service';
 
-bootstrap( AppComponent, [ OptionsService ] );
+bootstrap( OptionsComponent, [ OptionsService ] );

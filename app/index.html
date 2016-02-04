@@ -24,12 +24,12 @@
     <script src="lib/router.dev.js"></script>
 
     <!-- Configure SystemJS, used http://approsto.com/sha-generator/ sha256, base64 to hash for csp -->
-    <script>System.config({packages:{scripts:{format:"register",defaultExtension:"js"}}}),System["import"]("scripts/app.boot").then(null,console.error.bind(console));</script>
+    <script>System.config({packages:{scripts:{format:"register",defaultExtension:"js"}}}),System["import"]("scripts/bookmark.boot").then(null,console.error.bind(console));</script>
 
   </head>
 
   <body>
-    <lisht>Loading...</lisht>
+    <lisht-bookmarks>Loading...</lisht-bookmarks>
   </body>
 
 </html>

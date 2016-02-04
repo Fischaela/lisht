@@ -18,21 +18,13 @@ export class OptionsComponent implements OnInit {
   constructor( private _optionsService : OptionsService ) { }
 
   getOptions() {
-    this._optionsService.getOptions().then( options => this.options = options );
+    this._optionsService.getColors().then( options => this.options = options );
     this._optionsService.getActiveColor().then( activeColor => this.activeColor = activeColor );
   }
 
-  setOptions() {
-    this._optionsService.setOptions( this.options );
-  }
-
   setActiveColor( index : number ) {
-    for ( let i in this.options ) {
-      this.options[ i ].isActive = false;
-    }
-    this.options[ index ].isActive = true;
     this.activeColor = this.options[ index ].color;
-    this.setOptions();
+    this._optionsService.setActiveColor( this.activeColor );
   }
 
   ngOnInit() {

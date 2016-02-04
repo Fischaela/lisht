@@ -1,4 +1,5 @@
 System.register(['angular2/core', 'angular2/common', './options.service'], function(exports_1) {
+    "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -28,19 +29,12 @@ System.register(['angular2/core', 'angular2/common', './options.service'], funct
                 }
                 OptionsComponent.prototype.getOptions = function () {
                     var _this = this;
-                    this._optionsService.getOptions().then(function (options) { return _this.options = options; });
+                    this._optionsService.getColors().then(function (options) { return _this.options = options; });
                     this._optionsService.getActiveColor().then(function (activeColor) { return _this.activeColor = activeColor; });
                 };
-                OptionsComponent.prototype.setOptions = function () {
-                    this._optionsService.setOptions(this.options);
-                };
                 OptionsComponent.prototype.setActiveColor = function (index) {
-                    for (var i in this.options) {
-                        this.options[i].isActive = false;
-                    }
-                    this.options[index].isActive = true;
                     this.activeColor = this.options[index].color;
-                    this.setOptions();
+                    this._optionsService.setActiveColor(this.activeColor);
                 };
                 OptionsComponent.prototype.ngOnInit = function () {
                     this.getOptions();
@@ -54,7 +48,7 @@ System.register(['angular2/core', 'angular2/common', './options.service'], funct
                     __metadata('design:paramtypes', [options_service_1.OptionsService])
                 ], OptionsComponent);
                 return OptionsComponent;
-            })();
+            }());
             exports_1("OptionsComponent", OptionsComponent);
         }
     }
