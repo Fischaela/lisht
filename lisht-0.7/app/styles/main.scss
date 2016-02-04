@@ -1,0 +1,28 @@
+// Welcome!
+// This is the main file which has to import every needed scss file for your project
+// Change the several scss files to wireframe your project
+// Write every module in a new scss file named after its module without "_"
+
+// Import compass mixins
+
+@import "compass/css3";
+@import "compass/typography";
+@import "compass/reset";
+
+// Import base scss files
+@import "base/variables";
+@import "base/typography";
+@import "base/mixins";
+
+// Import modules
+@import "modules/layout";
+@import "modules/list-style";
+@import "modules/forms";
+@import "modules/buttons";
+@import "modules/options";
+
+// Import states
+@import "states/dnd";
+
+// Import themes
+@import "theme/options"

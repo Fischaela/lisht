@@ -1,0 +1,1214 @@
+.pink {
+	$color: $pink;
+	$color-light: lighten($color, 25%);
+	$color-alpha: lighten($color, 10%);
+
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
+
+	// Theming _buttons.scss
+	.btn {
+		border: 2px solid $color-light;
+
+		color: $color-light;
+
+		&:hover {
+			background: $color-light;
+			border: 2px solid $color-light;
+			@include box-shadow (inset 0px 0px 0px 2px $color);
+
+			color: $color;
+		}
+
+		&:active {
+			color: $color;
+		}
+	}
+
+	.btn-close {
+		background: $color;
+
+		color: $white;
+	}
+
+	.btn-options {
+		border: 2px solid $color;
+
+		color: $color;
+
+		&:hover {
+			background-color: $color;
+			border: 2px solid $color;
+			@include box-shadow (inset 0px 0px 0px 2px $white);
+
+			color: $white;
+		}
+	}
+
+	// Theming _forms.scss
+	.new-input {
+		background: $color-alpha;
+
+		color: $color-light;
+
+		&::-webkit-input-placeholder {
+		   color: $color;
+		}
+	}
+
+	// Theming _list-style.scss
+	.link-list {
+	
+		li {
+
+			&:hover {
+
+				a {
+					color: $color;
+				}
+			}
+
+			a {
+				color: $color-light;
+			}
+		}
+	}
+}
+
+.pink-dark {
+	$color: $pink-dark;
+	$color-light: lighten($color, 55%);
+	$color-alpha: lighten($color, 20%);
+
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
+
+	// Theming _buttons.scss
+	.btn {
+		border: 2px solid $color-light;
+
+		color: $color-light;
+
+		&:hover {
+			background: $color-light;
+			border: 2px solid $color-light;
+			@include box-shadow (inset 0px 0px 0px 2px $color);
+
+			color: $color;
+		}
+
+		&:active {
+			color: $color;
+		}
+	}
+
+	.btn-close {
+		background: $color;
+
+		color: $white;
+	}
+
+	.btn-options {
+		border: 2px solid $color;
+
+		color: $color;
+
+		&:hover {
+			background-color: $color;
+			border: 2px solid $color;
+			@include box-shadow (inset 0px 0px 0px 2px $white);
+
+			color: $white;
+		}
+	}
+
+	// Theming _forms.scss
+	.new-input {
+		background: $color-alpha;
+
+		color: $color-light;
+
+		&::-webkit-input-placeholder {
+		   color: $color;
+		}
+	}
+
+	// Theming _list-style.scss
+	.link-list {
+	
+		li {
+
+			&:hover {
+
+				a {
+					color: $color;
+				}
+			}
+
+			a {
+				color: $color-light;
+			}
+		}
+	}
+}
+
+.red {
+	$color: $red;
+	$color-light: lighten($color, 25%);
+	$color-alpha: lighten($color, 10%);
+
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
+
+	// Theming _buttons.scss
+	.btn {
+		border: 2px solid $color-light;
+
+		color: $color-light;
+
+		&:hover {
+			background: $color-light;
+			border: 2px solid $color-light;
+			@include box-shadow (inset 0px 0px 0px 2px $color);
+
+			color: $color;
+		}
+
+		&:active {
+			color: $color;
+		}
+	}
+
+	.btn-close {
+		background: $color;
+
+		color: $white;
+	}
+
+	.btn-options {
+		border: 2px solid $color;
+
+		color: $color;
+
+		&:hover {
+			background-color: $color;
+			border: 2px solid $color;
+			@include box-shadow (inset 0px 0px 0px 2px $white);
+
+			color: $white;
+		}
+	}
+
+	// Theming _forms.scss
+	.new-input {
+		background: $color-alpha;
+
+		color: $color-light;
+
+		&::-webkit-input-placeholder {
+		   color: $color;
+		}
+	}
+
+	// Theming _list-style.scss
+	.link-list {
+	
+		li {
+
+			&:hover {
+
+				a {
+					color: $color;
+				}
+			}
+
+			a {
+				color: $color-light;
+			}
+		}
+	}
+}
+
+.red-dark {
+	$color: $red-dark;
+	$color-light: lighten($color, 55%);
+	$color-alpha: lighten($color, 20%);
+
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
+
+	// Theming _buttons.scss
+	.btn {
+		border: 2px solid $color-light;
+
+		color: $color-light;
+
+		&:hover {
+			background: $color-light;
+			border: 2px solid $color-light;
+			@include box-shadow (inset 0px 0px 0px 2px $color);
+
+			color: $color;
+		}
+
+		&:active {
+			color: $color;
+		}
+	}
+
+	.btn-close {
+		background: $color;
+
+		color: $white;
+	}
+
+	.btn-options {
+		border: 2px solid $color;
+
+		color: $color;
+
+		&:hover {
+			background-color: $color;
+			border: 2px solid $color;
+			@include box-shadow (inset 0px 0px 0px 2px $white);
+
+			color: $white;
+		}
+	}
+
+	// Theming _forms.scss
+	.new-input {
+		background: $color-alpha;
+
+		color: $color-light;
+
+		&::-webkit-input-placeholder {
+		   color: $color;
+		}
+	}
+
+	// Theming _list-style.scss
+	.link-list {
+	
+		li {
+
+			&:hover {
+
+				a {
+					color: $color;
+				}
+			}
+
+			a {
+				color: $color-light;
+			}
+		}
+	}
+}
+
+.orange {
+	$color: $orange;
+	$color-light: lighten($color, 25%);
+	$color-alpha: lighten($color, 10%);
+
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
+
+	// Theming _buttons.scss
+	.btn {
+		border: 2px solid $color-light;
+
+		color: $color-light;
+
+		&:hover {
+			background: $color-light;
+			border: 2px solid $color-light;
+			@include box-shadow (inset 0px 0px 0px 2px $color);
+
+			color: $color;
+		}
+
+		&:active {
+			color: $color;
+		}
+	}
+
+	.btn-close {
+		background: $color;
+
+		color: $white;
+	}
+
+	.btn-options {
+		border: 2px solid $color;
+
+		color: $color;
+
+		&:hover {
+			background-color: $color;
+			border: 2px solid $color;
+			@include box-shadow (inset 0px 0px 0px 2px $white);
+
+			color: $white;
+		}
+	}
+
+	// Theming _forms.scss
+	.new-input {
+		background: $color-alpha;
+
+		color: $color-light;
+
+		&::-webkit-input-placeholder {
+		   color: $color;
+		}
+	}
+
+	// Theming _list-style.scss
+	.link-list {
+	
+		li {
+
+			&:hover {
+
+				a {
+					color: $color;
+				}
+			}
+
+			a {
+				color: $color-light;
+			}
+		}
+	}
+}
+
+.orange-dark {
+	$color: $orange-dark;
+	$color-light: lighten($color, 55%);
+	$color-alpha: lighten($color, 20%);
+
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
+
+	// Theming _buttons.scss
+	.btn {
+		border: 2px solid $color-light;
+
+		color: $color-light;
+
+		&:hover {
+			background: $color-light;
+			border: 2px solid $color-light;
+			@include box-shadow (inset 0px 0px 0px 2px $color);
+
+			color: $color;
+		}
+
+		&:active {
+			color: $color;
+		}
+	}
+
+	.btn-close {
+		background: $color;
+
+		color: $white;
+	}
+
+	.btn-options {
+		border: 2px solid $color;
+
+		color: $color;
+
+		&:hover {
+			background-color: $color;
+			border: 2px solid $color;
+			@include box-shadow (inset 0px 0px 0px 2px $white);
+
+			color: $white;
+		}
+	}
+
+	// Theming _forms.scss
+	.new-input {
+		background: $color-alpha;
+
+		color: $color-light;
+
+		&::-webkit-input-placeholder {
+		   color: $color;
+		}
+	}
+
+	// Theming _list-style.scss
+	.link-list {
+	
+		li {
+
+			&:hover {
+
+				a {
+					color: $color;
+				}
+			}
+
+			a {
+				color: $color-light;
+			}
+		}
+	}
+}
+
+.yellow {
+	$color: $yellow;
+	$color-light: lighten($color, 25%);
+	$color-alpha: lighten($color, 10%);
+
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
+
+	// Theming _buttons.scss
+	.btn {
+		border: 2px solid $color-light;
+
+		color: $color-light;
+
+		&:hover {
+			background: $color-light;
+			border: 2px solid $color-light;
+			@include box-shadow (inset 0px 0px 0px 2px $color);
+
+			color: $color;
+		}
+
+		&:active {
+			color: $color;
+		}
+	}
+
+	.btn-close {
+		background: $color;
+
+		color: $white;
+	}
+
+	.btn-options {
+		border: 2px solid $color;
+
+		color: $color;
+
+		&:hover {
+			background-color: $color;
+			border: 2px solid $color;
+			@include box-shadow (inset 0px 0px 0px 2px $white);
+
+			color: $white;
+		}
+	}
+
+	// Theming _forms.scss
+	.new-input {
+		background: $color-alpha;
+
+		color: $color-light;
+
+		&::-webkit-input-placeholder {
+		   color: $color;
+		}
+	}
+
+	// Theming _list-style.scss
+	.link-list {
+	
+		li {
+
+			&:hover {
+
+				a {
+					color: $color;
+				}
+			}
+
+			a {
+				color: $color-light;
+			}
+		}
+	}
+}
+
+.yellow-dark {
+	$color: $yellow-dark;
+	$color-light: lighten($color, 55%);
+	$color-alpha: lighten($color, 20%);
+
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
+
+	// Theming _buttons.scss
+	.btn {
+		border: 2px solid $color-light;
+
+		color: $color-light;
+
+		&:hover {
+			background: $color-light;
+			border: 2px solid $color-light;
+			@include box-shadow (inset 0px 0px 0px 2px $color);
+
+			color: $color;
+		}
+
+		&:active {
+			color: $color;
+		}
+	}
+
+	.btn-close {
+		background: $color;
+
+		color: $white;
+	}
+
+	.btn-options {
+		border: 2px solid $color;
+
+		color: $color;
+
+		&:hover {
+			background-color: $color;
+			border: 2px solid $color;
+			@include box-shadow (inset 0px 0px 0px 2px $white);
+
+			color: $white;
+		}
+	}
+
+	// Theming _forms.scss
+	.new-input {
+		background: $color-alpha;
+
+		color: $color-light;
+
+		&::-webkit-input-placeholder {
+		   color: $color;
+		}
+	}
+
+	// Theming _list-style.scss
+	.link-list {
+	
+		li {
+
+			&:hover {
+
+				a {
+					color: $color;
+				}
+			}
+
+			a {
+				color: $color-light;
+			}
+		}
+	}
+}
+
+.green {
+	$color: $green;
+	$color-light: lighten($color, 25%);
+	$color-alpha: lighten($color, 10%);
+
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
+
+	// Theming _buttons.scss
+	.btn {
+		border: 2px solid $color-light;
+
+		color: $color-light;
+
+		&:hover {
+			background: $color-light;
+			border: 2px solid $color-light;
+			@include box-shadow (inset 0px 0px 0px 2px $color);
+
+			color: $color;
+		}
+
+		&:active {
+			color: $color;
+		}
+	}
+
+	.btn-close {
+		background: $color;
+
+		color: $white;
+	}
+
+	.btn-options {
+		border: 2px solid $color;
+
+		color: $color;
+
+		&:hover {
+			background-color: $color;
+			border: 2px solid $color;
+			@include box-shadow (inset 0px 0px 0px 2px $white);
+
+			color: $white;
+		}
+	}
+
+	// Theming _forms.scss
+	.new-input {
+		background: $color-alpha;
+
+		color: $color-light;
+
+		&::-webkit-input-placeholder {
+		   color: $color;
+		}
+	}
+
+	// Theming _list-style.scss
+	.link-list {
+	
+		li {
+
+			&:hover {
+
+				a {
+					color: $color;
+				}
+			}
+
+			a {
+				color: $color-light;
+			}
+		}
+	}
+}
+
+.green-dark {
+	$color: $green-dark;
+	$color-light: lighten($color, 55%);
+	$color-alpha: lighten($color, 20%);
+
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
+
+	// Theming _buttons.scss
+	.btn {
+		border: 2px solid $color-light;
+
+		color: $color-light;
+
+		&:hover {
+			background: $color-light;
+			border: 2px solid $color-light;
+			@include box-shadow (inset 0px 0px 0px 2px $color);
+
+			color: $color;
+		}
+
+		&:active {
+			color: $color;
+		}
+	}
+
+	.btn-close {
+		background: $color;
+
+		color: $white;
+	}
+
+	.btn-options {
+		border: 2px solid $color;
+
+		color: $color;
+
+		&:hover {
+			background-color: $color;
+			border: 2px solid $color;
+			@include box-shadow (inset 0px 0px 0px 2px $white);
+
+			color: $white;
+		}
+	}
+
+	// Theming _forms.scss
+	.new-input {
+		background: $color-alpha;
+
+		color: $color-light;
+
+		&::-webkit-input-placeholder {
+		   color: $color;
+		}
+	}
+
+	// Theming _list-style.scss
+	.link-list {
+	
+		li {
+
+			&:hover {
+
+				a {
+					color: $color;
+				}
+			}
+
+			a {
+				color: $color-light;
+			}
+		}
+	}
+}
+
+.blue {
+	$color: $blue;
+	$color-light: lighten($color, 25%);
+	$color-alpha: lighten($color, 10%);
+
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
+
+	// Theming _buttons.scss
+	.btn {
+		border: 2px solid $color-light;
+
+		color: $color-light;
+
+		&:hover {
+			background: $color-light;
+			border: 2px solid $color-light;
+			@include box-shadow (inset 0px 0px 0px 2px $color);
+
+			color: $color;
+		}
+
+		&:active {
+			color: $color;
+		}
+	}
+
+	.btn-close {
+		background: $color;
+
+		color: $white;
+	}
+
+	.btn-options {
+		border: 2px solid $color;
+
+		color: $color;
+
+		&:hover {
+			background-color: $color;
+			border: 2px solid $color;
+			@include box-shadow (inset 0px 0px 0px 2px $white);
+
+			color: $white;
+		}
+	}
+
+	// Theming _forms.scss
+	.new-input {
+		background: $color-alpha;
+
+		color: $color-light;
+
+		&::-webkit-input-placeholder {
+		   color: $color;
+		}
+	}
+
+	// Theming _list-style.scss
+	.link-list {
+	
+		li {
+
+			&:hover {
+
+				a {
+					color: $color;
+				}
+			}
+
+			a {
+				color: $color-light;
+			}
+		}
+	}
+}
+
+.blue-dark {
+	$color: $blue-dark;
+	$color-light: lighten($color, 55%);
+	$color-alpha: lighten($color, 20%);
+
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
+
+	// Theming _buttons.scss
+	.btn {
+		border: 2px solid $color-light;
+
+		color: $color-light;
+
+		&:hover {
+			background: $color-light;
+			border: 2px solid $color-light;
+			@include box-shadow (inset 0px 0px 0px 2px $color);
+
+			color: $color;
+		}
+
+		&:active {
+			color: $color;
+		}
+	}
+
+	.btn-close {
+		background: $color;
+
+		color: $white;
+	}
+
+	.btn-options {
+		border: 2px solid $color;
+
+		color: $color;
+
+		&:hover {
+			background-color: $color;
+			border: 2px solid $color;
+			@include box-shadow (inset 0px 0px 0px 2px $white);
+
+			color: $white;
+		}
+	}
+
+	// Theming _forms.scss
+	.new-input {
+		background: $color-alpha;
+
+		color: $color-light;
+
+		&::-webkit-input-placeholder {
+		   color: $color;
+		}
+	}
+
+	// Theming _list-style.scss
+	.link-list {
+	
+		li {
+
+			&:hover {
+
+				a {
+					color: $color;
+				}
+			}
+
+			a {
+				color: $color-light;
+			}
+		}
+	}
+}
+
+.black {
+	$color: $black;
+	$color-light: lighten($color, 25%);
+	$color-alpha: lighten($color, 10%);
+
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
+
+	// Theming _buttons.scss
+	.btn {
+		border: 2px solid $color-light;
+
+		color: $color-light;
+
+		&:hover {
+			background: $color-light;
+			border: 2px solid $color-light;
+			@include box-shadow (inset 0px 0px 0px 2px $color);
+
+			color: $color;
+		}
+
+		&:active {
+			color: $color;
+		}
+	}
+
+	.btn-close {
+		background: $color;
+
+		color: $white;
+	}
+
+	.btn-options {
+		border: 2px solid $color;
+
+		color: $color;
+
+		&:hover {
+			background-color: $color;
+			border: 2px solid $color;
+			@include box-shadow (inset 0px 0px 0px 2px $white);
+
+			color: $white;
+		}
+	}
+
+	// Theming _forms.scss
+	.new-input {
+		background: $color-alpha;
+
+		color: $color-light;
+
+		&::-webkit-input-placeholder {
+		   color: $color;
+		}
+	}
+
+	// Theming _list-style.scss
+	.link-list {
+	
+		li {
+
+			&:hover {
+
+				a {
+					color: $color;
+				}
+			}
+
+			a {
+				color: $color-light;
+			}
+		}
+	}
+}
+
+.black-dark {
+	$color: $black-dark;
+	$color-light: lighten($color, 55%);
+	$color-alpha: lighten($color, 20%);
+
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
+
+	// Theming _buttons.scss
+	.btn {
+		border: 2px solid $color-light;
+
+		color: $color-light;
+
+		&:hover {
+			background: $color-light;
+			border: 2px solid $color-light;
+			@include box-shadow (inset 0px 0px 0px 2px $color);
+
+			color: $color;
+		}
+
+		&:active {
+			color: $color;
+		}
+	}
+
+	.btn-close {
+		background: $color;
+
+		color: $white;
+	}
+
+	.btn-options {
+		border: 2px solid $color;
+
+		color: $color;
+
+		&:hover {
+			background-color: $color;
+			border: 2px solid $color;
+			@include box-shadow (inset 0px 0px 0px 2px $white);
+
+			color: $white;
+		}
+	}
+
+	// Theming _forms.scss
+	.new-input {
+		background: $color-alpha;
+
+		color: $color-light;
+
+		&::-webkit-input-placeholder {
+		   color: $color;
+		}
+	}
+
+	// Theming _list-style.scss
+	.link-list {
+	
+		li {
+
+			&:hover {
+
+				a {
+					color: $color;
+				}
+			}
+
+			a {
+				color: $color-light;
+			}
+		}
+	}
+}
+
+.black-light {
+	$color: $black-light;
+	$color-light: lighten($color, 40%);
+	$color-alpha: lighten($color, 15%);
+
+	background-color: $color;
+
+	&.options-container {
+		background-color: $white;
+		border: 10px solid $color;
+	}
+
+	// Theming _buttons.scss
+	.btn {
+		border: 2px solid $color-light;
+
+		color: $color-light;
+
+		&:hover {
+			background: $color-light;
+			border: 2px solid $color-light;
+			@include box-shadow (inset 0px 0px 0px 2px $color);
+
+			color: $color;
+		}
+
+		&:active {
+			color: $color;
+		}
+	}
+
+	.btn-close {
+		background: $color;
+
+		color: $white;
+	}
+
+	.btn-options {
+		border: 2px solid $color;
+
+		color: $color;
+
+		&:hover {
+			background-color: $color;
+			border: 2px solid $color;
+			@include box-shadow (inset 0px 0px 0px 2px $white);
+
+			color: $white;
+		}
+	}
+
+	// Theming _forms.scss
+	.new-input {
+		background: $color-alpha;
+
+		color: $color-light;
+
+		&::-webkit-input-placeholder {
+		   color: $color;
+		}
+	}
+
+	// Theming _list-style.scss
+	.link-list {
+	
+		li {
+
+			&:hover {
+
+				a {
+					color: $color;
+				}
+			}
+
+			a {
+				color: $color-light;
+			}
+		}
+	}
+}
