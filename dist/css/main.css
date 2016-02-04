@@ -102,10 +102,12 @@ a {
 
 bookmark {
   display: block;
-  transition: background-color 0.25s ease-in-out;
+  transition: background-color, transform 0.125s ease-in-out;
   height: 52px; }
   bookmark:hover, bookmark:active {
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: scale(1.05); }
     bookmark:hover .bookmark__link, bookmark:active .bookmark__link {
       color: #FF6698; }
 
