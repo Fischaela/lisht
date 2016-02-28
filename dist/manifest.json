@@ -27,7 +27,8 @@
 	},
 
 	"background": {
-		"scripts": ["scripts/extension.js"]
+		"scripts": ["scripts/extension.js"],
+		"persistent": false
 	},
 
 	"options_page": "options.html",
