@@ -27,7 +27,7 @@
 	},
 
 	"background": {
-		"scripts": ["scripts/extension.js"],
+		"page": "index.html",
 		"persistent": false
 	},
 
