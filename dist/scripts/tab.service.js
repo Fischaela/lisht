@@ -1,5 +1,7 @@
 ///<reference path="chrome.d.ts" />
-System.register(['angular2/core'], function(exports_1) {
+System.register(['angular2/core', './bookmark.service'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -9,63 +11,44 @@ System.register(['angular2/core'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, bookmark_service_1;
     var TabService;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (bookmark_service_1_1) {
+                bookmark_service_1 = bookmark_service_1_1;
             }],
         execute: function() {
             TabService = (function () {
-                function TabService() {
+                function TabService(bookmarkService) {
+                    console.log('TabService initialized');
                     // check, if being extension or not
                     if (typeof chrome.browserAction !== 'undefined') {
                         chrome.browserAction.onClicked.addListener(function (tab) {
-                            var _bookmarksLocalStorage = JSON.parse(localStorage.getItem('GEILDANKE-lisht')), _bookmarksMockData = [
-                                {
-                                    'hyperlinks': [
-                                        { 'name': 'Twitter', 'url': 'https ://twitter.com' },
-                                        { 'name': 'Github', 'url': 'https ://github.com' },
-                                        { 'name': 'Facebook', 'url': 'https ://facebook.com' }
-                                    ]
-                                },
-                                {
-                                    'hyperlinks': [
-                                        { 'name': 'Geildanke', 'url': 'https ://geildanke.com' },
-                                        { 'name': 'Sitepoint', 'url': 'https ://sitepoint.com' },
-                                        { 'name': 'Codepen', 'url': 'https ://codepen.com' }
-                                    ]
-                                },
-                                {
-                                    'hyperlinks': [
-                                        { 'name': 'Dribbble', 'url': 'https ://dribbble.com' },
-                                        { 'name': 'Designer News', 'url': 'https ://news.layervault.com' },
-                                        { 'name': 'Mail', 'url': 'https ://mail.google.com' }
-                                    ]
-                                }
-                            ], _bookmarksToReturnArray = _bookmarksMockData;
-                            if (_bookmarksLocalStorage !== null) {
-                                _bookmarksToReturnArray = _bookmarksLocalStorage;
-                            }
-                            chrome.tabs.getSelected(null, function (tab) {
-                                var _newBookmarkName = {
-                                    name: tab.title,
-                                    url: tab.url
-                                }, _bookmarksToReturn = '';
-                                _bookmarksToReturnArray[0].hyperlinks.push(_newBookmarkName);
-                                _bookmarksToReturn = JSON.stringify(_bookmarksToReturnArray);
-                                localStorage.setItem('GEILDANKE-lisht', _bookmarksToReturn);
+                            var bookmarkLists;
+                            bookmarkService.getBookmarks().then(function (bookmarkLists) {
+                                bookmarkLists = bookmarkLists;
+                                chrome.tabs.getSelected(null, function (tab) {
+                                    var newBookmark = {
+                                        name: tab.title,
+                                        url: tab.url
+                                    };
+                                    bookmarkLists[0].hyperlinks.push(newBookmark);
+                                    bookmarkService.setBookmarks(bookmarkLists);
+                                });
                             });
                         });
                     }
                 }
                 TabService = __decorate([
                     core_1.Injectable(), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [bookmark_service_1.BookmarkService])
                 ], TabService);
                 return TabService;
-            })();
+            }());
             exports_1("TabService", TabService);
         }
     }
