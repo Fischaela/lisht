@@ -12,7 +12,7 @@ System.register(['angular2/core', './bookmark.service'], function(exports_1, con
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, bookmark_service_1;
-    var TabService;
+    var EventPage;
     return {
         setters:[
             function (core_1_1) {
@@ -22,35 +22,47 @@ System.register(['angular2/core', './bookmark.service'], function(exports_1, con
                 bookmark_service_1 = bookmark_service_1_1;
             }],
         execute: function() {
-            TabService = (function () {
-                function TabService(bookmarkService) {
-                    console.log('TabService initialized');
+            EventPage = (function () {
+                function EventPage(bookmarkService) {
+                    var bookmarkLists;
+                    console.log('Constructor');
                     // check, if being extension or not
                     if (typeof chrome.browserAction !== 'undefined') {
+                        console.log('browserAction');
                         chrome.browserAction.onClicked.addListener(function (tab) {
-                            var bookmarkLists;
+                            console.log('AddListener');
                             bookmarkService.getBookmarks().then(function (bookmarkLists) {
+                                console.log('Promise');
                                 bookmarkLists = bookmarkLists;
-                                chrome.tabs.getSelected(null, function (tab) {
-                                    var newBookmark = {
-                                        name: tab.title,
-                                        url: tab.url
-                                    };
-                                    bookmarkLists[0].hyperlinks.push(newBookmark);
-                                    bookmarkService.setBookmarks(bookmarkLists);
-                                });
+                                getSelectedTab(bookmarkLists);
                             });
                         });
                     }
+                    else {
+                        console.log('EventPage initialized');
+                    }
+                    function getSelectedTab(bookmarkLists) {
+                        console.log('getSelectedTab');
+                        chrome.tabs.getSelected(null, function (tab) {
+                            console.log('getSelected');
+                            var newBookmark = {
+                                name: tab.title,
+                                url: tab.url
+                            };
+                            console.log('newBookmark', newBookmark);
+                            bookmarkLists[0].hyperlinks.push(newBookmark);
+                            bookmarkService.setBookmarks(bookmarkLists);
+                        });
+                    }
                 }
-                TabService = __decorate([
+                EventPage = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [bookmark_service_1.BookmarkService])
-                ], TabService);
-                return TabService;
+                ], EventPage);
+                return EventPage;
             }());
-            exports_1("TabService", TabService);
+            exports_1("EventPage", EventPage);
         }
     }
 });
-//# sourceMappingURL=tab.service.js.map
+//# sourceMappingURL=eventPage.js.map

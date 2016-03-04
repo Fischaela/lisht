@@ -5,13 +5,13 @@ import { Bookmark } from './bookmark';
 import { BookmarkDetailComponent } from './bookmark-detail.component';
 import { BookmarkService } from './bookmark.service';
 import { OptionsService } from './options.service';
-import { TabService } from './tab.service';
+import { EventPage } from './eventPage';
 
 @Component( {
     selector: 'lisht-bookmarks',
     templateUrl: './templates/bookmarklist.html',
     directives: [ BookmarkDetailComponent ],
-    providers: [ BookmarkService, TabService ]
+    providers: [ BookmarkService, EventPage ]
 } )
 
 export class BookmarkComponent implements OnInit {
@@ -22,7 +22,7 @@ export class BookmarkComponent implements OnInit {
   name : Object[] = [];
   url : Object[] = [];
 
-  constructor( private _bookmarkService : BookmarkService, private _optionsService : OptionsService, private _tabService: TabService ) {}
+  constructor( private _bookmarkService : BookmarkService, private _optionsService : OptionsService, private _eventPage: EventPage ) {}
 
   getBookmarkLists() {
     this._bookmarkService.getBookmarks().then( bookmarkLists => this.bookmarkLists = bookmarkLists );
