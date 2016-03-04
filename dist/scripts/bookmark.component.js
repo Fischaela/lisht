@@ -1,4 +1,4 @@
-System.register(['angular2/core', './bookmark-detail.component', './bookmark.service', './options.service'], function(exports_1) {
+System.register(['angular2/core', './bookmark-detail.component', './bookmark.service', './options.service', './eventPage'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', './bookmark-detail.component', './bookmark.ser
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, bookmark_detail_component_1, bookmark_service_1, options_service_1;
+    var core_1, bookmark_detail_component_1, bookmark_service_1, options_service_1, eventPage_1;
     var BookmarkComponent;
     return {
         setters:[
@@ -23,12 +23,16 @@ System.register(['angular2/core', './bookmark-detail.component', './bookmark.ser
             },
             function (options_service_1_1) {
                 options_service_1 = options_service_1_1;
+            },
+            function (eventPage_1_1) {
+                eventPage_1 = eventPage_1_1;
             }],
         execute: function() {
             BookmarkComponent = (function () {
-                function BookmarkComponent(_bookmarkService, _optionsService) {
+                function BookmarkComponent(_bookmarkService, _optionsService, _eventPage) {
                     this._bookmarkService = _bookmarkService;
                     this._optionsService = _optionsService;
+                    this._eventPage = _eventPage;
                     this.name = [];
                     this.url = [];
                 }
@@ -59,9 +63,9 @@ System.register(['angular2/core', './bookmark-detail.component', './bookmark.ser
                         selector: 'lisht-bookmarks',
                         templateUrl: './templates/bookmarklist.html',
                         directives: [bookmark_detail_component_1.BookmarkDetailComponent],
-                        providers: [bookmark_service_1.BookmarkService]
+                        providers: [bookmark_service_1.BookmarkService, eventPage_1.EventPage]
                     }), 
-                    __metadata('design:paramtypes', [bookmark_service_1.BookmarkService, options_service_1.OptionsService])
+                    __metadata('design:paramtypes', [bookmark_service_1.BookmarkService, options_service_1.OptionsService, eventPage_1.EventPage])
                 ], BookmarkComponent);
                 return BookmarkComponent;
             })();
